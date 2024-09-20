@@ -1,0 +1,6 @@
+C:\Users\Novruzoff\source\repos\MRPos\Services\Catalog\Catalog.Infrasturucture\obj\Debug\net8.0\Catalog.Infrasturucture.csproj.AssemblyReference.cache
+C:\Users\Novruzoff\source\repos\MRPos\Services\Catalog\Catalog.Infrasturucture\obj\Debug\net8.0\Catalog.Infrasturucture.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Novruzoff\source\repos\MRPos\Services\Catalog\Catalog.Infrasturucture\obj\Debug\net8.0\Catalog.Infrasturucture.AssemblyInfoInputs.cache
+C:\Users\Novruzoff\source\repos\MRPos\Services\Catalog\Catalog.Infrasturucture\obj\Debug\net8.0\Catalog.Infrasturucture.AssemblyInfo.cs
+C:\Users\Novruzoff\source\repos\MRPos\Services\Catalog\Catalog.Infrasturucture\obj\Debug\net8.0\Catalog.Infrasturucture.csproj.CoreCompileInputs.cache
+C:\Users\Novruzoff\source\repos\MRPos\Services\Catalog\Catalog.Infrasturucture\obj\Debug\net8.0\Catalog.Infrasturucture.sourcelink.json
