@@ -3,24 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8CEFBC79-2164-42DB-A7DB-C4E125BF0CE8}|Services\\Catalog\\Catalog.Infrasturucture\\Catalog.Infrasturucture.csproj|c:\\users\\novruzoff\\source\\repos\\mrpos\\services\\catalog\\catalog.infrasturucture\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8CEFBC79-2164-42DB-A7DB-C4E125BF0CE8}|Services\\Catalog\\Catalog.Infrasturucture\\Catalog.Infrasturucture.csproj|solutionrelative:services\\catalog\\catalog.infrasturucture\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E45A80F1-CB20-4CA0-AF3C-B8B1E72392A6}|Services\\Catalog\\Catalog.Application\\Catalog.Application.csproj|c:\\users\\novruzoff\\source\\repos\\mrpos\\services\\catalog\\catalog.application\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E45A80F1-CB20-4CA0-AF3C-B8B1E72392A6}|Services\\Catalog\\Catalog.Application\\Catalog.Application.csproj|solutionrelative:services\\catalog\\catalog.application\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E45A80F1-CB20-4CA0-AF3C-B8B1E72392A6}|Services\\Catalog\\Catalog.Application\\Catalog.Application.csproj|c:\\users\\novruzoff\\source\\repos\\mrpos\\services\\catalog\\catalog.application\\common\\interfaces\\iapplicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E45A80F1-CB20-4CA0-AF3C-B8B1E72392A6}|Services\\Catalog\\Catalog.Application\\Catalog.Application.csproj|solutionrelative:services\\catalog\\catalog.application\\common\\interfaces\\iapplicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E45A80F1-CB20-4CA0-AF3C-B8B1E72392A6}|Services\\Catalog\\Catalog.Application\\Catalog.Application.csproj|c:\\users\\novruzoff\\source\\repos\\mrpos\\services\\catalog\\catalog.application\\common\\behaviors\\validationbehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E45A80F1-CB20-4CA0-AF3C-B8B1E72392A6}|Services\\Catalog\\Catalog.Application\\Catalog.Application.csproj|solutionrelative:services\\catalog\\catalog.application\\common\\behaviors\\validationbehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8CEFBC79-2164-42DB-A7DB-C4E125BF0CE8}|Services\\Catalog\\Catalog.Infrasturucture\\Catalog.Infrasturucture.csproj|c:\\users\\novruzoff\\source\\repos\\mrpos\\services\\catalog\\catalog.infrasturucture\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8CEFBC79-2164-42DB-A7DB-C4E125BF0CE8}|Services\\Catalog\\Catalog.Infrasturucture\\Catalog.Infrasturucture.csproj|solutionrelative:services\\catalog\\catalog.infrasturucture\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E45A80F1-CB20-4CA0-AF3C-B8B1E72392A6}|Services\\Catalog\\Catalog.Application\\Catalog.Application.csproj|c:\\users\\novruzoff\\source\\repos\\mrpos\\services\\catalog\\catalog.application\\common\\exceptions\\validationexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E45A80F1-CB20-4CA0-AF3C-B8B1E72392A6}|Services\\Catalog\\Catalog.Application\\Catalog.Application.csproj|solutionrelative:services\\catalog\\catalog.application\\common\\exceptions\\validationexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8CEFBC79-2164-42DB-A7DB-C4E125BF0CE8}|Services\\Catalog\\Catalog.Infrasturucture\\Catalog.Infrasturucture.csproj|c:\\users\\novruzoff\\source\\repos\\mrpos\\services\\catalog\\catalog.infrasturucture\\identity\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8CEFBC79-2164-42DB-A7DB-C4E125BF0CE8}|Services\\Catalog\\Catalog.Infrasturucture\\Catalog.Infrasturucture.csproj|solutionrelative:services\\catalog\\catalog.infrasturucture\\identity\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E45A80F1-CB20-4CA0-AF3C-B8B1E72392A6}|Services\\Catalog\\Catalog.Application\\Catalog.Application.csproj|c:\\users\\novruzoff\\source\\repos\\mrpos\\services\\catalog\\catalog.application\\common\\mapping\\categorymapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E45A80F1-CB20-4CA0-AF3C-B8B1E72392A6}|Services\\Catalog\\Catalog.Application\\Catalog.Application.csproj|solutionrelative:services\\catalog\\catalog.application\\common\\mapping\\categorymapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{991593A0-AD1E-4BE5-8E7A-77B96112B9AB}|Services\\Catalog\\Catalog.Domain\\Catalog.Domain.csproj|c:\\users\\novruzoff\\source\\repos\\mrpos\\services\\catalog\\catalog.domain\\events\\categorycreatedevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{991593A0-AD1E-4BE5-8E7A-77B96112B9AB}|Services\\Catalog\\Catalog.Domain\\Catalog.Domain.csproj|solutionrelative:services\\catalog\\catalog.domain\\events\\categorycreatedevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E45A80F1-CB20-4CA0-AF3C-B8B1E72392A6}|Services\\Catalog\\Catalog.Application\\Catalog.Application.csproj|c:\\users\\novruzoff\\source\\repos\\mrpos\\services\\catalog\\catalog.application\\common\\mapping\\mappingextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E45A80F1-CB20-4CA0-AF3C-B8B1E72392A6}|Services\\Catalog\\Catalog.Application\\Catalog.Application.csproj|solutionrelative:services\\catalog\\catalog.application\\common\\mapping\\mappingextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E45A80F1-CB20-4CA0-AF3C-B8B1E72392A6}|Services\\Catalog\\Catalog.Application\\Catalog.Application.csproj|c:\\users\\novruzoff\\source\\repos\\mrpos\\services\\catalog\\catalog.application\\common\\models\\categorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E45A80F1-CB20-4CA0-AF3C-B8B1E72392A6}|Services\\Catalog\\Catalog.Application\\Catalog.Application.csproj|solutionrelative:services\\catalog\\catalog.application\\common\\models\\categorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,75 +34,88 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "DependencyInjection.cs",
-              "DocumentMoniker": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Catalog\\Catalog.Infrasturucture\\DependencyInjection.cs",
-              "RelativeDocumentMoniker": "Services\\Catalog\\Catalog.Infrasturucture\\DependencyInjection.cs",
-              "ToolTip": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Catalog\\Catalog.Infrasturucture\\DependencyInjection.cs",
-              "RelativeToolTip": "Services\\Catalog\\Catalog.Infrasturucture\\DependencyInjection.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABUAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-20T08:56:23.754Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "IApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Catalog\\Catalog.Application\\Common\\Interfaces\\IApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "Services\\Catalog\\Catalog.Application\\Common\\Interfaces\\IApplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Catalog\\Catalog.Application\\Common\\Interfaces\\IApplicationDbContext.cs",
-              "RelativeToolTip": "Services\\Catalog\\Catalog.Application\\Common\\Interfaces\\IApplicationDbContext.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-20T08:49:10.711Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Catalog\\Catalog.Infrasturucture\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "Services\\Catalog\\Catalog.Infrasturucture\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Catalog\\Catalog.Infrasturucture\\ApplicationDbContext.cs",
-              "RelativeToolTip": "Services\\Catalog\\Catalog.Infrasturucture\\ApplicationDbContext.cs",
-              "ViewState": "AQIAAAEAAAAAAAAAAAAiwBQAAAABAAAA",
+              "DocumentIndex": 0,
+              "Title": "DependencyInjection.cs",
+              "DocumentMoniker": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Catalog\\Catalog.Application\\DependencyInjection.cs",
+              "RelativeDocumentMoniker": "Services\\Catalog\\Catalog.Application\\DependencyInjection.cs",
+              "ToolTip": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Catalog\\Catalog.Application\\DependencyInjection.cs",
+              "RelativeToolTip": "Services\\Catalog\\Catalog.Application\\DependencyInjection.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-20T08:24:15.726Z",
+              "WhenOpened": "2024-09-20T20:12:58.62Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ApplicationUser.cs",
-              "DocumentMoniker": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Catalog\\Catalog.Infrasturucture\\Identity\\ApplicationUser.cs",
-              "RelativeDocumentMoniker": "Services\\Catalog\\Catalog.Infrasturucture\\Identity\\ApplicationUser.cs",
-              "ToolTip": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Catalog\\Catalog.Infrasturucture\\Identity\\ApplicationUser.cs",
-              "RelativeToolTip": "Services\\Catalog\\Catalog.Infrasturucture\\Identity\\ApplicationUser.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAcAAAA",
+              "DocumentIndex": 1,
+              "Title": "ValidationBehavior.cs",
+              "DocumentMoniker": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Catalog\\Catalog.Application\\Common\\Behaviors\\ValidationBehavior.cs",
+              "RelativeDocumentMoniker": "Services\\Catalog\\Catalog.Application\\Common\\Behaviors\\ValidationBehavior.cs",
+              "ToolTip": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Catalog\\Catalog.Application\\Common\\Behaviors\\ValidationBehavior.cs",
+              "RelativeToolTip": "Services\\Catalog\\Catalog.Application\\Common\\Behaviors\\ValidationBehavior.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAgwB4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-20T08:23:16.9Z",
+              "WhenOpened": "2024-09-20T19:55:30.579Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ValidationException.cs",
+              "DocumentMoniker": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Catalog\\Catalog.Application\\Common\\Exceptions\\ValidationException.cs",
+              "RelativeDocumentMoniker": "Services\\Catalog\\Catalog.Application\\Common\\Exceptions\\ValidationException.cs",
+              "ToolTip": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Catalog\\Catalog.Application\\Common\\Exceptions\\ValidationException.cs",
+              "RelativeToolTip": "Services\\Catalog\\Catalog.Application\\Common\\Exceptions\\ValidationException.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAQwAkAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-20T19:45:27.548Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "CategoryCreatedEvent.cs",
-              "DocumentMoniker": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Catalog\\Catalog.Domain\\Events\\CategoryCreatedEvent.cs",
-              "RelativeDocumentMoniker": "Services\\Catalog\\Catalog.Domain\\Events\\CategoryCreatedEvent.cs",
-              "ToolTip": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Catalog\\Catalog.Domain\\Events\\CategoryCreatedEvent.cs",
-              "RelativeToolTip": "Services\\Catalog\\Catalog.Domain\\Events\\CategoryCreatedEvent.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAmAAAA",
+              "Title": "MappingExtension.cs",
+              "DocumentMoniker": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Catalog\\Catalog.Application\\Common\\Mapping\\MappingExtension.cs",
+              "RelativeDocumentMoniker": "Services\\Catalog\\Catalog.Application\\Common\\Mapping\\MappingExtension.cs",
+              "ToolTip": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Catalog\\Catalog.Application\\Common\\Mapping\\MappingExtension.cs",
+              "RelativeToolTip": "Services\\Catalog\\Catalog.Application\\Common\\Mapping\\MappingExtension.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-14T08:35:27.281Z",
+              "WhenOpened": "2024-09-20T19:34:21.927Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CategoryMapping.cs",
+              "DocumentMoniker": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Catalog\\Catalog.Application\\Common\\Mapping\\CategoryMapping.cs",
+              "RelativeDocumentMoniker": "Services\\Catalog\\Catalog.Application\\Common\\Mapping\\CategoryMapping.cs",
+              "ToolTip": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Catalog\\Catalog.Application\\Common\\Mapping\\CategoryMapping.cs",
+              "RelativeToolTip": "Services\\Catalog\\Catalog.Application\\Common\\Mapping\\CategoryMapping.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-20T19:32:29.741Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CategoryDto.cs",
+              "DocumentMoniker": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Catalog\\Catalog.Application\\Common\\Models\\CategoryDto.cs",
+              "RelativeDocumentMoniker": "Services\\Catalog\\Catalog.Application\\Common\\Models\\CategoryDto.cs",
+              "ToolTip": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Catalog\\Catalog.Application\\Common\\Models\\CategoryDto.cs",
+              "RelativeToolTip": "Services\\Catalog\\Catalog.Application\\Common\\Models\\CategoryDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-20T19:31:22.921Z",
               "EditorCaption": ""
             }
           ]
