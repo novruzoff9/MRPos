@@ -3,28 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E45A80F1-CB20-4CA0-AF3C-B8B1E72392A6}|Services\\Catalog\\Catalog.Application\\Catalog.Application.csproj|c:\\users\\novruzoff\\source\\repos\\mrpos\\services\\catalog\\catalog.application\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E45A80F1-CB20-4CA0-AF3C-B8B1E72392A6}|Services\\Catalog\\Catalog.Application\\Catalog.Application.csproj|solutionrelative:services\\catalog\\catalog.application\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E45A80F1-CB20-4CA0-AF3C-B8B1E72392A6}|Services\\Catalog\\Catalog.Application\\Catalog.Application.csproj|c:\\users\\novruzoff\\source\\repos\\mrpos\\services\\catalog\\catalog.application\\common\\behaviors\\validationbehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E45A80F1-CB20-4CA0-AF3C-B8B1E72392A6}|Services\\Catalog\\Catalog.Application\\Catalog.Application.csproj|solutionrelative:services\\catalog\\catalog.application\\common\\behaviors\\validationbehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E45A80F1-CB20-4CA0-AF3C-B8B1E72392A6}|Services\\Catalog\\Catalog.Application\\Catalog.Application.csproj|c:\\users\\novruzoff\\source\\repos\\mrpos\\services\\catalog\\catalog.application\\common\\exceptions\\validationexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E45A80F1-CB20-4CA0-AF3C-B8B1E72392A6}|Services\\Catalog\\Catalog.Application\\Catalog.Application.csproj|solutionrelative:services\\catalog\\catalog.application\\common\\exceptions\\validationexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E45A80F1-CB20-4CA0-AF3C-B8B1E72392A6}|Services\\Catalog\\Catalog.Application\\Catalog.Application.csproj|c:\\users\\novruzoff\\source\\repos\\mrpos\\services\\catalog\\catalog.application\\common\\mapping\\categorymapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E45A80F1-CB20-4CA0-AF3C-B8B1E72392A6}|Services\\Catalog\\Catalog.Application\\Catalog.Application.csproj|solutionrelative:services\\catalog\\catalog.application\\common\\mapping\\categorymapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E45A80F1-CB20-4CA0-AF3C-B8B1E72392A6}|Services\\Catalog\\Catalog.Application\\Catalog.Application.csproj|c:\\users\\novruzoff\\source\\repos\\mrpos\\services\\catalog\\catalog.application\\common\\mapping\\mappingextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E45A80F1-CB20-4CA0-AF3C-B8B1E72392A6}|Services\\Catalog\\Catalog.Application\\Catalog.Application.csproj|solutionrelative:services\\catalog\\catalog.application\\common\\mapping\\mappingextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E45A80F1-CB20-4CA0-AF3C-B8B1E72392A6}|Services\\Catalog\\Catalog.Application\\Catalog.Application.csproj|c:\\users\\novruzoff\\source\\repos\\mrpos\\services\\catalog\\catalog.application\\common\\models\\categorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E45A80F1-CB20-4CA0-AF3C-B8B1E72392A6}|Services\\Catalog\\Catalog.Application\\Catalog.Application.csproj|solutionrelative:services\\catalog\\catalog.application\\common\\models\\categorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6BEF4945-4D6C-4F57-9EDD-535AC7B8AAF3}|Services\\Catalog\\Catalog.WebAPI\\Catalog.WebAPI.csproj|c:\\users\\novruzoff\\source\\repos\\mrpos\\services\\catalog\\catalog.webapi\\infrastructure\\customexceptionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BEF4945-4D6C-4F57-9EDD-535AC7B8AAF3}|Services\\Catalog\\Catalog.WebAPI\\Catalog.WebAPI.csproj|solutionrelative:services\\catalog\\catalog.webapi\\infrastructure\\customexceptionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -43,79 +23,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "DependencyInjection.cs",
-              "DocumentMoniker": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Catalog\\Catalog.Application\\DependencyInjection.cs",
-              "RelativeDocumentMoniker": "Services\\Catalog\\Catalog.Application\\DependencyInjection.cs",
-              "ToolTip": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Catalog\\Catalog.Application\\DependencyInjection.cs",
-              "RelativeToolTip": "Services\\Catalog\\Catalog.Application\\DependencyInjection.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABEAAAAAAAAA",
+              "Title": "CustomExceptionHandler.cs",
+              "DocumentMoniker": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Catalog\\Catalog.WebAPI\\Infrastructure\\CustomExceptionHandler.cs",
+              "RelativeDocumentMoniker": "Services\\Catalog\\Catalog.WebAPI\\Infrastructure\\CustomExceptionHandler.cs",
+              "ToolTip": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Catalog\\Catalog.WebAPI\\Infrastructure\\CustomExceptionHandler.cs",
+              "RelativeToolTip": "Services\\Catalog\\Catalog.WebAPI\\Infrastructure\\CustomExceptionHandler.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAcAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-20T20:12:58.62Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ValidationBehavior.cs",
-              "DocumentMoniker": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Catalog\\Catalog.Application\\Common\\Behaviors\\ValidationBehavior.cs",
-              "RelativeDocumentMoniker": "Services\\Catalog\\Catalog.Application\\Common\\Behaviors\\ValidationBehavior.cs",
-              "ToolTip": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Catalog\\Catalog.Application\\Common\\Behaviors\\ValidationBehavior.cs",
-              "RelativeToolTip": "Services\\Catalog\\Catalog.Application\\Common\\Behaviors\\ValidationBehavior.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAgwB4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-20T19:55:30.579Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ValidationException.cs",
-              "DocumentMoniker": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Catalog\\Catalog.Application\\Common\\Exceptions\\ValidationException.cs",
-              "RelativeDocumentMoniker": "Services\\Catalog\\Catalog.Application\\Common\\Exceptions\\ValidationException.cs",
-              "ToolTip": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Catalog\\Catalog.Application\\Common\\Exceptions\\ValidationException.cs",
-              "RelativeToolTip": "Services\\Catalog\\Catalog.Application\\Common\\Exceptions\\ValidationException.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAQwAkAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-20T19:45:27.548Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MappingExtension.cs",
-              "DocumentMoniker": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Catalog\\Catalog.Application\\Common\\Mapping\\MappingExtension.cs",
-              "RelativeDocumentMoniker": "Services\\Catalog\\Catalog.Application\\Common\\Mapping\\MappingExtension.cs",
-              "ToolTip": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Catalog\\Catalog.Application\\Common\\Mapping\\MappingExtension.cs",
-              "RelativeToolTip": "Services\\Catalog\\Catalog.Application\\Common\\Mapping\\MappingExtension.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-20T19:34:21.927Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CategoryMapping.cs",
-              "DocumentMoniker": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Catalog\\Catalog.Application\\Common\\Mapping\\CategoryMapping.cs",
-              "RelativeDocumentMoniker": "Services\\Catalog\\Catalog.Application\\Common\\Mapping\\CategoryMapping.cs",
-              "ToolTip": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Catalog\\Catalog.Application\\Common\\Mapping\\CategoryMapping.cs",
-              "RelativeToolTip": "Services\\Catalog\\Catalog.Application\\Common\\Mapping\\CategoryMapping.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAeAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-20T19:32:29.741Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "CategoryDto.cs",
-              "DocumentMoniker": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Catalog\\Catalog.Application\\Common\\Models\\CategoryDto.cs",
-              "RelativeDocumentMoniker": "Services\\Catalog\\Catalog.Application\\Common\\Models\\CategoryDto.cs",
-              "ToolTip": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Catalog\\Catalog.Application\\Common\\Models\\CategoryDto.cs",
-              "RelativeToolTip": "Services\\Catalog\\Catalog.Application\\Common\\Models\\CategoryDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-20T19:31:22.921Z",
+              "WhenOpened": "2024-09-21T07:26:00.278Z",
               "EditorCaption": ""
             }
           ]
