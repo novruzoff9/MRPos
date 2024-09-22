@@ -9,7 +9,7 @@ public class CustomExceptionHandler : IExceptionHandler
 {
     private readonly Dictionary<Type, Func<HttpContext, Exception, Task>> _exceptionHandlers;
 
-    public CustomExceptionHandler(Dictionary<Type, Func<HttpContext, Exception, Task>> exceptionHandlers)
+    public CustomExceptionHandler()
     {
         _exceptionHandlers = new()
         {
@@ -44,6 +44,7 @@ public class CustomExceptionHandler : IExceptionHandler
 
     public async Task NotFoundException(HttpContext httpContext, Exception ex)
     {
-
+        //TODO: NotFoundException implementation here
     }
 }
+

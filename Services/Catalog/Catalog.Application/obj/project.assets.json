@@ -1608,8 +1608,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Catalog\\Catalog.Domain\\Catalog.Domain.csproj": {
-              "projectPath": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Catalog\\Catalog.Domain\\Catalog.Domain.csproj"
+            "c:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Catalog\\Catalog.Domain\\Catalog.Domain.csproj": {
+              "projectPath": "c:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Catalog\\Catalog.Domain\\Catalog.Domain.csproj"
             }
           }
         }

@@ -1,3 +1,5 @@
+using Catalog.WebAPI;
+using Microsoft.Extensions.Configuration;
 using Catalog.Infrasturucture;
 using Catalog.Application;
 
@@ -10,8 +12,14 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+// Infrastructure services
 builder.Services.AddInfrastructureServices(builder.Configuration);
+
+// Application services
 builder.Services.AddApplicationServices(builder.Configuration);
+
+// WebApi services
+builder.Services.AddWebApiServices(builder.Configuration);
 
 var app = builder.Build();
 

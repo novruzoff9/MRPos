@@ -26,6 +26,8 @@ public class DeleteCategoryCommandHandler : IRequestHandler<DeleteCategory, bool
         var category = await _context.Categories.FirstOrDefaultAsync(x => x.Id == request.Id, cancellationToken);
         if(category == null) { return false; }
         _context.Categories.Remove(category);
+
+        await _context.SaveChangesAsync(cancellationToken);
         return true;
     }
 }

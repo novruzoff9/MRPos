@@ -30,6 +30,8 @@ public class EditCategoryCommandHandler : IRequestHandler<EditCategory, bool>
         category.Name = request.Name;
 
         _context.Categories.Update(category);
+
+        await _context.SaveChangesAsync(cancellationToken);
         return true;
     }
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Catalog\\Catalog.Domain\\Catalog.Domain.csproj": {}
+    "c:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Catalog\\Catalog.Domain\\Catalog.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Catalog\\Catalog.Domain\\Catalog.Domain.csproj": {
+    "c:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Catalog\\Catalog.Domain\\Catalog.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Catalog\\Catalog.Domain\\Catalog.Domain.csproj",
+        "projectUniqueName": "c:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Catalog\\Catalog.Domain\\Catalog.Domain.csproj",
         "projectName": "Catalog.Domain",
-        "projectPath": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Catalog\\Catalog.Domain\\Catalog.Domain.csproj",
+        "projectPath": "c:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Catalog\\Catalog.Domain\\Catalog.Domain.csproj",
         "packagesPath": "C:\\Users\\Novruzoff\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Catalog\\Catalog.Domain\\obj\\",
+        "outputPath": "c:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Catalog\\Catalog.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Novruzoff\\AppData\\Roaming\\NuGet\\NuGet.Config",

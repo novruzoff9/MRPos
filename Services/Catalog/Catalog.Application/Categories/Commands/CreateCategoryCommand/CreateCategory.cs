@@ -28,8 +28,10 @@ public class CreateCategoryCommandHandler : IRequestHandler<CreateCategory, bool
             Name = request.Name
         };
 
-        await _context.Categories.AddAsync(category, cancellationToken: cancellationToken);
+        await _context.Categories.AddAsync(category, cancellationToken);
 
-        return true;
+        var success = await _context.SaveChangesAsync(cancellationToken) > 0;
+
+        return success;
     }
 }
