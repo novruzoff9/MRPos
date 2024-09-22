@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mhHlWcO48/o=",
+  "dgSpecHash": "esGMBRSwKNM=",
   "success": true,
-  "projectFilePath": "c:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Catalog\\Catalog.Domain\\Catalog.Domain.csproj",
+  "projectFilePath": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Catalog\\Catalog.Domain\\Catalog.Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Novruzoff\\.nuget\\packages\\awssdk.core\\3.7.100.14\\awssdk.core.3.7.100.14.nupkg.sha512",
     "C:\\Users\\Novruzoff\\.nuget\\packages\\awssdk.securitytoken\\3.7.100.14\\awssdk.securitytoken.3.7.100.14.nupkg.sha512",

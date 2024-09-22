@@ -2,6 +2,9 @@
 using Catalog.Application.Categories.Commands.EditCategoryCommand;
 using Catalog.Application.Categories.Queries.GetCategoryQuery;
 using Catalog.Application.Products.Commands.CreateProductCommand;
+using Catalog.Application.Products.Commands.DeleteProductCommand;
+using Catalog.Application.Products.Commands.EditProductCommand;
+using Catalog.Application.Products.Queries.GetProductQuery;
 using Catalog.Application.Products.Queries.GetProductsQuery;
 using Microsoft.AspNetCore.Mvc;
 
@@ -28,12 +31,12 @@ public class ProductsController : BaseController
     [HttpGet("{id}")]
     public async Task<IActionResult> GetById(int id)
     {
-        var result = await Sender.Send(new GetCategory(id));
+        var result = await Sender.Send(new GetProduct(id));
         return Ok(result);
     }
 
     [HttpPut]
-    public async Task<IActionResult> Edit(EditCategory command)
+    public async Task<IActionResult> Edit(EditProduct command)
     {
         var result = await Sender.Send(command);
         return Ok(result);
@@ -42,7 +45,7 @@ public class ProductsController : BaseController
     [HttpDelete("{id}")]
     public async Task<IActionResult> Delete(int id)
     {
-        var result = await Sender.Send(new DeleteCategory(id));
+        var result = await Sender.Send(new DeleteProduct(id));
         return Ok(result);
     }
 }
