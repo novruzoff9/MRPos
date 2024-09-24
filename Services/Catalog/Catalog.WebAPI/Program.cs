@@ -2,6 +2,7 @@ using Catalog.WebAPI;
 using Microsoft.Extensions.Configuration;
 using Catalog.Infrasturucture;
 using Catalog.Application;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -21,6 +22,20 @@ builder.Services.AddApplicationServices(builder.Configuration);
 // WebApi services
 builder.Services.AddWebApiServices(builder.Configuration);
 
+builder.Services.AddControllers(options =>
+{
+
+});
+
+builder.Services
+    .AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
+{
+    options.Authority = builder.Configuration["IdentityServerUrl"];
+    options.Audience = "CatalogApiFullAccess";
+    options.RequireHttpsMetadata = false;
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -30,6 +45,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

@@ -1,0 +1,29 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\PhotoStock\\PhotoStock\\wwwroot\\ProductImages\\5692f7a3-2e7c-4779-9749-01ab45f8e774_Xbox X.png",
+      "PackagePath": "staticwebassets\\ProductImages\\5692f7a3-2e7c-4779-9749-01ab45f8e774_Xbox X.png"
+    },
+    {
+      "Id": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\PhotoStock\\PhotoStock\\wwwroot\\ProductImages\\592f9b62-b32f-4a87-ab97-8ec5284cf7f1_Xbox X.png",
+      "PackagePath": "staticwebassets\\ProductImages\\592f9b62-b32f-4a87-ab97-8ec5284cf7f1_Xbox X.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.PhotoStock.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.PhotoStock.props",
+      "PackagePath": "build\\PhotoStock.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.PhotoStock.props",
+      "PackagePath": "buildMultiTargeting\\PhotoStock.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.PhotoStock.props",
+      "PackagePath": "buildTransitive\\PhotoStock.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

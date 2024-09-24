@@ -161,3 +161,4 @@ C:\Users\Novruzoff\source\repos\MRPos\Services\Catalog\Catalog.WebAPI\obj\Debug\
 C:\Users\Novruzoff\source\repos\MRPos\Services\Catalog\Catalog.WebAPI\obj\Debug\net8.0\Catalog.WebAPI.pdb
 C:\Users\Novruzoff\source\repos\MRPos\Services\Catalog\Catalog.WebAPI\obj\Debug\net8.0\Catalog.WebAPI.genruntimeconfig.cache
 C:\Users\Novruzoff\source\repos\MRPos\Services\Catalog\Catalog.WebAPI\obj\Debug\net8.0\ref\Catalog.WebAPI.dll
+C:\Users\Novruzoff\source\repos\MRPos\Services\Catalog\Catalog.WebAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

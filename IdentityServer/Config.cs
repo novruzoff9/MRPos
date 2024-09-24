@@ -10,6 +10,18 @@ namespace IdentityServer
 {
     public static class Config
     {
+        public static IEnumerable<ApiResource> ApiResources => new List<ApiResource>
+        {
+            new ApiResource("CatalogApiFullAccess")
+            {
+                Scopes =
+                {
+                    "CatalogApiFullAccess"
+                }
+            },
+            new ApiResource(IdentityServerConstants.LocalApi.ScopeName)
+        };
+
         public static IEnumerable<IdentityResource> IdentityResources =>
             new IdentityResource[]
             {

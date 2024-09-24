@@ -3,6 +3,7 @@ using Catalog.Application.Categories.Commands.DeleteCategoryCommand;
 using Catalog.Application.Categories.Commands.EditCategoryCommand;
 using Catalog.Application.Categories.Queries.GetCategoriesQuery;
 using Catalog.Application.Categories.Queries.GetCategoryQuery;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -10,6 +11,7 @@ namespace Catalog.WebAPI.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
+[Authorize]
 public class CategoriesController : BaseController
 {
 
