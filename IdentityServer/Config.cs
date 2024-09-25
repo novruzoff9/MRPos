@@ -4,6 +4,8 @@
 
 using IdentityServer4;
 using IdentityServer4.Models;
+using Microsoft.VisualBasic;
+using System;
 using System.Collections.Generic;
 
 namespace IdentityServer
@@ -12,13 +14,8 @@ namespace IdentityServer
     {
         public static IEnumerable<ApiResource> ApiResources => new List<ApiResource>
         {
-            new ApiResource("CatalogApiFullAccess")
-            {
-                Scopes =
-                {
-                    "CatalogApiFullAccess"
-                }
-            },
+            new ApiResource("CatalogAPIFullAccess") { Scopes = { "CatalogAPIFullAccess" } },
+            new ApiResource("ImageAPIFullAccess") { Scopes = { "ImageAPIFullAccess" }, },
             new ApiResource(IdentityServerConstants.LocalApi.ScopeName)
         };
 
@@ -41,6 +38,7 @@ namespace IdentityServer
             new ApiScope[]
             {
                 new ApiScope("CatalogAPIFullAccess", "Access for Catalog Api application"),
+                new ApiScope("ImageAPIFullAccess", "Access for Image Api application"),
                 new ApiScope(IdentityServerConstants.LocalApi.ScopeName)
             };
 
@@ -55,25 +53,38 @@ namespace IdentityServer
                     AllowedGrantTypes = GrantTypes.ClientCredentials,
                     ClientSecrets = { new Secret("511536EF-F270-4058-80CA-1C89C192F69A".Sha256()) },
 
-                    AllowedScopes = { 
+                    AllowedScopes = {
                         "CatalogAPIFullAccess",
+                        "ImageAPIFullAccess",
                         IdentityServerConstants.LocalApi.ScopeName
                     }
                 },
 
                 new Client
                 {
-                    ClientId = "interactive",
+                    ClientId = "MVCUserApiClient",
                     ClientSecrets = { new Secret("49C1A7E1-0C79-4A89-A3D6-A37998FB86B0".Sha256()) },
 
-                    AllowedGrantTypes = GrantTypes.Code,
-
-                    RedirectUris = { "https://localhost:44300/signin-oidc" },
-                    FrontChannelLogoutUri = "https://localhost:44300/signout-oidc",
-                    PostLogoutRedirectUris = { "https://localhost:44300/signout-callback-oidc" },
-
                     AllowOfflineAccess = true,
-                    AllowedScopes = { "openid", "profile", "scope2" }
+                    AllowedGrantTypes = GrantTypes.ResourceOwnerPassword,
+
+                    //RedirectUris = { "https://localhost:44300/signin-oidc" },
+                    //FrontChannelLogoutUri = "https://localhost:44300/signout-oidc",
+                    //PostLogoutRedirectUris = { "https://localhost:44300/signout-callback-oidc" },
+
+                    AllowedScopes = { 
+                        "roles",
+                        "CatalogAPIFullAccess",
+                        IdentityServerConstants.LocalApi.ScopeName,
+                        IdentityServerConstants.StandardScopes.Email,
+                        IdentityServerConstants.StandardScopes.OpenId,
+                        IdentityServerConstants.StandardScopes.Profile,
+                        IdentityServerConstants.StandardScopes.OfflineAccess
+                    },
+                    AccessTokenType = AccessTokenType.Jwt,
+                    AccessTokenLifetime = 2 * 60 * 60,
+                    AbsoluteRefreshTokenLifetime = (int)(DateTime.Now.AddDays(30) - DateTime.Now).TotalSeconds,
+                    RefreshTokenUsage = TokenUsage.ReUse
                 },
             };
     }

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "8x+FLVFwrKTf8D0OseGNq5ZxuWq+iAl3T0NvmuEYiXw=",
+  "Hash": "vv0RQh+99u6ugXnXZut8LYTx9aV58l0neoK437n3vsQ=",
   "Source": "PhotoStock",
   "BasePath": "_content/PhotoStock",
   "Mode": "Default",
@@ -15,44 +15,5 @@
       "Pattern": "**"
     }
   ],
-  "Assets": [
-    {
-      "Identity": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\PhotoStock\\PhotoStock\\wwwroot\\ProductImages\\5692f7a3-2e7c-4779-9749-01ab45f8e774_Xbox X.png",
-      "SourceId": "PhotoStock",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\PhotoStock\\PhotoStock\\wwwroot\\",
-      "BasePath": "_content/PhotoStock",
-      "RelativePath": "ProductImages/5692f7a3-2e7c-4779-9749-01ab45f8e774_Xbox X.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\ProductImages\\5692f7a3-2e7c-4779-9749-01ab45f8e774_Xbox X.png"
-    },
-    {
-      "Identity": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\PhotoStock\\PhotoStock\\wwwroot\\ProductImages\\592f9b62-b32f-4a87-ab97-8ec5284cf7f1_Xbox X.png",
-      "SourceId": "PhotoStock",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\PhotoStock\\PhotoStock\\wwwroot\\",
-      "BasePath": "_content/PhotoStock",
-      "RelativePath": "ProductImages/592f9b62-b32f-4a87-ab97-8ec5284cf7f1_Xbox X.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\ProductImages\\592f9b62-b32f-4a87-ab97-8ec5284cf7f1_Xbox X.png"
-    }
-  ]
+  "Assets": []
 }

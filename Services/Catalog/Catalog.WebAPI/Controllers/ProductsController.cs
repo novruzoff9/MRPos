@@ -6,12 +6,14 @@ using Catalog.Application.Products.Commands.DeleteProductCommand;
 using Catalog.Application.Products.Commands.EditProductCommand;
 using Catalog.Application.Products.Queries.GetProductQuery;
 using Catalog.Application.Products.Queries.GetProductsQuery;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Catalog.WebAPI.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
+[AllowAnonymous]
 public class ProductsController : BaseController
 {
     [HttpPost]

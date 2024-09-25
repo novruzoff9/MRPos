@@ -15,5 +15,10 @@ public class ProductMapping : BaseEntityMapping<Product>
 
         builder.Property(e=>e.Price)
             .HasColumnType("decimal(18,2)");
+
+        builder.HasOne(e => e.Category)
+            .WithMany(c => c.Products)
+            .HasForeignKey(e => e.CategoryId)
+            .OnDelete(DeleteBehavior.Restrict);
     }
 }

@@ -3,7 +3,7 @@ using Catalog.Domain.Entities;
 
 namespace Catalog.Application.Products.Commands.CreateProductCommand;
 
-public record CreateProduct(string Name, string Description, decimal Price) : IRequest<bool>;
+public record CreateProduct(string Name, string Description, decimal Price, int categoryId) : IRequest<bool>;
 
 public class CreateProductCommandHandler : IRequestHandler<CreateProduct, bool>
 {
@@ -23,6 +23,7 @@ public class CreateProductCommandHandler : IRequestHandler<CreateProduct, bool>
             Name = request.Name,
             Description = request.Description,
             Price = request.Price,
+            CategoryId = request.categoryId,
             Created = DateTime.UtcNow
         };
 

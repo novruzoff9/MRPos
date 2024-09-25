@@ -3,6 +3,8 @@ using Microsoft.Extensions.Configuration;
 using Catalog.Infrasturucture;
 using Catalog.Application;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc.Authorization;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -22,19 +24,23 @@ builder.Services.AddApplicationServices(builder.Configuration);
 // WebApi services
 builder.Services.AddWebApiServices(builder.Configuration);
 
+var reqriedAuthorizationPolicy = new AuthorizationPolicyBuilder()
+    .RequireAuthenticatedUser()
+    .Build();
+
 builder.Services.AddControllers(options =>
 {
-
+    options.Filters.Add(new AuthorizeFilter(reqriedAuthorizationPolicy));
 });
 
 builder.Services
     .AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
-{
+    {
     options.Authority = builder.Configuration["IdentityServerUrl"];
-    options.Audience = "CatalogApiFullAccess";
+    options.Audience = "CatalogAPIFullAccess";
     options.RequireHttpsMetadata = false;
-});
+    });
 
 var app = builder.Build();
 

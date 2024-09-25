@@ -33,3 +33,11 @@ C:\Users\Novruzoff\source\repos\MRPos\Services\PhotoStock\PhotoStock\obj\Debug\n
 C:\Users\Novruzoff\source\repos\MRPos\Services\PhotoStock\PhotoStock\obj\Debug\net8.0\PhotoStock.genruntimeconfig.cache
 C:\Users\Novruzoff\source\repos\MRPos\Services\PhotoStock\PhotoStock\obj\Debug\net8.0\ref\PhotoStock.dll
 C:\Users\Novruzoff\source\repos\MRPos\Services\PhotoStock\PhotoStock\bin\Debug\net8.0\PhotoStock.staticwebassets.runtime.json
+C:\Users\Novruzoff\source\repos\MRPos\Services\PhotoStock\PhotoStock\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Novruzoff\source\repos\MRPos\Services\PhotoStock\PhotoStock\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Novruzoff\source\repos\MRPos\Services\PhotoStock\PhotoStock\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Novruzoff\source\repos\MRPos\Services\PhotoStock\PhotoStock\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Novruzoff\source\repos\MRPos\Services\PhotoStock\PhotoStock\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Novruzoff\source\repos\MRPos\Services\PhotoStock\PhotoStock\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Novruzoff\source\repos\MRPos\Services\PhotoStock\PhotoStock\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Novruzoff\source\repos\MRPos\Services\PhotoStock\PhotoStock\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll

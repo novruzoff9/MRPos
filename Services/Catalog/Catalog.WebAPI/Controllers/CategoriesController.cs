@@ -11,7 +11,7 @@ namespace Catalog.WebAPI.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
-[Authorize]
+[AllowAnonymous]
 public class CategoriesController : BaseController
 {
 
