@@ -3,20 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{996A420A-0CDA-4F2C-B391-3B3262496174}|Menu\\Menu\\Menu.csproj|c:\\users\\novruzoff\\source\\repos\\mrpos\\menu\\menu\\data\\menudbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{996A420A-0CDA-4F2C-B391-3B3262496174}|Menu\\Menu\\Menu.csproj|solutionrelative:menu\\menu\\data\\menudbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{86BE71E7-F305-4436-B614-0744CB10F41C}|Services\\Organization\\Organization.WebAPI\\Organization.WebAPI.csproj|c:\\users\\novruzoff\\source\\repos\\mrpos\\services\\organization\\organization.webapi\\controllers\\companiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{86BE71E7-F305-4436-B614-0744CB10F41C}|Services\\Organization\\Organization.WebAPI\\Organization.WebAPI.csproj|solutionrelative:services\\organization\\organization.webapi\\controllers\\companiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{996A420A-0CDA-4F2C-B391-3B3262496174}|Menu\\Menu\\Menu.csproj|c:\\users\\novruzoff\\source\\repos\\mrpos\\menu\\menu\\models\\menuitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{996A420A-0CDA-4F2C-B391-3B3262496174}|Menu\\Menu\\Menu.csproj|solutionrelative:menu\\menu\\models\\menuitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{996A420A-0CDA-4F2C-B391-3B3262496174}|Menu\\Menu\\Menu.csproj|c:\\users\\novruzoff\\source\\repos\\mrpos\\menu\\menu\\controllers\\menucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{996A420A-0CDA-4F2C-B391-3B3262496174}|Menu\\Menu\\Menu.csproj|solutionrelative:menu\\menu\\controllers\\menucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0BD1CE26-5D34-4F16-8848-C96FF4D483A3}|Shared\\Shared\\Shared.csproj|c:\\users\\novruzoff\\source\\repos\\mrpos\\shared\\shared\\services\\isharedidentityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0BD1CE26-5D34-4F16-8848-C96FF4D483A3}|Shared\\Shared\\Shared.csproj|solutionrelative:shared\\shared\\services\\isharedidentityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{86BE71E7-F305-4436-B614-0744CB10F41C}|Services\\Organization\\Organization.WebAPI\\Organization.WebAPI.csproj|c:\\users\\novruzoff\\source\\repos\\mrpos\\services\\organization\\organization.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{86BE71E7-F305-4436-B614-0744CB10F41C}|Services\\Organization\\Organization.WebAPI\\Organization.WebAPI.csproj|solutionrelative:services\\organization\\organization.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,62 +18,36 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Organization\\Organization.WebAPI\\Program.cs",
+              "RelativeDocumentMoniker": "Services\\Organization\\Organization.WebAPI\\Program.cs",
+              "ToolTip": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Organization\\Organization.WebAPI\\Program.cs",
+              "RelativeToolTip": "Services\\Organization\\Organization.WebAPI\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-27T09:30:28.537Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ISharedIdentityService.cs",
-              "DocumentMoniker": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Shared\\Shared\\Services\\ISharedIdentityService.cs",
-              "RelativeDocumentMoniker": "Shared\\Shared\\Services\\ISharedIdentityService.cs",
-              "ToolTip": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Shared\\Shared\\Services\\ISharedIdentityService.cs",
-              "RelativeToolTip": "Shared\\Shared\\Services\\ISharedIdentityService.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAYwDEAAAA5AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-25T17:43:32.893Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MenuController.cs",
-              "DocumentMoniker": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Menu\\Menu\\Controllers\\MenuController.cs",
-              "RelativeDocumentMoniker": "Menu\\Menu\\Controllers\\MenuController.cs",
-              "ToolTip": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Menu\\Menu\\Controllers\\MenuController.cs",
-              "RelativeToolTip": "Menu\\Menu\\Controllers\\MenuController.cs",
-              "ViewState": "AQIAABgAAAAAAAAAAAASwCgAAAAhAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-25T17:08:59.19Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MenuItem.cs",
-              "DocumentMoniker": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Menu\\Menu\\Models\\MenuItem.cs",
-              "RelativeDocumentMoniker": "Menu\\Menu\\Models\\MenuItem.cs",
-              "ToolTip": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Menu\\Menu\\Models\\MenuItem.cs",
-              "RelativeToolTip": "Menu\\Menu\\Models\\MenuItem.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAoAAAAZAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-25T17:08:11.243Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "MenuDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Menu\\Menu\\Data\\MenuDbContext.cs",
-              "RelativeDocumentMoniker": "Menu\\Menu\\Data\\MenuDbContext.cs",
-              "ToolTip": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Menu\\Menu\\Data\\MenuDbContext.cs",
-              "RelativeToolTip": "Menu\\Menu\\Data\\MenuDbContext.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAxwBMAAAAFAAAA",
+              "Title": "CompaniesController.cs",
+              "DocumentMoniker": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Organization\\Organization.WebAPI\\Controllers\\CompaniesController.cs",
+              "RelativeDocumentMoniker": "Services\\Organization\\Organization.WebAPI\\Controllers\\CompaniesController.cs",
+              "ToolTip": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Organization\\Organization.WebAPI\\Controllers\\CompaniesController.cs",
+              "RelativeToolTip": "Services\\Organization\\Organization.WebAPI\\Controllers\\CompaniesController.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAswB0AAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-25T17:08:08.809Z",
+              "WhenOpened": "2024-09-27T09:10:40.683Z",
               "EditorCaption": ""
             }
           ]

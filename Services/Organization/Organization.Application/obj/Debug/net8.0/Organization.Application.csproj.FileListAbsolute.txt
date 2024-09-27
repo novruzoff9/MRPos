@@ -1,0 +1,16 @@
+C:\Users\Novruzoff\source\repos\MRPos\Services\Organization\Organization.Application\obj\Debug\net8.0\Organization.Application.csproj.AssemblyReference.cache
+C:\Users\Novruzoff\source\repos\MRPos\Services\Organization\Organization.Application\obj\Debug\net8.0\Organization.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Novruzoff\source\repos\MRPos\Services\Organization\Organization.Application\obj\Debug\net8.0\Organization.Application.AssemblyInfoInputs.cache
+C:\Users\Novruzoff\source\repos\MRPos\Services\Organization\Organization.Application\obj\Debug\net8.0\Organization.Application.AssemblyInfo.cs
+C:\Users\Novruzoff\source\repos\MRPos\Services\Organization\Organization.Application\obj\Debug\net8.0\Organization.Application.csproj.CoreCompileInputs.cache
+C:\Users\Novruzoff\source\repos\MRPos\Services\Organization\Organization.Application\obj\Debug\net8.0\Organization.Application.sourcelink.json
+C:\Users\Novruzoff\source\repos\MRPos\Services\Organization\Organization.Application\bin\Debug\net8.0\Organization.Application.deps.json
+C:\Users\Novruzoff\source\repos\MRPos\Services\Organization\Organization.Application\bin\Debug\net8.0\Organization.Application.dll
+C:\Users\Novruzoff\source\repos\MRPos\Services\Organization\Organization.Application\bin\Debug\net8.0\Organization.Application.pdb
+C:\Users\Novruzoff\source\repos\MRPos\Services\Organization\Organization.Application\bin\Debug\net8.0\Organization.Domain.dll
+C:\Users\Novruzoff\source\repos\MRPos\Services\Organization\Organization.Application\bin\Debug\net8.0\Organization.Domain.pdb
+C:\Users\Novruzoff\source\repos\MRPos\Services\Organization\Organization.Application\obj\Debug\net8.0\Organiza.17FE193D.Up2Date
+C:\Users\Novruzoff\source\repos\MRPos\Services\Organization\Organization.Application\obj\Debug\net8.0\Organization.Application.dll
+C:\Users\Novruzoff\source\repos\MRPos\Services\Organization\Organization.Application\obj\Debug\net8.0\refint\Organization.Application.dll
+C:\Users\Novruzoff\source\repos\MRPos\Services\Organization\Organization.Application\obj\Debug\net8.0\Organization.Application.pdb
+C:\Users\Novruzoff\source\repos\MRPos\Services\Organization\Organization.Application\obj\Debug\net8.0\ref\Organization.Application.dll
