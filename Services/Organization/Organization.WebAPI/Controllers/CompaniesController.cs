@@ -1,5 +1,8 @@
 ﻿using Catalog.Application.Companies.Commands.CreateCompanyCommand;
+using Catalog.Application.Companies.Commands.DeleteCompanyCommand;
+using Catalog.Application.Companies.Commands.EditCompanyCommand;
 using Catalog.Application.Companies.Queries.GetCompaniesQuery;
+using Catalog.Application.Companies.Queries.GetCompanyQuery;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -27,6 +30,27 @@ public class CompaniesController : BaseController
     public async Task<IActionResult> Get()
     {
         var result = await Sender.Send(new GetCompanies());
+        return Ok(result);
+    }
+
+    [HttpGet("{id}")]
+    public async Task<IActionResult> GetById(string id)
+    {
+        var result = await Sender.Send(new GetCompany(id));
+        return Ok(result);
+    }
+
+    [HttpPut]
+    public async Task<IActionResult> Edit(EditCompany command)
+    {
+        var result = await Sender.Send(command);
+        return Ok(result);
+    }
+
+    [HttpDelete]
+    public async Task<IActionResult> Delete(DeleteCompany command)
+    {
+        var result = await Sender.Send(command);
         return Ok(result);
     }
 }

@@ -1,4 +1,11 @@
+using MediatR;
+using Microsoft.EntityFrameworkCore;
+using Organization.Application;
+using Organization.Application.Common.Behaviors;
+using Organization.Application.Common.Interfaces;
 using Organization.Infrastructure;
+using Organization.WebAPI;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,6 +16,13 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+//Infrastructure Layer
+builder.Services.AddInfrastructureServices(builder.Configuration);
+
+//Application Layer
+builder.Services.AddApplicationServices(builder.Configuration);
+
+builder.Services.AddWebApiServices(builder.Configuration);
 
 builder.Services.AddControllers();
 

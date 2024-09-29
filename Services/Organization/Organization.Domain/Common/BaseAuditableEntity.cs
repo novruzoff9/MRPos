@@ -1,4 +1,6 @@
-﻿namespace Organization.Domain.Common;
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Organization.Domain.Common;
 
 public class BaseAuditableEntity : BaseEntity
 {

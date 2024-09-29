@@ -1,6 +1,6 @@
 namespace Catalog.Application.Companies.Commands.EditCompanyCommand;
 
-public record EditCompany(string Id, string Name, string Description) : IRequest<bool>;
+public record EditCompany(string Id, string Name, string Description, string LogoUrl) : IRequest<bool>;
 
 public class EditCompanyCommandHandler : IRequestHandler<EditCompany, bool>
 {
@@ -23,6 +23,7 @@ public class EditCompanyCommandHandler : IRequestHandler<EditCompany, bool>
 
         company.Name = request.Name;
         company.Description = request.Description;
+        company.LogoUrl = request.LogoUrl;
         company.LastModified = DateTime.UtcNow;
 
         _context.Companies.Update(company);
