@@ -306,3 +306,6 @@ C:\Users\Novruzoff\source\repos\MRPos\Services\Menu\Menu\obj\Debug\net8.0\refint
 C:\Users\Novruzoff\source\repos\MRPos\Services\Menu\Menu\obj\Debug\net8.0\Menu.pdb
 C:\Users\Novruzoff\source\repos\MRPos\Services\Menu\Menu\obj\Debug\net8.0\Menu.genruntimeconfig.cache
 C:\Users\Novruzoff\source\repos\MRPos\Services\Menu\Menu\obj\Debug\net8.0\ref\Menu.dll
+C:\Users\Novruzoff\source\repos\MRPos\Services\Menu\Menu\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\Novruzoff\source\repos\MRPos\Services\Menu\Menu\bin\Debug\net8.0\Shared.dll
+C:\Users\Novruzoff\source\repos\MRPos\Services\Menu\Menu\bin\Debug\net8.0\Shared.pdb

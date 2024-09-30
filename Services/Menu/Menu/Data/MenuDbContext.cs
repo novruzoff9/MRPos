@@ -12,7 +12,7 @@ public class MenuDbContext : DbContext
         base.OnModelCreating(modelBuilder);
 
         modelBuilder.Entity<MenuItem>()
-            .HasKey(e => new { e.ProductId });
+            .HasKey(e => new { e.ProductId, e.BranchId });
 
         modelBuilder.Entity<MenuItem>()
             .Property(e => e.ProductId)

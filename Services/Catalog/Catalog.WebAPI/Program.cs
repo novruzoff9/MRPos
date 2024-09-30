@@ -30,7 +30,7 @@ var reqriedAuthorizationPolicy = new AuthorizationPolicyBuilder()
 
 builder.Services.AddControllers(options =>
 {
-    options.Filters.Add(new AuthorizeFilter(reqriedAuthorizationPolicy));
+    //options.Filters.Add(new AuthorizeFilter(reqriedAuthorizationPolicy));
 });
 
 builder.Services

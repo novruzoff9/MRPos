@@ -51,6 +51,7 @@ builder.Services.AddAuthorization(options =>
 {
     options.AddPolicy("WriteCompany", policy => policy.RequireRole("superadmin"));
     options.AddPolicy("ReadCompany", policy => policy.RequireRole("admin"));
+    options.AddPolicy("ReadCompany", policy => policy.RequireClaim(""));
 });
 
 var requiredAuthorizationPolicy = new AuthorizationPolicyBuilder()

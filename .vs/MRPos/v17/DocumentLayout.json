@@ -1,44 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Organization\\Organization.Infrastructure\\Migrations\\20240930082518_AddedAddressOwner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Services\\Organization\\Organization.Infrastructure\\Migrations\\20240930082518_AddedAddressOwner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4C9A792B-C4FE-4D08-8357-2A3835F843E7}|Services\\Organization\\Organization.Application\\Organization.Application.csproj|c:\\users\\novruzoff\\source\\repos\\mrpos\\services\\organization\\organization.application\\branches\\commands\\editbranchcommand\\editbranch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4C9A792B-C4FE-4D08-8357-2A3835F843E7}|Services\\Organization\\Organization.Application\\Organization.Application.csproj|solutionrelative:services\\organization\\organization.application\\branches\\commands\\editbranchcommand\\editbranch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4C9A792B-C4FE-4D08-8357-2A3835F843E7}|Services\\Organization\\Organization.Application\\Organization.Application.csproj|c:\\users\\novruzoff\\source\\repos\\mrpos\\services\\organization\\organization.application\\branches\\commands\\createbranchcommand\\createbranch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4C9A792B-C4FE-4D08-8357-2A3835F843E7}|Services\\Organization\\Organization.Application\\Organization.Application.csproj|solutionrelative:services\\organization\\organization.application\\branches\\commands\\createbranchcommand\\createbranch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ACC24B7A-3150-420B-9692-807630C4922A}|Services\\Organization\\Organization.Infrastructure\\Organization.Infrastructure.csproj|c:\\users\\novruzoff\\source\\repos\\mrpos\\services\\organization\\organization.infrastructure\\data\\configurations\\companymapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ACC24B7A-3150-420B-9692-807630C4922A}|Services\\Organization\\Organization.Infrastructure\\Organization.Infrastructure.csproj|solutionrelative:services\\organization\\organization.infrastructure\\data\\configurations\\companymapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84BB8F1C-9C42-4A13-98C9-714CD6BAEC2E}|Services\\Organization\\Organization.Domain\\Organization.Domain.csproj|c:\\users\\novruzoff\\source\\repos\\mrpos\\services\\organization\\organization.domain\\entities\\branch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84BB8F1C-9C42-4A13-98C9-714CD6BAEC2E}|Services\\Organization\\Organization.Domain\\Organization.Domain.csproj|solutionrelative:services\\organization\\organization.domain\\entities\\branch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ACC24B7A-3150-420B-9692-807630C4922A}|Services\\Organization\\Organization.Infrastructure\\Organization.Infrastructure.csproj|c:\\users\\novruzoff\\source\\repos\\mrpos\\services\\organization\\organization.infrastructure\\data\\configurations\\baseentitymapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ACC24B7A-3150-420B-9692-807630C4922A}|Services\\Organization\\Organization.Infrastructure\\Organization.Infrastructure.csproj|solutionrelative:services\\organization\\organization.infrastructure\\data\\configurations\\baseentitymapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84BB8F1C-9C42-4A13-98C9-714CD6BAEC2E}|Services\\Organization\\Organization.Domain\\Organization.Domain.csproj|c:\\users\\novruzoff\\source\\repos\\mrpos\\services\\organization\\organization.domain\\valueobjects\\address.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84BB8F1C-9C42-4A13-98C9-714CD6BAEC2E}|Services\\Organization\\Organization.Domain\\Organization.Domain.csproj|solutionrelative:services\\organization\\organization.domain\\valueobjects\\address.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84BB8F1C-9C42-4A13-98C9-714CD6BAEC2E}|Services\\Organization\\Organization.Domain\\Organization.Domain.csproj|c:\\users\\novruzoff\\source\\repos\\mrpos\\services\\organization\\organization.domain\\valueobjects\\valueobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84BB8F1C-9C42-4A13-98C9-714CD6BAEC2E}|Services\\Organization\\Organization.Domain\\Organization.Domain.csproj|solutionrelative:services\\organization\\organization.domain\\valueobjects\\valueobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{86BE71E7-F305-4436-B614-0744CB10F41C}|Services\\Organization\\Organization.WebAPI\\Organization.WebAPI.csproj|c:\\users\\novruzoff\\source\\repos\\mrpos\\services\\organization\\organization.webapi\\controllers\\branchescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{86BE71E7-F305-4436-B614-0744CB10F41C}|Services\\Organization\\Organization.WebAPI\\Organization.WebAPI.csproj|solutionrelative:services\\organization\\organization.webapi\\controllers\\branchescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -46,128 +9,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "20240930082518_AddedAddressOwner.cs",
-              "DocumentMoniker": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Organization\\Organization.Infrastructure\\Migrations\\20240930082518_AddedAddressOwner.cs",
-              "RelativeDocumentMoniker": "Services\\Organization\\Organization.Infrastructure\\Migrations\\20240930082518_AddedAddressOwner.cs",
-              "ToolTip": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Organization\\Organization.Infrastructure\\Migrations\\20240930082518_AddedAddressOwner.cs",
-              "RelativeToolTip": "Services\\Organization\\Organization.Infrastructure\\Migrations\\20240930082518_AddedAddressOwner.cs",
-              "ViewState": "AQIAACgAAAAAAAAAAAAgwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-30T08:25:18.271Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CreateBranch.cs",
-              "DocumentMoniker": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Organization\\Organization.Application\\Branches\\Commands\\CreateBranchCommand\\CreateBranch.cs",
-              "RelativeDocumentMoniker": "Services\\Organization\\Organization.Application\\Branches\\Commands\\CreateBranchCommand\\CreateBranch.cs",
-              "ToolTip": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Organization\\Organization.Application\\Branches\\Commands\\CreateBranchCommand\\CreateBranch.cs",
-              "RelativeToolTip": "Services\\Organization\\Organization.Application\\Branches\\Commands\\CreateBranchCommand\\CreateBranch.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAA5wBwAAAAmAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-30T08:22:12.61Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "EditBranch.cs",
-              "DocumentMoniker": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Organization\\Organization.Application\\Branches\\Commands\\EditBranchCommand\\EditBranch.cs",
-              "RelativeDocumentMoniker": "Services\\Organization\\Organization.Application\\Branches\\Commands\\EditBranchCommand\\EditBranch.cs",
-              "ToolTip": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Organization\\Organization.Application\\Branches\\Commands\\EditBranchCommand\\EditBranch.cs",
-              "RelativeToolTip": "Services\\Organization\\Organization.Application\\Branches\\Commands\\EditBranchCommand\\EditBranch.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAASwBsAAAAWAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-30T08:22:04.951Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "BaseEntityMapping.cs",
-              "DocumentMoniker": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Organization\\Organization.Infrastructure\\Data\\Configurations\\BaseEntityMapping.cs",
-              "RelativeDocumentMoniker": "Services\\Organization\\Organization.Infrastructure\\Data\\Configurations\\BaseEntityMapping.cs",
-              "ToolTip": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Organization\\Organization.Infrastructure\\Data\\Configurations\\BaseEntityMapping.cs",
-              "RelativeToolTip": "Services\\Organization\\Organization.Infrastructure\\Data\\Configurations\\BaseEntityMapping.cs",
-              "ViewState": "AQIAABUAAAAAAAAAAAAowCkAAAAmAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-30T08:19:43.517Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CompanyMapping.cs",
-              "DocumentMoniker": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Organization\\Organization.Infrastructure\\Data\\Configurations\\CompanyMapping.cs",
-              "RelativeDocumentMoniker": "Services\\Organization\\Organization.Infrastructure\\Data\\Configurations\\CompanyMapping.cs",
-              "ToolTip": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Organization\\Organization.Infrastructure\\Data\\Configurations\\CompanyMapping.cs",
-              "RelativeToolTip": "Services\\Organization\\Organization.Infrastructure\\Data\\Configurations\\CompanyMapping.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAxwBcAAAAoAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-30T08:19:29.344Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Branch.cs",
-              "DocumentMoniker": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Organization\\Organization.Domain\\Entities\\Branch.cs",
-              "RelativeDocumentMoniker": "Services\\Organization\\Organization.Domain\\Entities\\Branch.cs",
-              "ToolTip": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Organization\\Organization.Domain\\Entities\\Branch.cs",
-              "RelativeToolTip": "Services\\Organization\\Organization.Domain\\Entities\\Branch.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAArAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-30T08:12:47.674Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Address.cs",
-              "DocumentMoniker": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Organization\\Organization.Domain\\ValueObjects\\Address.cs",
-              "RelativeDocumentMoniker": "Services\\Organization\\Organization.Domain\\ValueObjects\\Address.cs",
-              "ToolTip": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Organization\\Organization.Domain\\ValueObjects\\Address.cs",
-              "RelativeToolTip": "Services\\Organization\\Organization.Domain\\ValueObjects\\Address.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAnAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-30T08:12:29.475Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ValueObject.cs",
-              "DocumentMoniker": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Organization\\Organization.Domain\\ValueObjects\\ValueObject.cs",
-              "RelativeDocumentMoniker": "Services\\Organization\\Organization.Domain\\ValueObjects\\ValueObject.cs",
-              "ToolTip": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Organization\\Organization.Domain\\ValueObjects\\ValueObject.cs",
-              "RelativeToolTip": "Services\\Organization\\Organization.Domain\\ValueObjects\\ValueObject.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAArAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-30T08:12:10.82Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "BranchesController.cs",
-              "DocumentMoniker": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Organization\\Organization.WebAPI\\Controllers\\BranchesController.cs",
-              "RelativeDocumentMoniker": "Services\\Organization\\Organization.WebAPI\\Controllers\\BranchesController.cs",
-              "ToolTip": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Organization\\Organization.WebAPI\\Controllers\\BranchesController.cs",
-              "RelativeToolTip": "Services\\Organization\\Organization.WebAPI\\Controllers\\BranchesController.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-30T08:08:24.745Z",
-              "EditorCaption": ""
             }
           ]
         }

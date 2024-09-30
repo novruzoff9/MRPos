@@ -13,6 +13,9 @@ public class CategoryMapping : BaseEntityMapping<Category>
         builder.Property(e => e.Name)
             .HasMaxLength(100);
 
+        builder.Property(e=>e.CompanyId)
+            .HasMaxLength(6);
+
         builder.HasMany(e => e.Products)
             .WithOne(c => c.Category)
             .HasForeignKey(e => e.CategoryId)

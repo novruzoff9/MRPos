@@ -26,6 +26,9 @@ namespace Menu.Migrations
                     b.Property<int>("ProductId")
                         .HasColumnType("int");
 
+                    b.Property<string>("BranchId")
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<int>("CategoryId")
                         .HasColumnType("int");
 
@@ -40,7 +43,7 @@ namespace Menu.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("ProductId");
+                    b.HasKey("ProductId", "BranchId");
 
                     b.ToTable("MenuItems");
                 });
