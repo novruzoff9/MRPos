@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Identity;
+using System;
 
 namespace IdentityServer.Models
 {
@@ -9,5 +10,14 @@ namespace IdentityServer.Models
 
     public class ApplicationRole : IdentityRole<string>
     {
+        public ApplicationRole()
+        {
+            this.Id = Guid.NewGuid().ToString();
+        }
+
+        public ApplicationRole(string Name) : this()
+        {
+            this.Name = Name;
+        }
     }
 }

@@ -24,6 +24,5 @@ public class CompanyMapping : BaseEntityMapping<Company>
         builder.HasMany(e => e.Branches)
             .WithOne(b => b.Company)
             .HasForeignKey(b => b.CompanyId);
-
     }
 }

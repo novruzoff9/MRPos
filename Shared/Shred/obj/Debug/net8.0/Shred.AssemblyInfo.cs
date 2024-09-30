@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Shred")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7e15eec5b85eb9111686117515d70155b962170d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+35378597b862e450871d76dac0a85732b5012ef1")]
 [assembly: System.Reflection.AssemblyProductAttribute("Shred")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Shred")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

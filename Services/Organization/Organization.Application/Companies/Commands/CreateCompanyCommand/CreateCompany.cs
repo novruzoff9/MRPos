@@ -17,7 +17,7 @@ public class CreateCompanyCommandHandler : IRequestHandler<CreateCompany, bool>
     {
         Guard.Against.Null(request, nameof(CreateCompany));
         GenerateOrganizationId IdGenerator = new GenerateOrganizationId(_context);
-
+        
         var company = new Company
         {
             Id = await IdGenerator.GenerateUniqueCompanyIdAsync(),

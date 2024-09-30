@@ -1,11 +1,11 @@
-using MediatR;
-using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc.Authorization;
+using Microsoft.IdentityModel.JsonWebTokens;
+using Microsoft.IdentityModel.Tokens;
 using Organization.Application;
-using Organization.Application.Common.Behaviors;
-using Organization.Application.Common.Interfaces;
-using Organization.Infrastructure;
 using Organization.WebAPI;
-using System.Reflection;
+using Shared.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -22,9 +22,45 @@ builder.Services.AddInfrastructureServices(builder.Configuration);
 //Application Layer
 builder.Services.AddApplicationServices(builder.Configuration);
 
+//WebApi Layer
 builder.Services.AddWebApiServices(builder.Configuration);
 
-builder.Services.AddControllers();
+//Authorization
+builder.Services.AddHttpContextAccessor();
+JsonWebTokenHandler.DefaultInboundClaimTypeMap.Remove("sub");
+JsonWebTokenHandler.DefaultInboundClaimTypeMap.Remove("roles");
+
+builder.Services
+    .AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
+    {
+        options.Authority = builder.Configuration["IdentityServerUrl"];
+        options.Audience = "OrganizationAPIFullAccess";
+        options.RequireHttpsMetadata = false;
+
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            RoleClaimType = "roles",
+            NameClaimType = "sub"
+        };
+    });
+
+builder.Services.AddScoped<ISharedIdentityService, SharedIdentityService>();
+
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("WriteCompany", policy => policy.RequireRole("superadmin"));
+    options.AddPolicy("ReadCompany", policy => policy.RequireRole("admin"));
+});
+
+var requiredAuthorizationPolicy = new AuthorizationPolicyBuilder()
+    .RequireAuthenticatedUser()
+    .Build();
+
+builder.Services.AddControllers(options =>
+{
+    options.Filters.Add(new AuthorizeFilter(requiredAuthorizationPolicy));
+});
 
 var app = builder.Build();
 

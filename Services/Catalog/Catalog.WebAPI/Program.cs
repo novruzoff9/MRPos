@@ -37,9 +37,9 @@ builder.Services
     .AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
     {
-    options.Authority = builder.Configuration["IdentityServerUrl"];
-    options.Audience = "CatalogAPIFullAccess";
-    options.RequireHttpsMetadata = false;
+        options.Authority = builder.Configuration["IdentityServerUrl"];
+        options.Audience = "CatalogAPIFullAccess";
+        options.RequireHttpsMetadata = false;
     });
 
 var app = builder.Build();

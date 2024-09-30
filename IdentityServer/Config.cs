@@ -16,6 +16,7 @@ namespace IdentityServer
         {
             new ApiResource("CatalogAPIFullAccess") { Scopes = { "CatalogAPIFullAccess" } },
             new ApiResource("ImageAPIFullAccess") { Scopes = { "ImageAPIFullAccess" }, },
+            new ApiResource("OrganizationAPIFullAccess") { Scopes = { "OrganizationAPIFullAccess" }, },
             new ApiResource(IdentityServerConstants.LocalApi.ScopeName)
         };
 
@@ -30,8 +31,9 @@ namespace IdentityServer
                     Name = "roles",
                     DisplayName = "Roles",
                     Description = "Allow the service access to your user roles",
-                    UserClaims = new[] { "role"}
+                    UserClaims = new[] { "role"},
                 }
+
             };
 
         public static IEnumerable<ApiScope> ApiScopes =>
@@ -39,6 +41,7 @@ namespace IdentityServer
             {
                 new ApiScope("CatalogAPIFullAccess", "Access for Catalog Api application"),
                 new ApiScope("ImageAPIFullAccess", "Access for Image Api application"),
+                new ApiScope("OrganizationAPIFullAccess", "Access for Organization Api application"),
                 new ApiScope(IdentityServerConstants.LocalApi.ScopeName)
             };
 
@@ -75,6 +78,7 @@ namespace IdentityServer
                     AllowedScopes = { 
                         "roles",
                         "CatalogAPIFullAccess",
+                        "OrganizationAPIFullAccess",
                         IdentityServerConstants.LocalApi.ScopeName,
                         IdentityServerConstants.StandardScopes.Email,
                         IdentityServerConstants.StandardScopes.OpenId,

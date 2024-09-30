@@ -25,16 +25,29 @@ public  class GenerateOrganizationId
 
         do
         {
-            newId = GenerateRandomId();
+            newId = GenerateRandomId(4);
         }
         while (await _context.Companies.AnyAsync(c => c.Id == newId));
 
         return newId;
     }
 
-    private string GenerateRandomId()
+    public async Task<string> GenerateUniqueBranchIdAsync()
     {
-        return new string(Enumerable.Repeat(_chars, 4)
+        string newId;
+
+        do
+        {
+            newId = GenerateRandomId(6);
+        }
+        while (await _context.Branches.AnyAsync(c => c.Id == newId));
+
+        return newId;
+    }
+
+    private string GenerateRandomId(int length)
+    {
+        return new string(Enumerable.Repeat(_chars, length)
             .Select(s => s[_random.Next(s.Length)]).ToArray());
     }
 }

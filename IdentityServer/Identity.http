@@ -41,9 +41,9 @@ POST {{identityUrl}}/api/users
 Content-Type: application/json
 
 {
-  "username": "novruzoff",
+  "username": "test",
   "password": "Nov2005!!",
-  "email": "yagmurnov2@gmail.com"
+  "email": "test@gmail.com"
 }
 
 

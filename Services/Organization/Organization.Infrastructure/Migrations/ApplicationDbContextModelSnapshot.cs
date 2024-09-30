@@ -42,10 +42,6 @@ namespace Organization.Infrastructure.Migrations
                         .HasMaxLength(120)
                         .HasColumnType("nvarchar(120)");
 
-                    b.Property<string>("GoogleMapsLocation")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<bool>("Is24Hour")
                         .HasColumnType("bit");
 
@@ -113,6 +109,40 @@ namespace Organization.Infrastructure.Migrations
                         .WithMany("Branches")
                         .HasForeignKey("CompanyId")
                         .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.OwnsOne("Organization.Domain.ValueObjects.Address", "Address", b1 =>
+                        {
+                            b1.Property<string>("BranchId")
+                                .HasColumnType("nvarchar(6)");
+
+                            b1.Property<string>("City")
+                                .HasColumnType("nvarchar(max)");
+
+                            b1.Property<string>("Country")
+                                .HasColumnType("nvarchar(max)");
+
+                            b1.Property<string>("GoogleMapsEmbed")
+                                .HasColumnType("nvarchar(max)");
+
+                            b1.Property<string>("GoogleMapsLocation")
+                                .HasColumnType("nvarchar(max)");
+
+                            b1.Property<string>("Region")
+                                .HasColumnType("nvarchar(max)");
+
+                            b1.Property<string>("Street")
+                                .HasColumnType("nvarchar(max)");
+
+                            b1.HasKey("BranchId");
+
+                            b1.ToTable("Branches");
+
+                            b1.WithOwner()
+                                .HasForeignKey("BranchId");
+                        });
+
+                    b.Navigation("Address")
                         .IsRequired();
 
                     b.Navigation("Company");

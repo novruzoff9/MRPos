@@ -36,6 +36,9 @@ public class BranchMapping : BaseEntityMapping<Branch>
         builder.Property(e => e.LastModifiedBy)
             .HasMaxLength(120);
 
+        builder.OwnsOne(e => e.Address)
+            .WithOwner();
+
         builder.HasOne(e => e.Company)
             .WithMany(b => b.Branches)
             .HasForeignKey(b => b.CompanyId);
