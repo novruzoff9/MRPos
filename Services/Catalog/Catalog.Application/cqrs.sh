@@ -3,6 +3,7 @@
 # Kullanıcıdan sınıf adı ve çoğul hali alın
 read -p "Sınıf adını girin: " class_name
 read -p "Sınıfın çoğul halini girin: " plural_class_name
+read -p "Servis adını girin: " service_name
 
 # Kök dizin (ana klasör)
 root_directory="$plural_class_name"
@@ -35,10 +36,10 @@ create_directory "$queries_directory/Get${class_name}Query"
 # Create.cs içerik
 create_command_file="$commands_directory/Create${class_name}Command/Create${class_name}.cs"
 create_file "$create_command_file" "
-using Catalog.Application.Common.Interfaces;
-using Catalog.Domain.Entities;
+using $service_name.Application.Common.Interfaces;
+using $service_name.Domain.Entities;
 
-namespace Catalog.Application.${plural_class_name}.Commands.Create${class_name}Command;
+namespace $service_name.Application.${plural_class_name}.Commands.Create${class_name}Command;
 
 public record Create${class_name}(string Name, string Description, decimal Price) : IRequest<bool>;
 
@@ -74,10 +75,10 @@ public class Create${class_name}CommandHandler : IRequestHandler<Create${class_n
 # Edit.cs içerik
 edit_command_file="$commands_directory/Edit${class_name}Command/Edit${class_name}.cs"
 create_file "$edit_command_file" "
-using Catalog.Application.Common.Interfaces;
-using Catalog.Domain.Entities;
+using $service_name.Application.Common.Interfaces;
+using $service_name.Domain.Entities;
 
-namespace Catalog.Application.${plural_class_name}.Commands.Edit${class_name}Command;
+namespace $service_name.Application.${plural_class_name}.Commands.Edit${class_name}Command;
 
 public record Edit${class_name}(int Id, string Name, string Description, decimal Price) : IRequest<bool>;
 
@@ -117,10 +118,10 @@ public class Edit${class_name}CommandHandler : IRequestHandler<Edit${class_name}
 # Delete.cs içerik
 delete_command_file="$commands_directory/Delete${class_name}Command/Delete${class_name}.cs"
 create_file "$delete_command_file" "
-using Catalog.Application.Common.Interfaces;
-using Catalog.Domain.Entities;
+using $service_name.Application.Common.Interfaces;
+using $service_name.Domain.Entities;
 
-namespace Catalog.Application.${plural_class_name}.Commands.Delete${class_name}Command;
+namespace $service_name.Application.${plural_class_name}.Commands.Delete${class_name}Command;
 
 public record Delete${class_name}(int Id) : IRequest<bool>;
 
@@ -150,10 +151,10 @@ public class Delete${class_name}CommandHandler : IRequestHandler<Delete${class_n
 # Get.cs içerik
 get_query_file="$queries_directory/Get${plural_class_name}Query/Get${plural_class_name}.cs"
 create_file "$get_query_file" "
-using Catalog.Application.Common.Interfaces;
-using Catalog.Domain.Entities;
+using $service_name.Application.Common.Interfaces;
+using $service_name.Domain.Entities;
 
-namespace Catalog.Application.${plural_class_name}.Queries.Get${plural_class_name}Query;
+namespace $service_name.Application.${plural_class_name}.Queries.Get${plural_class_name}Query;
 
 public record Get${plural_class_name} : IRequest<List<${class_name}>>;
 
@@ -177,10 +178,10 @@ public class Get${plural_class_name}QueryHandler : IRequestHandler<Get${plural_c
 # Get.cs içerik
 get_single_query_file="$queries_directory/Get${class_name}Query/Get${class_name}.cs"
 create_file "$get_single_query_file" "
-using Catalog.Application.Common.Interfaces;
-using Catalog.Domain.Entities;
+using $service_name.Application.Common.Interfaces;
+using $service_name.Domain.Entities;
 
-namespace Catalog.Application.${plural_class_name}.Queries.Get${class_name}Query;
+namespace $service_name.Application.${plural_class_name}.Queries.Get${class_name}Query;
 
 public record Get${class_name}(int Id) : IRequest<${class_name}>;
 

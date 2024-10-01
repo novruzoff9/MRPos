@@ -12,5 +12,6 @@ public interface IApplicationDbContext
 {
     public DbSet<Company> Companies { get; set; }
     public DbSet<Branch> Branches { get; set; }
+    public DbSet<Table> Tables { get; set; }
     Task<int> SaveChangesAsync(CancellationToken cancellationToken);
 }

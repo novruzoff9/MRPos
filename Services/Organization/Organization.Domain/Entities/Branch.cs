@@ -12,4 +12,5 @@ public class Branch : BaseAuditableEntity
     public TimeOnly Closing { get; set; }
     public decimal ServiceFee { get; set; }
     public Address Address { get; set; }
+    public List<Table>? Tables { get; set; }
 }

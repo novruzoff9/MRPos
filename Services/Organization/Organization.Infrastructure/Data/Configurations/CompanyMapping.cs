@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Organization.Domain.Entities;
 
 namespace Organization.Infrastructure.Data.Configurations;
@@ -23,6 +24,7 @@ public class CompanyMapping : BaseEntityMapping<Company>
 
         builder.HasMany(e => e.Branches)
             .WithOne(b => b.Company)
-            .HasForeignKey(b => b.CompanyId);
+            .HasForeignKey(b => b.CompanyId)
+            .OnDelete(DeleteBehavior.Restrict);
     }
 }

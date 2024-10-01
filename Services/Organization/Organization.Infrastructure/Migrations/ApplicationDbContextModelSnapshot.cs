@@ -103,12 +103,30 @@ namespace Organization.Infrastructure.Migrations
                     b.ToTable("Companies");
                 });
 
+            modelBuilder.Entity("Organization.Domain.Entities.Table", b =>
+                {
+                    b.Property<string>("BranchId")
+                        .HasMaxLength(6)
+                        .HasColumnType("nvarchar(6)");
+
+                    b.Property<string>("TableNumber")
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
+
+                    b.Property<decimal>("Deposit")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.HasKey("BranchId", "TableNumber");
+
+                    b.ToTable("Tables");
+                });
+
             modelBuilder.Entity("Organization.Domain.Entities.Branch", b =>
                 {
                     b.HasOne("Organization.Domain.Entities.Company", "Company")
                         .WithMany("Branches")
                         .HasForeignKey("CompanyId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.OwnsOne("Organization.Domain.ValueObjects.Address", "Address", b1 =>
@@ -146,6 +164,22 @@ namespace Organization.Infrastructure.Migrations
                         .IsRequired();
 
                     b.Navigation("Company");
+                });
+
+            modelBuilder.Entity("Organization.Domain.Entities.Table", b =>
+                {
+                    b.HasOne("Organization.Domain.Entities.Branch", "Branch")
+                        .WithMany("Tables")
+                        .HasForeignKey("BranchId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Branch");
+                });
+
+            modelBuilder.Entity("Organization.Domain.Entities.Branch", b =>
+                {
+                    b.Navigation("Tables");
                 });
 
             modelBuilder.Entity("Organization.Domain.Entities.Company", b =>

@@ -1,7 +1,20 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4C9A792B-C4FE-4D08-8357-2A3835F843E7}|Services\\Organization\\Organization.Application\\Organization.Application.csproj|c:\\users\\novruzoff\\source\\repos\\mrpos\\services\\organization\\organization.application\\tables\\queries\\gettablequery\\gettable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C9A792B-C4FE-4D08-8357-2A3835F843E7}|Services\\Organization\\Organization.Application\\Organization.Application.csproj|solutionrelative:services\\organization\\organization.application\\tables\\queries\\gettablequery\\gettable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C9A792B-C4FE-4D08-8357-2A3835F843E7}|Services\\Organization\\Organization.Application\\Organization.Application.csproj|c:\\users\\novruzoff\\source\\repos\\mrpos\\services\\organization\\organization.application\\tables\\commands\\edittablecommand\\edittable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C9A792B-C4FE-4D08-8357-2A3835F843E7}|Services\\Organization\\Organization.Application\\Organization.Application.csproj|solutionrelative:services\\organization\\organization.application\\tables\\commands\\edittablecommand\\edittable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C9A792B-C4FE-4D08-8357-2A3835F843E7}|Services\\Organization\\Organization.Application\\Organization.Application.csproj|c:\\users\\novruzoff\\source\\repos\\mrpos\\services\\organization\\organization.application\\tables\\commands\\deletetablecommand\\deletetable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C9A792B-C4FE-4D08-8357-2A3835F843E7}|Services\\Organization\\Organization.Application\\Organization.Application.csproj|solutionrelative:services\\organization\\organization.application\\tables\\commands\\deletetablecommand\\deletetable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +22,50 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GetTable.cs",
+              "DocumentMoniker": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Organization\\Organization.Application\\Tables\\Queries\\GetTableQuery\\GetTable.cs",
+              "RelativeDocumentMoniker": "Services\\Organization\\Organization.Application\\Tables\\Queries\\GetTableQuery\\GetTable.cs",
+              "ToolTip": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Organization\\Organization.Application\\Tables\\Queries\\GetTableQuery\\GetTable.cs",
+              "RelativeToolTip": "Services\\Organization\\Organization.Application\\Tables\\Queries\\GetTableQuery\\GetTable.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T08:00:36.762Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EditTable.cs",
+              "DocumentMoniker": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Organization\\Organization.Application\\Tables\\Commands\\EditTableCommand\\EditTable.cs",
+              "RelativeDocumentMoniker": "Services\\Organization\\Organization.Application\\Tables\\Commands\\EditTableCommand\\EditTable.cs",
+              "ToolTip": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Organization\\Organization.Application\\Tables\\Commands\\EditTableCommand\\EditTable.cs",
+              "RelativeToolTip": "Services\\Organization\\Organization.Application\\Tables\\Commands\\EditTableCommand\\EditTable.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAASwBYAAABQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T08:00:31.522Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DeleteTable.cs",
+              "DocumentMoniker": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Organization\\Organization.Application\\Tables\\Commands\\DeleteTableCommand\\DeleteTable.cs",
+              "RelativeDocumentMoniker": "Services\\Organization\\Organization.Application\\Tables\\Commands\\DeleteTableCommand\\DeleteTable.cs",
+              "ToolTip": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Organization\\Organization.Application\\Tables\\Commands\\DeleteTableCommand\\DeleteTable.cs",
+              "RelativeToolTip": "Services\\Organization\\Organization.Application\\Tables\\Commands\\DeleteTableCommand\\DeleteTable.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAxwBEAAABQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T08:00:08.989Z",
+              "EditorCaption": ""
             }
           ]
         }

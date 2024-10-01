@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Tables\Queries\GetTableQuery\GetTable.cs~RF697938.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Common\Mapping\" />
     <Folder Include="Common\Models\" />
   </ItemGroup>
