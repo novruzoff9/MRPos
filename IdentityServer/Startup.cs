@@ -13,6 +13,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using IdentityServer.Services;
+using Shared.Services;
 
 namespace IdentityServer
 {
@@ -36,6 +37,7 @@ namespace IdentityServer
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
+            services.AddScoped<ISharedIdentityService, SharedIdentityService>();
             //services.AddScoped<IUserClaimsPrincipalFactory<ApplicationUser>, CustomUserClaimsPrincipalFactory>();
 
             services.AddIdentity<ApplicationUser, ApplicationRole>()
@@ -74,6 +76,17 @@ namespace IdentityServer
                 });
 
             builder.AddResourceOwnerValidator<IdentityResourceOwnerPasswordValidator>();
+
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAllOrigins",
+                    builder =>
+                    {
+                        builder.AllowAnyOrigin()
+                        .AllowAnyHeader()
+                        .AllowAnyMethod();
+                    });
+            });
         }
 
         public void Configure(IApplicationBuilder app)
@@ -87,6 +100,7 @@ namespace IdentityServer
             app.UseStaticFiles();
 
             app.UseRouting();
+            app.UseCors("AllowAllOrigins");
             app.UseIdentityServer();
             app.UseAuthentication();
             app.UseAuthorization();

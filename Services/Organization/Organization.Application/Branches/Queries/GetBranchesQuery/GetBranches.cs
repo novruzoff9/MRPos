@@ -1,20 +1,34 @@
-namespace Catalog.Application.Branches.Queries.GetBranchesQuery;
+using Shared.ResultTypes;
+using Shared.Services;
 
-public record GetBranches : IRequest<List<Branch>>;
+namespace Organization.Application.Branches.Queries.GetBranchesQuery;
 
-public class GetBranchesQueryHandler : IRequestHandler<GetBranches, List<Branch>>
+public record GetBranches : IRequest<Response<List<Branch>>>;
+
+public class GetBranchesQueryHandler : IRequestHandler<GetBranches, Response<List<Branch>>>
 {
     private readonly IApplicationDbContext _context;
+    private readonly ISharedIdentityService _identityService;
 
-    public GetBranchesQueryHandler(IApplicationDbContext context)
+    public GetBranchesQueryHandler(IApplicationDbContext context, ISharedIdentityService identityService)
     {
         _context = context;
+        _identityService = identityService;
     }
 
-    public async Task<List<Branch>> Handle(GetBranches request, CancellationToken cancellationToken)
+    public async Task<Response<List<Branch>>> Handle(GetBranches request, CancellationToken cancellationToken)
     {
-        var branches = await _context.Branches.ToListAsync(cancellationToken);
-        return branches;
+        var companyId = _identityService.GetCompanyId;
+        List<Branch> branches = new List<Branch>();
+        if(companyId != "MRPos")
+        {
+            branches = await _context.Branches.Where(x=>x.CompanyId == companyId).ToListAsync(cancellationToken);
+        }
+        else
+        {
+            branches = await _context.Branches.ToListAsync(cancellationToken);
+        }
+        return Response<List<Branch>>.Success(branches, 200);
     }
 }
 

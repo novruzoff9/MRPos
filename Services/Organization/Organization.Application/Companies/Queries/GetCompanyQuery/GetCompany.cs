@@ -1,4 +1,4 @@
-namespace Catalog.Application.Companies.Queries.GetCompanyQuery;
+namespace Organization.Application.Companies.Queries.GetCompanyQuery;
 
 public record GetCompany(string Id) : IRequest<Company>;
 

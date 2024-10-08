@@ -1,5 +1,6 @@
 ﻿using Catalog.Application.Common.Interfaces;
 using Catalog.Domain.Entities;
+using Shared.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,10 +14,12 @@ public record EditProduct(int Id, string Name, string Description, decimal Price
 public class EditProductCommandHanlder : IRequestHandler<EditProduct, bool>
 {
     private readonly IApplicationDbContext _context;
+    private readonly ISharedIdentityService _identityService;
 
-    public EditProductCommandHanlder(IApplicationDbContext context)
+    public EditProductCommandHanlder(IApplicationDbContext context, ISharedIdentityService identityService)
     {
         _context = context;
+        _identityService = identityService;
     }
 
     public async Task<bool> Handle(EditProduct request, CancellationToken cancellationToken)
@@ -29,11 +32,13 @@ public class EditProductCommandHanlder : IRequestHandler<EditProduct, bool>
         var product = await _context.Products.FirstOrDefaultAsync(x => x.Id == request.Id, cancellationToken);
 
         if (product == null) { return false; }
+        if (product.CompanyId != _identityService.GetCompanyId) { return false; }
 
         product.Name = request.Name;
         product.Description = request.Description;
         product.Price = request.Price;
         product.Modified = DateTime.UtcNow;
+        product.LastModifiedBy = _identityService.GetUserId;
 
         _context.Products.Update(product);
 

@@ -12,7 +12,7 @@
 @basketClientId = MVCUserApiClient
 @basketClientSecret = 49C1A7E1-0C79-4A89-A3D6-A37998FB86B0
 @basketGrantType = password
-@username=novruzoff
+@username=yagmurnov2@gmail.com
 @password=Nov2005!!
 
 @access_token =eyJhbGciOiJSUzI1NiIsImtpZCI6IjNCODNBQUJBRTIzMjVFRkEzRUZFOUM3NjI5MzQzMzY2IiwidHlwIjoiYXQrand0In0.eyJuYmYiOjE3MjcyNjE3NDcsImV4cCI6MTcyNzI2ODk0NywiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDAxIiwiYXVkIjpbIkNhdGFsb2dBUElGdWxsQWNjZXNzIiwiaHR0cDovL2xvY2FsaG9zdDo1MDAxL3Jlc291cmNlcyJdLCJjbGllbnRfaWQiOiJNVkNVc2VyQXBpQ2xpZW50Iiwic3ViIjoiNTIzMTZjMmYtOWEyYi00NjE4LWI2MjItZTU1MDFhNDljYzhlIiwiYXV0aF90aW1lIjoxNzI3MjYxNzQ3LCJpZHAiOiJsb2NhbCIsImp0aSI6IkU2RkE4NjUzNDY1NzhCRUUzQ0RFNjBENzA0NDJDMTVBIiwiaWF0IjoxNzI3MjYxNzQ3LCJzY29wZSI6WyJDYXRhbG9nQVBJRnVsbEFjY2VzcyIsImVtYWlsIiwiSWRlbnRpdHlTZXJ2ZXJBcGkiLCJvcGVuaWQiLCJwcm9maWxlIiwicm9sZXMiLCJvZmZsaW5lX2FjY2VzcyJdLCJhbXIiOlsicHdkIl19.odUhXbmCoShja-sToI_Dd_PFMS7JrSYhgd0E2npJg50kduY1-qAV0ary3FAtZRaEDuFG7sxXo03ai0d79St2rHG5JoWELSNDhuQtpB_ph4P7nj5HHwGOIBGkKBh2sTo1X4rer2JmCRIvBhp52EoMNiVay6B74nVE0_bEIDsNWoAH1Nmr7c5n9_2f2JxBG78hxq-MP7sLNCsSI89EW9vD0GMDEkzxM8ORLxmyy1172DpcX2dQsA5mU-cdCEFkefYG1b2v5z11WcOEPnvW0eBshsk7oySGi3ScoiSPs9GSpfzcMwjcni95MEM4VG6IdUibfBjMRWkU_hpybcY-C40TXg 
@@ -35,15 +35,15 @@ Content-Type: application/x-www-form-urlencoded
 grant_type={{basketGrantType}}&client_id={{basketClientId}}&client_secret={{basketClientSecret}}&username={{username}}&password={{password}}
 
 
-
-###
+### Create User With CompanyId
 POST {{identityUrl}}/api/users
 Content-Type: application/json
 
 {
-  "username": "test",
+  "username": "ShaurmaNo1Director",
   "password": "Nov2005!!",
-  "email": "test@gmail.com"
+  "email": "shaurmadr@gmail.com",
+  "companyid": "NHQV"
 }
 
 

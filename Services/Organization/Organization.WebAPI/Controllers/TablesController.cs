@@ -22,9 +22,9 @@ public class TablesController : BaseController
     }
 
     [HttpGet("{id}")]
-    public async Task<IActionResult> GetById(string id)
+    public async Task<IActionResult> GetById(GetTable query)
     {
-        var result = await Sender.Send(new GetTable(id));
+        var result = await Sender.Send(query);
         return Ok(result);
     }
 
@@ -48,5 +48,4 @@ public class TablesController : BaseController
         var result = await Sender.Send(command);
         return Ok(result);
     }
-
 }

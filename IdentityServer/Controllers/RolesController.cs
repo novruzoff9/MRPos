@@ -23,6 +23,7 @@ namespace IdentityServer.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(string roleName)
         {
+            roleName = roleName.ToLower();
             if (await _roleManager.RoleExistsAsync(roleName))
             {
                 return BadRequest("Role already exists");

@@ -1,17 +1,20 @@
 using Organization.Application.Common.Services;
 using Organization.Domain.ValueObjects;
+using Shared.Services;
 
 namespace Organization.Application.Branches.Commands.CreateBranchCommand;
 
-public record CreateBranch(string CompanyId, bool Is24Hour, decimal ServiceFee, TimeOnly Opening, TimeOnly Closing, Address Address) : IRequest<bool>;
+public record CreateBranch(bool Is24Hour, decimal ServiceFee, TimeOnly Opening, TimeOnly Closing, Address Address) : IRequest<bool>;
 
 public class CreateBranchCommandHandler : IRequestHandler<CreateBranch, bool>
 {
     private readonly IApplicationDbContext _context;
+    private readonly ISharedIdentityService _identityService;
 
-    public CreateBranchCommandHandler(IApplicationDbContext context)
+    public CreateBranchCommandHandler(IApplicationDbContext context, ISharedIdentityService identityService)
     {
         _context = context;
+        _identityService = identityService;
     }
 
     public async Task<bool> Handle(CreateBranch request, CancellationToken cancellationToken)
@@ -22,7 +25,7 @@ public class CreateBranchCommandHandler : IRequestHandler<CreateBranch, bool>
         var branch = new Branch
         {
             Id = await IdGenerator.GenerateUniqueBranchIdAsync(),
-            CompanyId = request.CompanyId,
+            CompanyId = _identityService.GetCompanyId,
             ServiceFee = request.ServiceFee,
             Is24Hour = request.Is24Hour,
             Opening = request.Opening,

@@ -1,6 +1,6 @@
 using Organization.Application.Common.Services;
 
-namespace Catalog.Application.Companies.Commands.CreateCompanyCommand;
+namespace Organization.Application.Companies.Commands.CreateCompanyCommand;
 
 public record CreateCompany(string Name, string Description, string LogoUrl) : IRequest<bool>;
 

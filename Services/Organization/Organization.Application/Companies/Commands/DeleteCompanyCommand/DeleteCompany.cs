@@ -1,4 +1,4 @@
-namespace Catalog.Application.Companies.Commands.DeleteCompanyCommand;
+namespace Organization.Application.Companies.Commands.DeleteCompanyCommand;
 
 public record DeleteCompany(string Id) : IRequest<bool>;
 

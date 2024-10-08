@@ -28,8 +28,11 @@ namespace IdentityServer.Services
 
             var roles = await _userManager.GetRolesAsync(user);
 
-            var claims = roles.Select(role => new Claim("roles", role)).ToList();
-            context.IssuedClaims.AddRange(claims);
+            var roleClaims = roles.Select(role => new Claim("roles", role)).ToList();
+            context.IssuedClaims.AddRange(roleClaims);
+
+            var companyClaim = new Claim("company", user.CompanyId?? "MRPos");
+            context.IssuedClaims.Add(companyClaim);
         }
 
         public Task IsActiveAsync(IsActiveContext context)

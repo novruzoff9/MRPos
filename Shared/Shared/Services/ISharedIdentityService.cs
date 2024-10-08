@@ -9,6 +9,7 @@ namespace Shared.Services
     public interface ISharedIdentityService
     {
         public string GetUserId { get; }
+        public string GetCompanyId { get; }
     }
 
     public class SharedIdentityService : ISharedIdentityService
@@ -21,36 +22,6 @@ namespace Shared.Services
         }
 
         public string GetUserId => _httpContextAccessor.HttpContext.User.FindFirst("sub").Value;
-
-        /*
-        Using in Service
-        Program.cs:
-        // Add HttpContextAccessor service to the container
-        builder.Services.AddHttpContextAccessor();
-
-        // Remove default inbound claim type mappings for "sub"
-        JsonWebTokenHandler.DefaultInboundClaimTypeMap.Remove("sub");
-        
-        // JWT Bearer Authentication
-        builder.Services
-            .AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-            .AddJwtBearer(options =>
-            {
-                options.Authority = builder.Configuration["IdentityServerUrl"];
-                options.Audience = "BasketAPIFullAccess";
-                options.RequireHttpsMetadata = false;
-        
-                options.TokenValidationParameters = new TokenValidationParameters
-                {
-                    RoleClaimType = "role",
-                    NameClaimType = "sub"
-                };
-            });
-        
-        // Dependency Injection for SharedIdentityService
-        builder.Services.AddScoped<ISharedIdentityService, SharedIdentityService>();
-
-         
-         */
+        public string GetCompanyId => _httpContextAccessor.HttpContext.User.FindFirst("company").Value;
     }
 }

@@ -1,27 +1,44 @@
-﻿using Catalog.Application.Branches.Commands.DeleteBranchCommand;
-using Catalog.Application.Branches.Commands.EditBranchCommand;
-using Catalog.Application.Branches.Queries.GetBranchesQuery;
-using Catalog.Application.Branches.Queries.GetBranchQuery;
+﻿using Organization.Application.Branches.Commands.DeleteBranchCommand;
+using Organization.Application.Branches.Commands.EditBranchCommand;
+using Organization.Application.Branches.Queries.GetBranchesQuery;
+using Organization.Application.Branches.Queries.GetBranchQuery;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using AutoMapper;
 using Organization.Application.Branches.Commands.CreateBranchCommand;
+using Organization.Application.Common.Models.Branch;
+using Shared.ResultTypes;
 
 namespace Organization.WebAPI.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
-[AllowAnonymous]
 public class BranchesController : BaseController
 {
+    private readonly IMapper _mapper;
+
+    public BranchesController(IMapper mapper)
+    {
+        _mapper = mapper;
+    }
+
     [HttpGet]
+    [Authorize(Policy = "ReadBranch")]
     public async Task<IActionResult> Get()
     {
         var result = await Sender.Send(new GetBranches());
-        return Ok(result);
+        if (!result.IsSuccess)
+        {
+            return Ok(result);
+        }
+        var newResultData = _mapper.Map<BranchSummaryDto>(result.Data);
+        var resultDto = Response<BranchSummaryDto>.Success(newResultData, 200);
+        return Ok(resultDto);
     }
 
     [HttpGet("{id}")]
+    [Authorize(Policy = "ReadBranch")]
     public async Task<IActionResult> GetById(string id)
     {
         var result = await Sender.Send(new GetBranch(id));
@@ -29,6 +46,7 @@ public class BranchesController : BaseController
     }
 
     [HttpPost]
+    [Authorize(Policy = "WriteBranch")]
     public async Task<IActionResult> Create(CreateBranch command)
     {
         var result = await Sender.Send(command);
@@ -36,6 +54,7 @@ public class BranchesController : BaseController
     }
 
     [HttpPut]
+    [Authorize(Policy = "WriteBranch")]
     public async Task<IActionResult> Edit(EditBranch command)
     {
         var result = await Sender.Send(command);
@@ -43,6 +62,7 @@ public class BranchesController : BaseController
     }
 
     [HttpDelete]
+    [Authorize(Policy = "WriteBranch")]
     public async Task<IActionResult> Delete(DeleteBranch command)
     {
         var result = await Sender.Send(command);

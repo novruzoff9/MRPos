@@ -20,7 +20,7 @@ public class EditTableCommandHandler : IRequestHandler<EditTable, bool>
         Guard.Against.NotFound(request.TableNumber, nameof(request));
         Guard.Against.Negative(request.Deposit, nameof(request));
 
-        var table = await _context.Tables.FirstOrDefaultAsync(x => x.TableNumber == request.Id, cancellationToken);
+        var table = await _context.Tables.FirstOrDefaultAsync(x => x.TableNumber == request.Id && x.BranchId == request.BranchId, cancellationToken);
 
         if (table == null) { return false; }
 

@@ -1,13 +1,15 @@
-﻿using Catalog.Application.Branches.Queries.GetBranchesQuery;
-using Catalog.Application.Companies.Commands.CreateCompanyCommand;
-using Catalog.Application.Companies.Commands.DeleteCompanyCommand;
-using Catalog.Application.Companies.Commands.EditCompanyCommand;
-using Catalog.Application.Companies.Queries.GetCompaniesQuery;
-using Catalog.Application.Companies.Queries.GetCompanyQuery;
+﻿using Organization.Application.Branches.Queries.GetBranchesQuery;
+using Organization.Application.Companies.Commands.CreateCompanyCommand;
+using Organization.Application.Companies.Commands.DeleteCompanyCommand;
+using Organization.Application.Companies.Commands.EditCompanyCommand;
+using Organization.Application.Companies.Queries.GetCompaniesQuery;
+using Organization.Application.Companies.Queries.GetCompanyQuery;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Catalog.Application.Categories.Queries.GetCategoriesQuery;
+using Catalog.Application.Products.Queries.GetProductsQuery;
 
 namespace Organization.WebAPI.Controllers;
 
@@ -50,9 +52,27 @@ public class CompaniesController : BaseController
     public async Task<IActionResult> GetBranchesByCompanyId(string id)
     {
         var result = await Sender.Send(new GetBranches());
-        result = result.Where(x => x.CompanyId == id).ToList();
+        //result = result.Where(x => x.CompanyId == id).ToList();
         return Ok(result);
     }
+
+    [HttpGet("{id}/categories")]
+    [Authorize(Policy = "ReadCompany")]
+    public async Task<IActionResult> GetCategoriesByCompanyId(string id)
+    {
+        var result = await Sender.Send(new GetCategories());
+        //result = result.Where(x => x.CompanyId == id).ToList();
+        return Ok(result);
+    }
+
+    /*[HttpGet("{id}/products")]
+    [Authorize(Policy = "ReadCompany")]
+    public async Task<IActionResult> GetProductsByCompanyId(string id)
+    {
+        var result = await Sender.Send(new GetProducts());
+        result = result.Where(x => x.CompanyId == id).ToList();
+        return Ok(result);
+    }*/
 
     [HttpPut]
     [Authorize(Policy = "WriteCompany")]

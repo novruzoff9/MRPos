@@ -1,6 +1,7 @@
 ﻿using Amazon.Runtime;
 using Catalog.Application.Common.Interfaces;
 using Catalog.Domain.Entities;
+using Shared.ResultTypes;
 using Shared.Services;
 using System;
 using System.Collections.Generic;
@@ -12,40 +13,27 @@ using System.Threading.Tasks;
 
 namespace Catalog.Application.Categories.Commands.CreateCategoryCommand;
 
-public record CreateCategory(string Name, string CompanyId) : IRequest<bool>;
+public record CreateCategory(string Name) : IRequest<Response<NoContent>>;
 
-public class CreateCategoryCommandHandler : IRequestHandler<CreateCategory, bool>
+public class CreateCategoryCommandHandler : IRequestHandler<CreateCategory, Response<NoContent>>
 {
     private readonly IApplicationDbContext _context;
-    private readonly IHttpClientFactory _httpClientFactory;
-    private readonly ITokenService _tokenService;
+    private readonly ISharedIdentityService _identityService;
 
-    public CreateCategoryCommandHandler(IApplicationDbContext context, IHttpClientFactory httpClientFactory, ITokenService tokenService)
+    public CreateCategoryCommandHandler(IApplicationDbContext context, ISharedIdentityService identityService)
     {
         _context = context;
-        _httpClientFactory = httpClientFactory;
-        _tokenService = tokenService;
+        _identityService = identityService;
     }
 
-    public async Task<bool> Handle(CreateCategory request, CancellationToken cancellationToken)
+    public async Task<Response<NoContent>> Handle(CreateCategory request, CancellationToken cancellationToken)
     {
         Guard.Against.Null(request, nameof(CreateCategory));
 
-        var client = _httpClientFactory.CreateClient("company");
-        var token = await _tokenService.GetTokenAsync();
-
-        client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", token);
-
-        var companyResponse = await client.GetAsync($"http://localhost:5005/api/Companies/{request.CompanyId}/details");
-
-        if (companyResponse.StatusCode != System.Net.HttpStatusCode.OK)
-        {
-            return false;
-        }
 
         var category = new Category
         {
-            CompanyId = request.CompanyId,
+            CompanyId = _identityService.GetCompanyId,
             Name = request.Name
         };
 
@@ -53,6 +41,6 @@ public class CreateCategoryCommandHandler : IRequestHandler<CreateCategory, bool
 
         var success = await _context.SaveChangesAsync(cancellationToken) > 0;
 
-        return success;
+        return Response<NoContent>.Success(200);
     }
 }

@@ -50,8 +50,10 @@ builder.Services.AddScoped<ISharedIdentityService, SharedIdentityService>();
 builder.Services.AddAuthorization(options =>
 {
     options.AddPolicy("WriteCompany", policy => policy.RequireRole("superadmin"));
-    options.AddPolicy("ReadCompany", policy => policy.RequireRole("admin"));
-    options.AddPolicy("ReadCompany", policy => policy.RequireClaim(""));
+    options.AddPolicy("ReadCompany", policy => policy.RequireRole("superadmin", "admin", "director"));
+
+    options.AddPolicy("WriteBranch", policy => policy.RequireRole("superadmin", "admin", "director"));
+    options.AddPolicy("ReadBranch", policy => policy.RequireRole("superadmin", "admin", "director", "branchdirector"));
 });
 
 var requiredAuthorizationPolicy = new AuthorizationPolicyBuilder()
@@ -72,6 +74,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseCors("AllowAllOrigins");
 app.UseAuthentication();
 app.UseAuthorization();
 

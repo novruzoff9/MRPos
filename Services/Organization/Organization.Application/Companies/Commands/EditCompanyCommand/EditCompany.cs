@@ -1,4 +1,4 @@
-namespace Catalog.Application.Companies.Commands.EditCompanyCommand;
+namespace Organization.Application.Companies.Commands.EditCompanyCommand;
 
 public record EditCompany(string Id, string Name, string Description, string LogoUrl) : IRequest<bool>;
 
