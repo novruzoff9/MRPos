@@ -1,4 +1,5 @@
 using Organization.Application.Common.Services;
+using Shared.Services;
 
 namespace Organization.Application.Companies.Commands.CreateCompanyCommand;
 
@@ -7,10 +8,12 @@ public record CreateCompany(string Name, string Description, string LogoUrl) : I
 public class CreateCompanyCommandHandler : IRequestHandler<CreateCompany, bool>
 {
     private readonly IApplicationDbContext _context;
+    private readonly ISharedIdentityService _identityService;
 
-    public CreateCompanyCommandHandler(IApplicationDbContext context)
+    public CreateCompanyCommandHandler(IApplicationDbContext context, ISharedIdentityService identityService)
     {
         _context = context;
+        _identityService = identityService;
     }
 
     public async Task<bool> Handle(CreateCompany request, CancellationToken cancellationToken)
@@ -24,7 +27,8 @@ public class CreateCompanyCommandHandler : IRequestHandler<CreateCompany, bool>
             Name = request.Name,
             Description = request.Description,
             LogoUrl = request.LogoUrl,
-            Created = DateTime.UtcNow
+            Created = DateTime.UtcNow,
+            CreatedBy = _identityService.GetUserId
         };
 
         await _context.Companies.AddAsync(company, cancellationToken);

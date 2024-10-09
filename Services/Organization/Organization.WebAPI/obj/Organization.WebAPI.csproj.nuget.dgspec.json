@@ -222,6 +222,10 @@
               "target": "Package",
               "version": "[4.6.0, )"
             },
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
             "FluentValidation": {
               "target": "Package",
               "version": "[11.10.0, )"

@@ -28,13 +28,15 @@ public class BranchesController : BaseController
     public async Task<IActionResult> Get()
     {
         var result = await Sender.Send(new GetBranches());
-        if (!result.IsSuccess)
-        {
-            return Ok(result);
-        }
-        var newResultData = _mapper.Map<BranchSummaryDto>(result.Data);
-        var resultDto = Response<BranchSummaryDto>.Success(newResultData, 200);
-        return Ok(resultDto);
+        return Ok(result);
+    }
+
+    [HttpGet("summary")]
+    [Authorize(Policy = "ReadBranch")]
+    public async Task<IActionResult> GetSummary()
+    {
+        var result = await Sender.Send(new GetBranchesSummary());
+        return Ok(result);
     }
 
     [HttpGet("{id}")]

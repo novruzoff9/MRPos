@@ -18,12 +18,10 @@ namespace IdentityServer.Controllers
     public class UsersController : ControllerBase
     {
         private readonly UserManager<ApplicationUser> _userManager;
-        private readonly ISharedIdentityService _identityService;
 
-        public UsersController(UserManager<ApplicationUser> userManager, ISharedIdentityService identityService)
+        public UsersController(UserManager<ApplicationUser> userManager)
         {
             _userManager = userManager;
-            _identityService = identityService;
         }
 
         [HttpPost]
@@ -33,8 +31,7 @@ namespace IdentityServer.Controllers
             {
                 Id = Guid.NewGuid().ToString(),
                 UserName = request.UserName,
-                Email = request.Email,
-                CompanyId = request.CompanyId                
+                Email = request.Email            
             };
 
             var result = await _userManager.CreateAsync(user, request.Password);
@@ -54,11 +51,13 @@ namespace IdentityServer.Controllers
         [HttpGet("WithToken")]
         public async Task<IActionResult> GetUser()
         {
-            var userIdClaims = User.Claims.FirstOrDefault(x => x.Type == "sub");
+            var user1 = User;
+            var claims = user1.Claims;
+            var userIdClaims = claims.FirstOrDefault(x => x.Type == "sub");
 
             if (userIdClaims == null)
             {
-                return BadRequest();
+                return BadRequest("Id degeri tapilmadi");
             }
 
             var user = await _userManager.FindByIdAsync(userIdClaims.Value);
@@ -103,6 +102,29 @@ namespace IdentityServer.Controllers
             return Ok(userslist);
         }
 
+        [HttpGet("Employees")]
+        public async Task<IActionResult> GetEmployees(string companyId)
+        {
+            var users = await _userManager.Users.Where(x=>x.CompanyId == companyId).ToListAsync();
+            var userslist = new List<UserDto>();
+
+            foreach (var user in users)
+            {
+                var roles = await _userManager.GetRolesAsync(user);
+                userslist.Add(new UserDto
+                {
+                    Id = user.Id,
+                    UserName = user.UserName,
+                    Email = user.Email,
+                    CompanyId = user.CompanyId,
+                    Roles = roles.ToList() ?? Array.Empty<string>().ToList()
+                });
+            }
+
+
+            return Ok(userslist);
+        }
+
         [HttpPost("AddEmployee")]
         public async Task<IActionResult> CreateEmployee([FromBody] SignUpDto request)
         {
@@ -111,7 +133,7 @@ namespace IdentityServer.Controllers
                 Id = Guid.NewGuid().ToString(),
                 UserName = request.UserName,
                 Email = request.Email,
-                CompanyId = _identityService.GetCompanyId
+                //CompanyId = _identityService.GetCompanyId
             };
 
             var result = await _userManager.CreateAsync(user, request.Password);

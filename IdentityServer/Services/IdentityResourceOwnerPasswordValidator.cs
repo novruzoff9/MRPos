@@ -43,7 +43,8 @@ namespace IdentityServer.Services
             var claims = new List<Claim>
         {
             new Claim("sub", user.Id.ToString()), // Kullanıcı kimliği
-            new Claim("email", user.Email)        // Kullanıcı e-posta
+            new Claim("email", user.Email),        // Kullanıcı e-posta
+            new Claim("company", user.CompanyId)
         };
 
             // Rolleri ekle

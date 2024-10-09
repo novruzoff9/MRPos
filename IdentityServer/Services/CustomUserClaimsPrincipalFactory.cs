@@ -25,6 +25,8 @@ namespace IdentityServer.Services
                 identity.AddClaim(new Claim(ClaimTypes.Role, role));
             }
 
+            identity.AddClaim(new Claim("company", user.CompanyId));
+
             return identity;
         }
     }

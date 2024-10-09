@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "IVpEOhbGdl4=",
+  "dgSpecHash": "kS3tgTAzv1E=",
   "success": true,
   "projectFilePath": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Organization\\Organization.Infrastructure\\Organization.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Novruzoff\\.nuget\\packages\\ardalis.guardclauses\\4.6.0\\ardalis.guardclauses.4.6.0.nupkg.sha512",
+    "C:\\Users\\Novruzoff\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\Novruzoff\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\Novruzoff\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
     "C:\\Users\\Novruzoff\\.nuget\\packages\\fluentvalidation\\11.10.0\\fluentvalidation.11.10.0.nupkg.sha512",
