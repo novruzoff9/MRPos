@@ -31,6 +31,7 @@ public class CreateBranchCommandHandler : IRequestHandler<CreateBranch, bool>
             Opening = request.Opening,
             Closing = request.Closing,
             Created = DateTime.UtcNow,
+            CreatedBy = _identityService.GetUserId,
             Address = request.Address
         };
 

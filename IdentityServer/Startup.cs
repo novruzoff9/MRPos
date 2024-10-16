@@ -38,6 +38,7 @@ namespace IdentityServer
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddScoped<ISharedIdentityService, SharedIdentityService>();
+            services.AddScoped<IApplicationDbContext, ApplicationDbContext>();
             //services.AddScoped<IUserClaimsPrincipalFactory<ApplicationUser>, CustomUserClaimsPrincipalFactory>();
 
             services.AddIdentity<ApplicationUser, ApplicationRole>()

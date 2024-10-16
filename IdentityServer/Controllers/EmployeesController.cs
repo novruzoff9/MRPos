@@ -1,12 +1,8 @@
-﻿using IdentityServer.Data;
-using IdentityServer.DTOs.User;
+﻿using IdentityServer.DTOs.User;
 using IdentityServer.Models;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Shared.ResultTypes;
-using Shared.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -44,20 +40,19 @@ namespace IdentityServer.Controllers
                 });
             }
 
-            var result = Response<List<UserDto>>.Success(userslist, 200);
 
-            return Ok(result);
+            return Ok(userslist);
         }
 
         [HttpPost]
-        public async Task<IActionResult> AddEmployee(CreateUserDto request)
+        public async Task<IActionResult> AddEmployee(CreateUserDto request, string companyId)
         {
             var employee = new ApplicationUser
             {
                 Id = Guid.NewGuid().ToString(),
                 UserName = request.UserName,
                 Email = request.Email,
-                //CompanyId = _identityService.GetCompanyId
+                CompanyId = companyId
             };
 
             var result = await _userManager.CreateAsync(employee, request.Password);

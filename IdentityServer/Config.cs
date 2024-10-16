@@ -17,6 +17,7 @@ namespace IdentityServer
             new ApiResource("CatalogAPIFullAccess") { Scopes = { "CatalogAPIFullAccess" } },
             new ApiResource("ImageAPIFullAccess") { Scopes = { "ImageAPIFullAccess" }, },
             new ApiResource("OrganizationAPIFullAccess") { Scopes = { "OrganizationAPIFullAccess" }, },
+            new ApiResource("HRAPIFullAccess") { Scopes = { "HRAPIFullAccess" }, },
             new ApiResource(IdentityServerConstants.LocalApi.ScopeName)
         };
 
@@ -42,6 +43,7 @@ namespace IdentityServer
                 new ApiScope("CatalogAPIFullAccess", "Access for Catalog Api application"),
                 new ApiScope("ImageAPIFullAccess", "Access for Image Api application"),
                 new ApiScope("OrganizationAPIFullAccess", "Access for Organization Api application"),
+                new ApiScope("HRAPIFullAccess", "Access for HR Api application"),
                 new ApiScope(IdentityServerConstants.LocalApi.ScopeName)
             };
 
@@ -79,6 +81,7 @@ namespace IdentityServer
                         "roles",
                         "CatalogAPIFullAccess",
                         "OrganizationAPIFullAccess",
+                        "HRAPIFullAccess",
                         IdentityServerConstants.LocalApi.ScopeName,
                         IdentityServerConstants.StandardScopes.Email,
                         IdentityServerConstants.StandardScopes.OpenId,
