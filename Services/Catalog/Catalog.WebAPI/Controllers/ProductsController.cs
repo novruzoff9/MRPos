@@ -5,6 +5,7 @@ using Catalog.Application.Products.Commands.CreateProductCommand;
 using Catalog.Application.Products.Commands.DeleteProductCommand;
 using Catalog.Application.Products.Commands.EditProductCommand;
 using Catalog.Application.Products.Queries.GetProductQuery;
+using Catalog.Application.Products.Queries.GetProductsByCategoryQuery;
 using Catalog.Application.Products.Queries.GetProductsQuery;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -34,6 +35,14 @@ public class ProductsController : BaseController
     public async Task<IActionResult> GetById(int id)
     {
         var result = await Sender.Send(new GetProduct(id));
+        return Ok(result);
+    }
+
+    [HttpGet("ByCategoryId/{categoryId}")]
+    [AllowAnonymous]
+    public async Task<IActionResult> GetByCategory(int categoryId)
+    {
+        var result = await Sender.Send(new GetProductsByCategory(categoryId));
         return Ok(result);
     }
 

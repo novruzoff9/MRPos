@@ -26,6 +26,7 @@ namespace IdentityServer.Services
             }
 
             identity.AddClaim(new Claim("company", user.CompanyId));
+            identity.AddClaim(new Claim("branch", user.BranchId == null ? "noBranch" : user.BranchId));
 
             return identity;
         }

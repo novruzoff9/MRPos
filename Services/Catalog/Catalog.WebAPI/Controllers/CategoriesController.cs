@@ -29,6 +29,14 @@ public class CategoriesController : BaseController
         return Ok(result);
     }
 
+    [HttpGet("company/{id}")]
+    [AllowAnonymous]
+    public async Task<IActionResult> GetCategoriesByCompanyId(string id)
+    {
+        var result = await Sender.Send(new GetCategoriesofCompany(id));
+        return Ok(result);
+    }
+
     [HttpGet("{id}")]
     public async Task<IActionResult> GetById(int id)
     {

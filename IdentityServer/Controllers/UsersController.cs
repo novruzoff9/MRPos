@@ -94,10 +94,10 @@ namespace IdentityServer.Controllers
                     UserName = user.UserName,
                     Email = user.Email,
                     CompanyId = user.CompanyId,
+                    BranchId = user.BranchId,
                     Roles = roles.ToList() ?? Array.Empty<string>().ToList()
                 });
             }
-
 
             return Ok(userslist);
         }
@@ -117,10 +117,10 @@ namespace IdentityServer.Controllers
                     UserName = user.UserName,
                     Email = user.Email,
                     CompanyId = user.CompanyId,
+                    BranchId = user.BranchId,
                     Roles = roles.ToList() ?? Array.Empty<string>().ToList()
                 });
             }
-
 
             return Ok(userslist);
         }
@@ -141,12 +141,31 @@ namespace IdentityServer.Controllers
             if (!result.Succeeded)
             {
                 var errors = result.Errors.Select(e => e.Description).ToList();
-                return Ok(new
+                return BadRequest(new
                 {
                     Errors = errors
                 });
             }
 
+            return Ok();
+        }
+
+        [HttpPost("UpdateBranch")]
+        public async Task<IActionResult> UpdateBranch(string userId, string branchId)
+        {
+            var user = _userManager.Users.FirstOrDefault(x => x.Id == userId);
+            user.BranchId = branchId;
+            var result = await _userManager.UpdateAsync(user);
+            
+            if (!result.Succeeded)
+            {
+                var errors = result.Errors.Select(e => e.Description).ToList();
+                return Ok(new
+                {
+                    Errors = errors
+                });
+            }
+            
             return Ok();
         }
     }

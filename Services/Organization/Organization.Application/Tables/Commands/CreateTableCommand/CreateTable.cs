@@ -1,14 +1,18 @@
+using Shared.Services;
+
 namespace Organization.Application.Tables.Commands.CreateTableCommand;
 
-public record CreateTable(string BranchId, string TableNumber, decimal Deposit) : IRequest<bool>;
+public record CreateTable(string? BranchId, string TableNumber, decimal Deposit) : IRequest<bool>;
 
 public class CreateTableCommandHandler : IRequestHandler<CreateTable, bool>
 {
     private readonly IApplicationDbContext _context;
+    private readonly ISharedIdentityService _identityService;
 
-    public CreateTableCommandHandler(IApplicationDbContext context)
+    public CreateTableCommandHandler(IApplicationDbContext context, ISharedIdentityService identityService)
     {
         _context = context;
+        _identityService = identityService;
     }
 
     public async Task<bool> Handle(CreateTable request, CancellationToken cancellationToken)
@@ -19,7 +23,7 @@ public class CreateTableCommandHandler : IRequestHandler<CreateTable, bool>
         {
             TableNumber = request.TableNumber,
             Deposit = request.Deposit,
-            BranchId = request.BranchId
+            BranchId = request.BranchId ?? _identityService.GetBranchId
         };
 
         await _context.Tables.AddAsync(table, cancellationToken);

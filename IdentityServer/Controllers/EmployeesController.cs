@@ -36,6 +36,7 @@ namespace IdentityServer.Controllers
                     UserName = user.UserName,
                     Email = user.Email,
                     CompanyId = user.CompanyId,
+                    BranchId = user.BranchId,
                     Roles = roles.ToList() ?? Array.Empty<string>().ToList()
                 });
             }

@@ -1,12 +1,13 @@
 using Catalog.Application.Common.Interfaces;
 using Catalog.Domain.Entities;
+using Shared.ResultTypes;
 using Shared.Services;
 
 namespace Catalog.Application.Products.Commands.CreateProductCommand;
 
-public record CreateProduct(string Name, string Description, decimal Price, int categoryId) : IRequest<bool>;
+public record CreateProduct(string Name, string Description, decimal Price, int categoryId) : IRequest<Response<NoContent>>;
 
-public class CreateProductCommandHandler : IRequestHandler<CreateProduct, bool>
+public class CreateProductCommandHandler : IRequestHandler<CreateProduct, Response<NoContent>>
 {
     private readonly IApplicationDbContext _context;
     private readonly ISharedIdentityService _identityService;
@@ -17,7 +18,7 @@ public class CreateProductCommandHandler : IRequestHandler<CreateProduct, bool>
         _identityService = identityService;
     }
 
-    public async Task<bool> Handle(CreateProduct request, CancellationToken cancellationToken)
+    public async Task<Response<NoContent>> Handle(CreateProduct request, CancellationToken cancellationToken)
     {
         Guard.Against.Null(request, nameof(CreateProduct));
 
@@ -28,7 +29,7 @@ public class CreateProductCommandHandler : IRequestHandler<CreateProduct, bool>
             Price = request.Price,
             CategoryId = request.categoryId,
             Created = DateTime.UtcNow,
-            CreatedBy = _identityService.GetUserId,
+            //CreatedBy = _identityService.GetUserId,
             CompanyId = _identityService.GetCompanyId
         };
 
@@ -36,6 +37,6 @@ public class CreateProductCommandHandler : IRequestHandler<CreateProduct, bool>
 
         var success = await _context.SaveChangesAsync(cancellationToken) > 0;
 
-        return success;
+        return Response<NoContent>.Success(200);
     }
 }

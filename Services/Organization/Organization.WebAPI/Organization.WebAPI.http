@@ -1,6 +1,6 @@
 @organizationApi = http://localhost:5005
 
-@token = eyJhbGciOiJSUzI1NiIsImtpZCI6IjNCODNBQUJBRTIzMjVFRkEzRUZFOUM3NjI5MzQzMzY2IiwidHlwIjoiYXQrand0In0.eyJuYmYiOjE3Mjg0MTg2MzEsImV4cCI6MTcyODQyNTgzMSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDAxIiwiYXVkIjpbIkNhdGFsb2dBUElGdWxsQWNjZXNzIiwiT3JnYW5pemF0aW9uQVBJRnVsbEFjY2VzcyIsImh0dHA6Ly9sb2NhbGhvc3Q6NTAwMS9yZXNvdXJjZXMiXSwiY2xpZW50X2lkIjoiTVZDVXNlckFwaUNsaWVudCIsInN1YiI6IjUyMzE2YzJmLTlhMmItNDYxOC1iNjIyLWU1NTAxYTQ5Y2M4ZSIsImF1dGhfdGltZSI6MTcyODQxODYzMSwiaWRwIjoibG9jYWwiLCJyb2xlcyI6WyJzdXBlcmFkbWluIiwiYWRtaW4iXSwiY29tcGFueSI6Ik1SUG9zIiwianRpIjoiRDgwQzVCODdCNjI3NjM5QTgyQUM2MTE2NUQ2M0FGMTIiLCJpYXQiOjE3Mjg0MTg2MzEsInNjb3BlIjpbIkNhdGFsb2dBUElGdWxsQWNjZXNzIiwiZW1haWwiLCJJZGVudGl0eVNlcnZlckFwaSIsIm9wZW5pZCIsIk9yZ2FuaXphdGlvbkFQSUZ1bGxBY2Nlc3MiLCJwcm9maWxlIiwicm9sZXMiLCJvZmZsaW5lX2FjY2VzcyJdLCJhbXIiOlsicHdkIl19.h2cebp3my3Zy6YhEPOAeOor6BjthujY9aTPTzKUSDwTEh23TMeFM6hYLUeLIuEGy0LFYYxRNf3iK2npEj6qJRfTG4Ax-Fw-w4aLiDwBjW5YdsZuzeHpWFW8hdTCCU37VEh7kKG6ho9e8NQLp2VOaX-eM2iEJ1eku01Cq1LMn1aS0KUyZiuAe07FlxtJhLqMbWJDDwOBiM2fAsNiAS7hHolN2Bip0OSAROyeeDCWHCx4A3R-zLStqtU2FQ8_XUbYPelS69t0k7OvBLwDg6Ja5kAFWvbWHYDrQ6eW2WL53tD-vRZCpq_mNaRL5C8zTzo_Ts97ojJdE6cvhaoKSPrnIKg
+@token = eyJhbGciOiJSUzI1NiIsImtpZCI6IjNCODNBQUJBRTIzMjVFRkEzRUZFOUM3NjI5MzQzMzY2IiwidHlwIjoiYXQrand0In0.eyJuYmYiOjE3Mjk2ODA2NzAsImV4cCI6MTcyOTY4Nzg3MCwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDAxIiwiYXVkIjpbIkNhdGFsb2dBUElGdWxsQWNjZXNzIiwiSFJBUElGdWxsQWNjZXNzIiwiTWVudUFQSUZ1bGxBY2Nlc3MiLCJPcmRlckFQSUZ1bGxBY2Nlc3MiLCJPcmdhbml6YXRpb25BUElGdWxsQWNjZXNzIiwiaHR0cDovL2xvY2FsaG9zdDo1MDAxL3Jlc291cmNlcyJdLCJjbGllbnRfaWQiOiJNVkNVc2VyQXBpQ2xpZW50Iiwic3ViIjoiMzhmNTZhMWMtYWY1Ni00ZWYxLWI5MmItMjRhMzg0N2UxMDU4IiwiYXV0aF90aW1lIjoxNzI5NjgwNjcwLCJpZHAiOiJsb2NhbCIsInJvbGVzIjoiYWRtaW4iLCJjb21wYW55IjoiTkhRViIsImJyYW5jaCI6Ik5vQnJhbmNoIiwianRpIjoiN0NDRkRDMTY3RDNGQTBCRkUzNUEyQTk4NUZCMDJFOTQiLCJpYXQiOjE3Mjk2ODA2NzAsInNjb3BlIjpbIkNhdGFsb2dBUElGdWxsQWNjZXNzIiwiZW1haWwiLCJIUkFQSUZ1bGxBY2Nlc3MiLCJJZGVudGl0eVNlcnZlckFwaSIsIk1lbnVBUElGdWxsQWNjZXNzIiwib3BlbmlkIiwiT3JkZXJBUElGdWxsQWNjZXNzIiwiT3JnYW5pemF0aW9uQVBJRnVsbEFjY2VzcyIsInByb2ZpbGUiLCJyb2xlcyIsIm9mZmxpbmVfYWNjZXNzIl0sImFtciI6WyJwd2QiXX0.U5oTnL-P5a5UieddSTHFfmedxMy86Ng4ek9VjyNmYHO4ElF5z-aZGxWzkLGyWLYTyT09Q0y75SO9E3bxZFiAhWbb-njaISkK0BRsS3ZH9_3sbRU-yKGPMjEnqtCxHGDZtz54HmT2-1FvYb4aH3m7AXC2JFFhLqabOOnozdFqJCfUwy1NQHDthUuhEMYhUAo9tgtrJ_Y2hC-7qlMIoifWPTXw5d-Fu3pcAAZ6NjBv5to7emdZAjk73xeMN7D0ae7xvGFH0kKLVkniCYecilI1FgRH4oaFAv4BkCbeyAKAbb7fkAepTSKU3-wGJVEp4m3WOr6clf3HM6x5ksgd7ofWyg
 
 
 
@@ -17,4 +17,33 @@ Content-Type: application/json
   "name": "RufatOgluHolding",
   "description": "Mirinin ??xsi ?irk?ti",
   "logoUrl": "nyll"
+}
+
+###
+POST {{organizationApi}}/api/branches
+Authorization: Bearer {{token}}
+Content-Type: application/json
+{
+  "name": "Tarqovu",
+  "is24Hour": false,
+  "serviceFee": 0,
+  "opening": "08:10:00",
+  "closing": "23:50:00",
+  "address": {
+    "city": "Baku",
+    "country": "Azerbaijan",
+    "googleMapsEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2451.3570553831887!2d49.83966533922378!3d40.37273880576869!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307dafc38f9f4f%3A0x33f1f198d861a453!2sShaurma%20N1!5e1!3m2!1str!2saz!4v1729681472659!5m2!1str!2saz",
+      "googleMapsLocation": "https://maps.app.goo.gl/ugXYFJBrNzKea8t87",
+    "region": "Nasimi",
+    "street": "Nizami"
+  }
+}
+
+###
+POST {{organizationApi}}/api/tables
+Authorization: Bearer {{token}}
+Content-Type: application/json
+{
+  "tableNumber": "2",
+  "deposit": "0"
 }

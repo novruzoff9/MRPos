@@ -10,6 +10,7 @@ namespace Shared.Services
     {
         public string GetUserId { get; }
         public string GetCompanyId { get; }
+        public string GetBranchId { get; }
     }
 
     public class SharedIdentityService : ISharedIdentityService
@@ -23,5 +24,6 @@ namespace Shared.Services
 
         public string GetUserId => _httpContextAccessor.HttpContext.User.FindFirst("sub").Value;
         public string GetCompanyId => _httpContextAccessor.HttpContext.User.FindFirst("company").Value;
+        public string GetBranchId => _httpContextAccessor.HttpContext.User.FindFirst("branch").Value;
     }
 }

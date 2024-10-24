@@ -55,7 +55,10 @@ namespace IdentityServer.Controllers
                 return NotFound("Role not found");
             }
 
+            var oldRoles = await _userManager.GetRolesAsync(user);
+
             // Kullanıcıyı role atayalım
+            await _userManager.RemoveFromRolesAsync(user, oldRoles);
             var result = await _userManager.AddToRoleAsync(user, role.Name);
 
             if (!result.Succeeded)
@@ -66,11 +69,48 @@ namespace IdentityServer.Controllers
             return Ok("User assigned to role successfully");
         }
 
+        [HttpPost("delete-role")]
+        public async Task<IActionResult> RemoveRole(string userId, string roleId)
+        {
+            // Kullanıcıyı bulalım
+            var user = await _userManager.FindByIdAsync(userId);
+            if (user == null)
+            {
+                return NotFound("User not found");
+            }
+
+            // Rolü bulalım
+            var role = await _roleManager.FindByIdAsync(roleId);
+            if (role == null)
+            {
+                return NotFound("Role not found");
+            }
+
+            // Rolu kullanicidan silelim
+            var result = await _userManager.RemoveFromRoleAsync(user, role.Name);
+
+            if (!result.Succeeded)
+            {
+                return BadRequest(result.Errors);
+            }
+
+            return Ok("User removed from role successfully");
+        }
+
         [HttpGet]
         public IActionResult GetAll()
         {
             var roles = _roleManager.Roles;
             return Ok(roles);
         }
+
+        [HttpGet("{userId}")]
+        public async Task<IActionResult> GetRolesOfUser(string userId)
+        {
+            var user = await _userManager.FindByIdAsync(userId);
+            var roles = await _userManager.GetRolesAsync(user);
+            return Ok(roles);
+        }
+
     }
 }

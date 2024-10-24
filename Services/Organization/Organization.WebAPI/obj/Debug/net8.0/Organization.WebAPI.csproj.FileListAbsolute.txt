@@ -170,3 +170,4 @@ C:\Users\Novruzoff\source\repos\MRPos\Services\Organization\Organization.WebAPI\
 C:\Users\Novruzoff\source\repos\MRPos\Services\Organization\Organization.WebAPI\bin\Debug\net8.0\Catalog.Domain.dll
 C:\Users\Novruzoff\source\repos\MRPos\Services\Organization\Organization.WebAPI\bin\Debug\net8.0\Catalog.Application.pdb
 C:\Users\Novruzoff\source\repos\MRPos\Services\Organization\Organization.WebAPI\bin\Debug\net8.0\Catalog.Domain.pdb
+C:\Users\Novruzoff\source\repos\MRPos\Services\Organization\Organization.WebAPI\bin\Debug\net8.0\Organization.WebAPI.staticwebassets.runtime.json

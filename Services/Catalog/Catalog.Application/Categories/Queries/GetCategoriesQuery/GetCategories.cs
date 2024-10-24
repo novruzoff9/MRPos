@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace Catalog.Application.Categories.Queries.GetCategoriesQuery;
 
-public record GetCategories : IRequest<Response<List<Category>>>;
+public record GetCategories() : IRequest<Response<List<Category>>>;
 
 public class GetCategoriesQueryHandler : IRequestHandler<GetCategories, Response<List<Category>>>
 {

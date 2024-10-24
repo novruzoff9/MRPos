@@ -52,6 +52,10 @@ namespace Organization.Infrastructure.Migrations
                         .HasMaxLength(120)
                         .HasColumnType("nvarchar(120)");
 
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<TimeOnly>("Opening")
                         .HasColumnType("time");
 

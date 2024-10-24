@@ -33,6 +33,9 @@ namespace IdentityServer.Services
 
             var companyClaim = new Claim("company", user.CompanyId?? "MRPos");
             context.IssuedClaims.Add(companyClaim);
+
+            var branchClaim = new Claim("branch", user.BranchId ?? "NoBranch");
+            context.IssuedClaims.Add(branchClaim);
         }
 
         public Task IsActiveAsync(IsActiveContext context)

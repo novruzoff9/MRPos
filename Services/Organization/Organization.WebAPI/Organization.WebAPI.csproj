@@ -25,4 +25,8 @@
     <ProjectReference Include="..\Organization.Infrastructure\Organization.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\CompanyLogo\" />
+  </ItemGroup>
+
 </Project>

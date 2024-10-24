@@ -4,7 +4,7 @@ using Shared.Services;
 
 namespace Organization.Application.Branches.Commands.CreateBranchCommand;
 
-public record CreateBranch(bool Is24Hour, decimal ServiceFee, TimeOnly Opening, TimeOnly Closing, Address Address) : IRequest<bool>;
+public record CreateBranch(string Name, bool Is24Hour, decimal ServiceFee, TimeOnly Opening, TimeOnly Closing, Address Address) : IRequest<bool>;
 
 public class CreateBranchCommandHandler : IRequestHandler<CreateBranch, bool>
 {
@@ -25,6 +25,7 @@ public class CreateBranchCommandHandler : IRequestHandler<CreateBranch, bool>
         var branch = new Branch
         {
             Id = await IdGenerator.GenerateUniqueBranchIdAsync(),
+            Name = request.Name,
             CompanyId = _identityService.GetCompanyId,
             ServiceFee = request.ServiceFee,
             Is24Hour = request.Is24Hour,

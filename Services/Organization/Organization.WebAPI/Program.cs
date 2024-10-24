@@ -47,7 +47,7 @@ builder.Services.AddScoped<ISharedIdentityService, SharedIdentityService>();
 
 builder.Services.AddAuthorization(options =>
 {
-    options.AddPolicy("WriteCompany", policy => policy.RequireRole("superadmin"));
+    options.AddPolicy("WriteCompany", policy => policy.RequireRole("superadmin", "admin"));
     options.AddPolicy("ReadCompany", policy => policy.RequireRole("superadmin", "admin", "director"));
 
     options.AddPolicy("WriteBranch", policy => policy.RequireRole("superadmin", "admin", "director"));
@@ -71,7 +71,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
+app.UseStaticFiles();
 app.UseCors("AllowAllOrigins");
 app.UseAuthentication();
 app.UseAuthorization();

@@ -71,4 +71,62 @@ public class EmployeesController : ControllerBase
         }
         return Ok(result);
     }
+
+    [HttpPost("delete-role")]
+    public async Task<IActionResult> RemoveRoleFromUser(string userId, string roleId)
+    {
+        var client = _httpClientFactory.CreateClient("employees");
+        var response = await client.PostAsync($"http://localhost:5001/api/roles/delete-role?userId={userId}&roleId={roleId}", null);
+
+        Response<NoContent> result;
+
+        if (response.IsSuccessStatusCode)
+        {
+            result = Response<NoContent>.Success(200);
+        }
+        else
+        {
+            result = Response<NoContent>.Fail("Error oldu", 400);
+        }
+        return Ok(result);
+    }
+
+    [HttpGet("{userId}/roles")]
+    public async Task<IActionResult> GetRolesOfUser(string userId)
+    {
+        var client = _httpClientFactory.CreateClient("employees");
+        var response = await client.GetAsync($"http://localhost:5001/api/roles/{userId}");
+        var roles = await response.Content.ReadFromJsonAsync<List<string>>();
+
+        Response<List<string>> result;
+
+        if (response.IsSuccessStatusCode)
+        {
+            result = Response<List<string>>.Success(roles, 200);
+        }
+        else
+        {
+            result = Response<List<string>>.Fail("Error oldu", 400);
+        }
+        return Ok(result);
+    }
+
+    [HttpPost("updatebranch")]
+    public async Task<IActionResult> UpdateBranch(string userId, string branchId)
+    {
+        var client = _httpClientFactory.CreateClient("employees");
+        var response = await client.PostAsync($"http://localhost:5001/api/users/UpdateBranch?userId={userId}&branchId={branchId}", null);
+
+        Response<NoContent> result;
+
+        if (response.IsSuccessStatusCode)
+        {
+            result = Response<NoContent>.Success(200);
+        }
+        else
+        {
+            result = Response<NoContent>.Fail($"Error oldu {response}", 400);
+        }
+        return Ok(result);
+    }
 }

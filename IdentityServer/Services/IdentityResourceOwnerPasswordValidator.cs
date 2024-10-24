@@ -44,7 +44,8 @@ namespace IdentityServer.Services
         {
             new Claim("sub", user.Id.ToString()), // Kullanıcı kimliği
             new Claim("email", user.Email),        // Kullanıcı e-posta
-            new Claim("company", user.CompanyId)
+            new Claim("company", user.CompanyId),
+            new Claim("branch", user.BranchId == null ? "noBranch" : user.BranchId)
         };
 
             // Rolleri ekle

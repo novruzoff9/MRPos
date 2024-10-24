@@ -9,6 +9,7 @@ using AutoMapper;
 using Organization.Application.Branches.Commands.CreateBranchCommand;
 using Organization.Application.Common.Models.Branch;
 using Shared.ResultTypes;
+using Organization.Infrastructure;
 
 namespace Organization.WebAPI.Controllers;
 
@@ -17,10 +18,12 @@ namespace Organization.WebAPI.Controllers;
 public class BranchesController : BaseController
 {
     private readonly IMapper _mapper;
+    private readonly ApplicationDbContext _context;
 
-    public BranchesController(IMapper mapper)
+    public BranchesController(IMapper mapper, ApplicationDbContext context)
     {
         _mapper = mapper;
+        _context = context;
     }
 
     [HttpGet]
@@ -63,11 +66,20 @@ public class BranchesController : BaseController
         return Ok(result);
     }
 
-    [HttpDelete]
+    [HttpDelete("{id}")]
     [Authorize(Policy = "WriteBranch")]
-    public async Task<IActionResult> Delete(DeleteBranch command)
+    public async Task<IActionResult> Delete(string id)
     {
-        var result = await Sender.Send(command);
+        var result = await Sender.Send(new DeleteBranch(id));
         return Ok(result);
+    }
+
+    [HttpGet("branch-serviceFee/{branchId}")]
+    [AllowAnonymous]
+    public async Task<IActionResult> GetServiceFee(string branchId)
+    {
+        var branch = _context.Branches.FirstOrDefault(x => x.Id == branchId);
+        var serviceFee = branch.ServiceFee;
+        return Ok(serviceFee);
     }
 }

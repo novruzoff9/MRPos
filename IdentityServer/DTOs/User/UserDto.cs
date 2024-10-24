@@ -8,6 +8,7 @@ namespace IdentityServer.DTOs.User
         public string UserName { get; set; }
         public string Email { get; set; }
         public string CompanyId { get; set; }
+        public string BranchId { get; set; }
         public List<string> Roles { get; set; }
         
     }
