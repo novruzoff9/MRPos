@@ -319,7 +319,10 @@
       "System.Text.Encodings.Web/4.4.0": {},
       "Organization.Domain/1.0.0": {
         "runtime": {
-          "Organization.Domain.dll": {}
+          "Organization.Domain.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "Shared/1.0.0": {
@@ -329,7 +332,10 @@
           "Newtonsoft.Json": "13.0.3"
         },
         "runtime": {
-          "Shared.dll": {}
+          "Shared.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

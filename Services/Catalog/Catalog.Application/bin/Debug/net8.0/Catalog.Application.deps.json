@@ -463,7 +463,10 @@
           "MongoDB.Driver": "2.28.0"
         },
         "runtime": {
-          "Catalog.Domain.dll": {}
+          "Catalog.Domain.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "Shared/1.0.0": {
@@ -473,7 +476,10 @@
           "Newtonsoft.Json": "13.0.3"
         },
         "runtime": {
-          "Shared.dll": {}
+          "Shared.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

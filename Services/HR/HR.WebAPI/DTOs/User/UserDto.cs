@@ -10,5 +10,4 @@ public class UserDto
     public string CompanyId { get; set; }
     public string BranchId { get; set; }
     public List<string> Roles { get; set; }
-    
 }

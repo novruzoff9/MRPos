@@ -1,11 +1,12 @@
 {
   "Version": 1,
-  "Hash": "ft7BgVbIdRfePx1131eNoJjkwHmUdmw/flRSgRRprN8=",
+  "Hash": "gX+FR6Ey09TmVrhI/C8hPWQDN1WstMHC52tfFhFiz5I=",
   "Source": "Catalog.WebAPI",
   "BasePath": "_content/Catalog.WebAPI",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": []
+  "Assets": [],
+  "Endpoints": []
 }

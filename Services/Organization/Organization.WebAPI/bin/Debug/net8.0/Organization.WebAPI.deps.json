@@ -1130,12 +1130,6 @@
       "System.Text.Json/8.0.4": {
         "dependencies": {
           "System.Text.Encodings.Web": "8.0.0"
-        },
-        "runtime": {
-          "lib/net8.0/System.Text.Json.dll": {
-            "assemblyVersion": "8.0.0.0",
-            "fileVersion": "8.0.724.31311"
-          }
         }
       },
       "System.Threading.Channels/6.0.0": {},
@@ -1180,7 +1174,10 @@
           "Shared": "1.0.0"
         },
         "runtime": {
-          "Catalog.Application.dll": {}
+          "Catalog.Application.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "Catalog.Domain/1.0.0": {
@@ -1188,7 +1185,10 @@
           "MongoDB.Driver": "2.28.0"
         },
         "runtime": {
-          "Catalog.Domain.dll": {}
+          "Catalog.Domain.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "Organization.Application/1.0.0": {
@@ -1204,12 +1204,18 @@
           "Shared": "1.0.0"
         },
         "runtime": {
-          "Organization.Application.dll": {}
+          "Organization.Application.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "Organization.Domain/1.0.0": {
         "runtime": {
-          "Organization.Domain.dll": {}
+          "Organization.Domain.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "Organization.Infrastructure/1.0.0": {
@@ -1219,7 +1225,10 @@
           "Organization.Application": "1.0.0"
         },
         "runtime": {
-          "Organization.Infrastructure.dll": {}
+          "Organization.Infrastructure.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "Shared/1.0.0": {
@@ -1229,7 +1238,10 @@
           "Newtonsoft.Json": "13.0.3"
         },
         "runtime": {
-          "Shared.dll": {}
+          "Shared.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

@@ -1,11 +1,12 @@
 {
   "Version": 1,
-  "Hash": "8Bn3Lszcvu0F2SyyP9SFwaLfqebRJZbHxotWRAIA72Q=",
+  "Hash": "zyki3bH0ZU+qmwVe+gAawPziOK9lTGNQr8OMSjRo1X4=",
   "Source": "Menu",
   "BasePath": "_content/Menu",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": []
+  "Assets": [],
+  "Endpoints": []
 }

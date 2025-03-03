@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Menu\\Menu\\Menu.csproj": {}
+    "C:\\Users\\User\\source\\repos\\MRPos\\Services\\Menu\\Menu\\Menu.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Catalog\\Catalog.Domain\\Catalog.Domain.csproj": {
+    "C:\\Users\\User\\source\\repos\\MRPos\\Services\\Catalog\\Catalog.Domain\\Catalog.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Catalog\\Catalog.Domain\\Catalog.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\User\\source\\repos\\MRPos\\Services\\Catalog\\Catalog.Domain\\Catalog.Domain.csproj",
         "projectName": "Catalog.Domain",
-        "projectPath": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Catalog\\Catalog.Domain\\Catalog.Domain.csproj",
-        "packagesPath": "C:\\Users\\Novruzoff\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Catalog\\Catalog.Domain\\obj\\",
+        "projectPath": "C:\\Users\\User\\source\\repos\\MRPos\\Services\\Catalog\\Catalog.Domain\\Catalog.Domain.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\source\\repos\\MRPos\\Services\\Catalog\\Catalog.Domain\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Novruzoff\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -39,8 +42,9 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "direct"
-        }
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -67,21 +71,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Menu\\Menu\\Menu.csproj": {
+    "C:\\Users\\User\\source\\repos\\MRPos\\Services\\Menu\\Menu\\Menu.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Menu\\Menu\\Menu.csproj",
+        "projectUniqueName": "C:\\Users\\User\\source\\repos\\MRPos\\Services\\Menu\\Menu\\Menu.csproj",
         "projectName": "Menu",
-        "projectPath": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Menu\\Menu\\Menu.csproj",
-        "packagesPath": "C:\\Users\\Novruzoff\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Menu\\Menu\\obj\\",
+        "projectPath": "C:\\Users\\User\\source\\repos\\MRPos\\Services\\Menu\\Menu\\Menu.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\source\\repos\\MRPos\\Services\\Menu\\Menu\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Novruzoff\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -89,21 +97,20 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Catalog\\Catalog.Domain\\Catalog.Domain.csproj": {
-                "projectPath": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Catalog\\Catalog.Domain\\Catalog.Domain.csproj"
+              "C:\\Users\\User\\source\\repos\\MRPos\\Services\\Catalog\\Catalog.Domain\\Catalog.Domain.csproj": {
+                "projectPath": "C:\\Users\\User\\source\\repos\\MRPos\\Services\\Catalog\\Catalog.Domain\\Catalog.Domain.csproj"
               },
-              "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Organization\\Organization.Domain\\Organization.Domain.csproj": {
-                "projectPath": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Organization\\Organization.Domain\\Organization.Domain.csproj"
+              "C:\\Users\\User\\source\\repos\\MRPos\\Services\\Organization\\Organization.Domain\\Organization.Domain.csproj": {
+                "projectPath": "C:\\Users\\User\\source\\repos\\MRPos\\Services\\Organization\\Organization.Domain\\Organization.Domain.csproj"
               },
-              "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Shared\\Shared\\Shared.csproj": {
-                "projectPath": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Shared\\Shared\\Shared.csproj"
+              "C:\\Users\\User\\source\\repos\\MRPos\\Shared\\Shared\\Shared.csproj": {
+                "projectPath": "C:\\Users\\User\\source\\repos\\MRPos\\Shared\\Shared\\Shared.csproj"
               }
             }
           }
@@ -116,8 +123,9 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "direct"
-        }
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -165,21 +173,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Organization\\Organization.Domain\\Organization.Domain.csproj": {
+    "C:\\Users\\User\\source\\repos\\MRPos\\Services\\Organization\\Organization.Domain\\Organization.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Organization\\Organization.Domain\\Organization.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\User\\source\\repos\\MRPos\\Services\\Organization\\Organization.Domain\\Organization.Domain.csproj",
         "projectName": "Organization.Domain",
-        "projectPath": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Organization\\Organization.Domain\\Organization.Domain.csproj",
-        "packagesPath": "C:\\Users\\Novruzoff\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Services\\Organization\\Organization.Domain\\obj\\",
+        "projectPath": "C:\\Users\\User\\source\\repos\\MRPos\\Services\\Organization\\Organization.Domain\\Organization.Domain.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\source\\repos\\MRPos\\Services\\Organization\\Organization.Domain\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Novruzoff\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -187,7 +199,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -204,8 +215,9 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "direct"
-        }
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -226,21 +238,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Shared\\Shared\\Shared.csproj": {
+    "C:\\Users\\User\\source\\repos\\MRPos\\Shared\\Shared\\Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Shared\\Shared\\Shared.csproj",
+        "projectUniqueName": "C:\\Users\\User\\source\\repos\\MRPos\\Shared\\Shared\\Shared.csproj",
         "projectName": "Shared",
-        "projectPath": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Shared\\Shared\\Shared.csproj",
-        "packagesPath": "C:\\Users\\Novruzoff\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Novruzoff\\source\\repos\\MRPos\\Shared\\Shared\\obj\\",
+        "projectPath": "C:\\Users\\User\\source\\repos\\MRPos\\Shared\\Shared\\Shared.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\source\\repos\\MRPos\\Shared\\Shared\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Novruzoff\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -248,7 +264,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -265,8 +280,9 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "direct"
-        }
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "netcoreapp3.1": {
@@ -301,7 +317,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

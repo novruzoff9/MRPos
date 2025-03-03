@@ -1,5 +1,8 @@
 is_global = true
 build_property.RootNamespace = Shared
-build_property.ProjectDir = C:\Users\Novruzoff\source\repos\MRPos\Shared\Shared\
+build_property.ProjectDir = C:\Users\User\source\repos\MRPos\Shared\Shared\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.CsWinRTUseWindowsUIXamlProjections = false
+build_property.EffectiveAnalysisLevelStyle = 
+build_property.EnableCodeStyleSeverity = 
