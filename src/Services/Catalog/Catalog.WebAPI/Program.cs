@@ -1,10 +1,6 @@
-using Catalog.WebAPI;
-using Microsoft.Extensions.Configuration;
-using Catalog.Infrasturucture;
 using Catalog.Application;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Catalog.Infrasturucture;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc.Authorization;
 using Shared.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -22,8 +18,6 @@ builder.Services.AddInfrastructureServices(builder.Configuration);
 // Application services
 builder.Services.AddApplicationServices(builder.Configuration);
 
-// WebApi services
-builder.Services.AddWebApiServices(builder.Configuration);
 
 var reqriedAuthorizationPolicy = new AuthorizationPolicyBuilder()
     .RequireAuthenticatedUser()
@@ -31,7 +25,7 @@ var reqriedAuthorizationPolicy = new AuthorizationPolicyBuilder()
 
 builder.Services.AddControllers(options =>
 {
-    //options.Filters.Add(new AuthorizeFilter(reqriedAuthorizationPolicy));
+    //options.Filters.Add(new AuthorizeFilter(requiredAuthorizationPolicy));
 });
 builder.Services.AddHttpContextAccessor();
 builder.Services.ConfigureAuth(builder.Configuration);
@@ -45,7 +39,6 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseCors("AllowAllOrigins");
 app.UseAuthentication();
 app.UseAuthorization();
 
