@@ -3,28 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\User\\source\\repos\\MRPos\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{86BE71E7-F305-4436-B614-0744CB10F41C}|Services\\Organization\\Organization.WebAPI\\Organization.WebAPI.csproj|c:\\users\\user\\source\\repos\\mrpos\\services\\organization\\organization.webapi\\controllers\\companiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{86BE71E7-F305-4436-B614-0744CB10F41C}|Services\\Organization\\Organization.WebAPI\\Organization.WebAPI.csproj|solutionrelative:services\\organization\\organization.webapi\\controllers\\companiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8163C2E2-B4FF-4BEA-8A9E-9A26BA1EC43C}|src\\Shared\\Shared\\Shared.csproj|c:\\users\\user\\source\\repos\\mrpos\\src\\shared\\shared\\extensions\\redis\\redisregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8163C2E2-B4FF-4BEA-8A9E-9A26BA1EC43C}|src\\Shared\\Shared\\Shared.csproj|solutionrelative:src\\shared\\shared\\extensions\\redis\\redisregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B091C875-8467-417B-B349-80951B1DF242}|Services\\Order\\Order.WebAPI\\Order.WebAPI.csproj|c:\\users\\user\\source\\repos\\mrpos\\services\\order\\order.webapi\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B091C875-8467-417B-B349-80951B1DF242}|Services\\Order\\Order.WebAPI\\Order.WebAPI.csproj|solutionrelative:services\\order\\order.webapi\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AEE5B342-F27B-AFAC-445F-11D54A515CFB}|src\\Services\\Catalog\\Catalog.Application\\Catalog.Application.csproj|c:\\users\\user\\source\\repos\\mrpos\\src\\services\\catalog\\catalog.application\\catalog.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{AEE5B342-F27B-AFAC-445F-11D54A515CFB}|src\\Services\\Catalog\\Catalog.Application\\Catalog.Application.csproj|solutionrelative:src\\services\\catalog\\catalog.application\\catalog.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C4092F76-4DAA-4453-92F1-687D56DCD6B7}|Services\\HR\\HR.WebAPI\\HR.WebAPI.csproj|c:\\users\\user\\source\\repos\\mrpos\\services\\hr\\hr.webapi\\controllers\\employeescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C4092F76-4DAA-4453-92F1-687D56DCD6B7}|Services\\HR\\HR.WebAPI\\HR.WebAPI.csproj|solutionrelative:services\\hr\\hr.webapi\\controllers\\employeescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E32714A0-1FBC-7299-1685-1B42AB87239F}|src\\Services\\Organization\\Organization.Application\\Organization.Application.csproj|c:\\users\\user\\source\\repos\\mrpos\\src\\services\\organization\\organization.application\\branches\\commands\\deletebranchcommand\\deletebranch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E32714A0-1FBC-7299-1685-1B42AB87239F}|src\\Services\\Organization\\Organization.Application\\Organization.Application.csproj|solutionrelative:src\\services\\organization\\organization.application\\branches\\commands\\deletebranchcommand\\deletebranch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C4092F76-4DAA-4453-92F1-687D56DCD6B7}|Services\\HR\\HR.WebAPI\\HR.WebAPI.csproj|c:\\users\\user\\source\\repos\\mrpos\\services\\hr\\hr.webapi\\hr.webapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
-      "RelativeMoniker": "D:0:0:{C4092F76-4DAA-4453-92F1-687D56DCD6B7}|Services\\HR\\HR.WebAPI\\HR.WebAPI.csproj|solutionrelative:services\\hr\\hr.webapi\\hr.webapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+      "AbsoluteMoniker": "D:0:0:{E32714A0-1FBC-7299-1685-1B42AB87239F}|src\\Services\\Organization\\Organization.Application\\Organization.Application.csproj|c:\\users\\user\\source\\repos\\mrpos\\src\\services\\organization\\organization.application\\branches\\commands\\createbranchcommand\\createbranch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E32714A0-1FBC-7299-1685-1B42AB87239F}|src\\Services\\Organization\\Organization.Application\\Organization.Application.csproj|solutionrelative:src\\services\\organization\\organization.application\\branches\\commands\\createbranchcommand\\createbranch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4C9A792B-C4FE-4D08-8357-2A3835F843E7}|Services\\Organization\\Organization.Application\\Organization.Application.csproj|c:\\users\\user\\source\\repos\\mrpos\\services\\organization\\organization.application\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4C9A792B-C4FE-4D08-8357-2A3835F843E7}|Services\\Organization\\Organization.Application\\Organization.Application.csproj|solutionrelative:services\\organization\\organization.application\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{835E480B-67B6-DECC-D11E-CE9A444109DC}|src\\Services\\Menu\\Menu\\Menu.csproj|c:\\users\\user\\source\\repos\\mrpos\\src\\services\\menu\\menu\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{835E480B-67B6-DECC-D11E-CE9A444109DC}|src\\Services\\Menu\\Menu\\Menu.csproj|solutionrelative:src\\services\\menu\\menu\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{86BE71E7-F305-4436-B614-0744CB10F41C}|Services\\Organization\\Organization.WebAPI\\Organization.WebAPI.csproj|c:\\users\\user\\source\\repos\\mrpos\\services\\organization\\organization.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{86BE71E7-F305-4436-B614-0744CB10F41C}|Services\\Organization\\Organization.WebAPI\\Organization.WebAPI.csproj|solutionrelative:services\\organization\\organization.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8163C2E2-B4FF-4BEA-8A9E-9A26BA1EC43C}|src\\Shared\\Shared\\Shared.csproj|c:\\users\\user\\source\\repos\\mrpos\\src\\shared\\shared\\extensions\\consulregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8163C2E2-B4FF-4BEA-8A9E-9A26BA1EC43C}|src\\Shared\\Shared\\Shared.csproj|solutionrelative:src\\shared\\shared\\extensions\\consulregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8163C2E2-B4FF-4BEA-8A9E-9A26BA1EC43C}|src\\Shared\\Shared\\Shared.csproj|c:\\users\\user\\source\\repos\\mrpos\\src\\shared\\shared\\extensions\\authregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8163C2E2-B4FF-4BEA-8A9E-9A26BA1EC43C}|src\\Shared\\Shared\\Shared.csproj|solutionrelative:src\\shared\\shared\\extensions\\authregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A51805C8-F998-541A-F2B6-6B01A35673D5}|src\\Services\\Order\\Order.WebAPI\\Order.WebAPI.csproj|c:\\users\\user\\source\\repos\\mrpos\\src\\services\\order\\order.webapi\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A51805C8-F998-541A-F2B6-6B01A35673D5}|src\\Services\\Order\\Order.WebAPI\\Order.WebAPI.csproj|solutionrelative:src\\services\\order\\order.webapi\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,85 +42,119 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CompaniesController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\MRPos\\Services\\Organization\\Organization.WebAPI\\Controllers\\CompaniesController.cs",
-              "RelativeDocumentMoniker": "Services\\Organization\\Organization.WebAPI\\Controllers\\CompaniesController.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\MRPos\\Services\\Organization\\Organization.WebAPI\\Controllers\\CompaniesController.cs",
-              "RelativeToolTip": "Services\\Organization\\Organization.WebAPI\\Controllers\\CompaniesController.cs",
-              "ViewState": "AgIAAFUAAAAAAAAAAAAwwF4AAAB2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T20:22:33.369Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "OrdersController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\MRPos\\Services\\Order\\Order.WebAPI\\Controllers\\OrdersController.cs",
-              "RelativeDocumentMoniker": "Services\\Order\\Order.WebAPI\\Controllers\\OrdersController.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\MRPos\\Services\\Order\\Order.WebAPI\\Controllers\\OrdersController.cs",
-              "RelativeToolTip": "Services\\Order\\Order.WebAPI\\Controllers\\OrdersController.cs",
-              "ViewState": "AgIAACgAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "Title": "Catalog.Application",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\MRPos\\src\\Services\\Catalog\\Catalog.Application\\Catalog.Application.csproj",
+              "RelativeDocumentMoniker": "src\\Services\\Catalog\\Catalog.Application\\Catalog.Application.csproj",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\MRPos\\src\\Services\\Catalog\\Catalog.Application\\Catalog.Application.csproj",
+              "RelativeToolTip": "src\\Services\\Catalog\\Catalog.Application\\Catalog.Application.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-11-29T09:37:59.547Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DeleteBranch.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\MRPos\\src\\Services\\Organization\\Organization.Application\\Branches\\Commands\\DeleteBranchCommand\\DeleteBranch.cs",
+              "RelativeDocumentMoniker": "src\\Services\\Organization\\Organization.Application\\Branches\\Commands\\DeleteBranchCommand\\DeleteBranch.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\MRPos\\src\\Services\\Organization\\Organization.Application\\Branches\\Commands\\DeleteBranchCommand\\DeleteBranch.cs",
+              "RelativeToolTip": "src\\Services\\Organization\\Organization.Application\\Branches\\Commands\\DeleteBranchCommand\\DeleteBranch.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T16:49:32.03Z",
+              "WhenOpened": "2025-11-29T09:37:33.912Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "HR.WebAPI.http",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\MRPos\\Services\\HR\\HR.WebAPI\\HR.WebAPI.http",
-              "RelativeDocumentMoniker": "Services\\HR\\HR.WebAPI\\HR.WebAPI.http",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\MRPos\\Services\\HR\\HR.WebAPI\\HR.WebAPI.http",
-              "RelativeToolTip": "Services\\HR\\HR.WebAPI\\HR.WebAPI.http",
-              "ViewState": "AgIAAAcAAAAAAAAAAAA8wBMAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2024-12-05T11:03:46.331Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "EmployeesController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\MRPos\\Services\\HR\\HR.WebAPI\\Controllers\\EmployeesController.cs",
-              "RelativeDocumentMoniker": "Services\\HR\\HR.WebAPI\\Controllers\\EmployeesController.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\MRPos\\Services\\HR\\HR.WebAPI\\Controllers\\EmployeesController.cs",
-              "RelativeToolTip": "Services\\HR\\HR.WebAPI\\Controllers\\EmployeesController.cs",
-              "ViewState": "AgIAAG8AAAAAAAAAAAAwwHEAAAAEAAAAAAAAAA==",
+              "Title": "CreateBranch.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\MRPos\\src\\Services\\Organization\\Organization.Application\\Branches\\Commands\\CreateBranchCommand\\CreateBranch.cs",
+              "RelativeDocumentMoniker": "src\\Services\\Organization\\Organization.Application\\Branches\\Commands\\CreateBranchCommand\\CreateBranch.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\MRPos\\src\\Services\\Organization\\Organization.Application\\Branches\\Commands\\CreateBranchCommand\\CreateBranch.cs",
+              "RelativeToolTip": "src\\Services\\Organization\\Organization.Application\\Branches\\Commands\\CreateBranchCommand\\CreateBranch.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-05T10:51:19.821Z"
+              "WhenOpened": "2025-11-29T09:36:42.858Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "DependencyInjection.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\MRPos\\Services\\Organization\\Organization.Application\\DependencyInjection.cs",
-              "RelativeDocumentMoniker": "Services\\Organization\\Organization.Application\\DependencyInjection.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\MRPos\\Services\\Organization\\Organization.Application\\DependencyInjection.cs",
-              "RelativeToolTip": "Services\\Organization\\Organization.Application\\DependencyInjection.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\MRPos\\src\\Services\\Menu\\Menu\\Program.cs",
+              "RelativeDocumentMoniker": "src\\Services\\Menu\\Menu\\Program.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\MRPos\\src\\Services\\Menu\\Menu\\Program.cs",
+              "RelativeToolTip": "src\\Services\\Menu\\Menu\\Program.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAAAAD8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-05T10:39:46.919Z"
+              "WhenOpened": "2025-11-29T09:36:17.135Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RedisRegistration.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\MRPos\\src\\Shared\\Shared\\Extensions\\Redis\\RedisRegistration.cs",
+              "RelativeDocumentMoniker": "src\\Shared\\Shared\\Extensions\\Redis\\RedisRegistration.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\MRPos\\src\\Shared\\Shared\\Extensions\\Redis\\RedisRegistration.cs",
+              "RelativeToolTip": "src\\Shared\\Shared\\Extensions\\Redis\\RedisRegistration.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAgwAsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T09:34:37.88Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\MRPos\\Services\\Organization\\Organization.WebAPI\\Program.cs",
-              "RelativeDocumentMoniker": "Services\\Organization\\Organization.WebAPI\\Program.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\MRPos\\Services\\Organization\\Organization.WebAPI\\Program.cs",
-              "RelativeToolTip": "Services\\Organization\\Organization.WebAPI\\Program.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Title": "ConsulRegistration.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\MRPos\\src\\Shared\\Shared\\Extensions\\ConsulRegistration.cs",
+              "RelativeDocumentMoniker": "src\\Shared\\Shared\\Extensions\\ConsulRegistration.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\MRPos\\src\\Shared\\Shared\\Extensions\\ConsulRegistration.cs",
+              "RelativeToolTip": "src\\Shared\\Shared\\Extensions\\ConsulRegistration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-05T10:27:01.406Z"
+              "WhenOpened": "2025-11-29T09:33:14.399Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AuthRegistration.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\MRPos\\src\\Shared\\Shared\\Extensions\\AuthRegistration.cs",
+              "RelativeDocumentMoniker": "src\\Shared\\Shared\\Extensions\\AuthRegistration.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\MRPos\\src\\Shared\\Shared\\Extensions\\AuthRegistration.cs",
+              "RelativeToolTip": "src\\Shared\\Shared\\Extensions\\AuthRegistration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T09:32:08.315Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "OrdersController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\MRPos\\src\\Services\\Order\\Order.WebAPI\\Controllers\\OrdersController.cs",
+              "RelativeDocumentMoniker": "src\\Services\\Order\\Order.WebAPI\\Controllers\\OrdersController.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\MRPos\\src\\Services\\Order\\Order.WebAPI\\Controllers\\OrdersController.cs",
+              "RelativeToolTip": "src\\Services\\Order\\Order.WebAPI\\Controllers\\OrdersController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T09:31:14.286Z",
+              "EditorCaption": ""
             }
           ]
         }
