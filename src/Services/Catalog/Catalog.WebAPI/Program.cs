@@ -2,6 +2,7 @@ using Catalog.Application;
 using Catalog.Infrasturucture;
 using Microsoft.AspNetCore.Authorization;
 using Shared.Extensions;
+using Shared.Middlewares;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -38,6 +39,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseMiddleware<RestrictAccessMiddleware>();
 
 app.UseAuthentication();
 app.UseAuthorization();

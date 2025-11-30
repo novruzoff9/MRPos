@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.EntityFrameworkCore;
 using Order.WebAPI.Hubs;
 using Shared.Extensions;
+using Shared.Middlewares;
 using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -24,7 +25,7 @@ builder.Services.AddDbContext<OrderDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("default"));
 });
 
-builder.Services.AddHttpContextAccessor();]
+builder.Services.AddHttpContextAccessor();
 
 //Authorization
 builder.Services.AddHttpContextAccessor();
@@ -49,6 +50,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseMiddleware<RestrictAccessMiddleware>();
 
 app.UseHttpsRedirection();
 

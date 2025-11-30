@@ -52,6 +52,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseMiddleware<Shared.Middlewares.RestrictAccessMiddleware>();
 app.UseMiddleware<ExceptionHandlingMiddleware>();
 app.UseAuthorization();
 

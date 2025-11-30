@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc.Authorization;
 using Organization.Application;
 using Organization.WebAPI;
 using Shared.Extensions;
+using Shared.Middlewares;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -47,6 +48,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+app.UseMiddleware<RestrictAccessMiddleware>();
 app.UseStaticFiles();
 app.UseCors("AllowAllOrigins");
 app.UseAuthentication();
