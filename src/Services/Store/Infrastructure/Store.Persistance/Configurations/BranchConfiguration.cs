@@ -4,7 +4,7 @@ using Store.Domain.Entities;
 
 namespace Store.Persistance.Configurations;
 
-public class BranchConfiguration : IEntityTypeConfiguration<Branch>
+internal class BranchConfiguration : IEntityTypeConfiguration<Branch>
 {
     public void Configure(EntityTypeBuilder<Branch> builder)
     {

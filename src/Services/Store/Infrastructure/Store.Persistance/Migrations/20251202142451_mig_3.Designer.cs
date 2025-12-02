@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Store.Persistance.DbContexts;
 
@@ -11,9 +12,11 @@ using Store.Persistance.DbContexts;
 namespace Store.Persistance.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20251202142451_mig_3")]
+    partial class mig_3
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -65,26 +68,6 @@ namespace Store.Persistance.Migrations
                     b.ToTable("Branches");
                 });
 
-            modelBuilder.Entity("Store.Domain.Entities.Category", b =>
-                {
-                    b.Property<string>("Id")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("CompanyId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("CompanyId");
-
-                    b.ToTable("Categories");
-                });
-
             modelBuilder.Entity("Store.Domain.Entities.Company", b =>
                 {
                     b.Property<string>("Id")
@@ -117,41 +100,6 @@ namespace Store.Persistance.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Companies");
-                });
-
-            modelBuilder.Entity("Store.Domain.Entities.Product", b =>
-                {
-                    b.Property<string>("Id")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("CategoryId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("CompanyId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("Description")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<decimal>("Price")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<int>("Status")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("CategoryId");
-
-                    b.HasIndex("CompanyId");
-
-                    b.ToTable("Products");
                 });
 
             modelBuilder.Entity("Store.Domain.Entities.Table", b =>
@@ -237,17 +185,6 @@ namespace Store.Persistance.Migrations
                     b.Navigation("Company");
                 });
 
-            modelBuilder.Entity("Store.Domain.Entities.Product", b =>
-                {
-                    b.HasOne("Store.Domain.Entities.Category", "Category")
-                        .WithMany("Products")
-                        .HasForeignKey("CategoryId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Category");
-                });
-
             modelBuilder.Entity("Store.Domain.Entities.Table", b =>
                 {
                     b.HasOne("Store.Domain.Entities.Branch", "Branch")
@@ -262,11 +199,6 @@ namespace Store.Persistance.Migrations
             modelBuilder.Entity("Store.Domain.Entities.Branch", b =>
                 {
                     b.Navigation("Tables");
-                });
-
-            modelBuilder.Entity("Store.Domain.Entities.Category", b =>
-                {
-                    b.Navigation("Products");
                 });
 
             modelBuilder.Entity("Store.Domain.Entities.Company", b =>

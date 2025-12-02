@@ -37,6 +37,15 @@ public class Branch : BaseEntity, ICompanyOwned
     public void UpdateOperatingHours(bool is24Hour, TimeOnly? opening, TimeOnly? closing)
     {
         Is24Hour = is24Hour;
+        if (is24Hour)
+        {
+            Opening = null;
+            Closing = null;
+            return;
+        }
+        if (opening == null || closing == null)
+            throw new ArgumentException("Opening and closing times must be provided for non-24-hour branches.");
+
         Opening = opening;
         Closing = closing;
     }

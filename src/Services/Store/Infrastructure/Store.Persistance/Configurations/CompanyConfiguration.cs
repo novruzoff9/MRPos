@@ -2,7 +2,7 @@
 
 namespace Store.Persistance.Configurations;
 
-public class CompanyConfiguration : IEntityTypeConfiguration<Company>
+internal class CompanyConfiguration : IEntityTypeConfiguration<Company>
 {
     public void Configure(EntityTypeBuilder<Company> builder)
     {

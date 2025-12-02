@@ -19,4 +19,8 @@
     <ProjectReference Include="..\Store.Domain\Store.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Features\Products\Commands\EditProductCommand\" />
+  </ItemGroup>
+
 </Project>
