@@ -4,8 +4,6 @@ using Menu.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Organization.Domain.Entities;
-using Shared.Interfaces;
 using Shared.Interfaces;
 
 namespace Menu.Controllers;

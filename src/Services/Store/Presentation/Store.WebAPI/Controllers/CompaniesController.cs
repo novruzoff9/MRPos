@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Mvc;
 using Shared.ResultTypes;
 using Store.Application.Common.Models.Company;
 using Store.Application.Features.Companies;
-using Store.Application.Features.Companies.Queries.GetCompaniesQuery;
 
 namespace Store.WebAPI.Controllers;
 
