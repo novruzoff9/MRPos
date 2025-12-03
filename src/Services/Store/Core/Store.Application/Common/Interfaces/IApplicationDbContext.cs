@@ -7,5 +7,6 @@ public interface IApplicationDbContext
     DbSet<Table> Tables { get; }
     DbSet<Category> Categories { get; }
     DbSet<Product> Products { get; }
+    DbSet<MenuItem> MenuItems { get; }
     Task<int> SaveChangesAsync(CancellationToken cancellationToken = default);
 }

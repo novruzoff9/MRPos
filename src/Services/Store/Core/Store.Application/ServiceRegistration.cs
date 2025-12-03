@@ -25,5 +25,6 @@ public static class ServiceRegistration
         // DI registrations
         services.AddSingleton(config);
         services.AddScoped<IMapper, ServiceMapper>();
+        services.AddScoped<IMenuItemService, MenuItemService>();
     }
 }
