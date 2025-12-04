@@ -9,6 +9,7 @@ public class GetProductsQueryHandler(IApplicationDbContext dbContext) : IRequest
     public async Task<List<ProductReturnDto>> Handle(GetProductsQuery request, CancellationToken cancellationToken)
     {
         var products = await dbContext.Products
+            .Include(x => x.Category)
             .ProjectToType<ProductReturnDto>()
             .ToListAsync(cancellationToken);
         return products;

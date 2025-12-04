@@ -9,8 +9,9 @@ public class GetCategoryQueryHandler(IApplicationDbContext context) : IRequestHa
     public async Task<CategoryReturnDto> Handle(GetCategoryQuery request, CancellationToken cancellationToken)
     {
         var category = await context.Categories
+            .Where(x => x.Id == request.Id)
             .ProjectToType<CategoryReturnDto>()
-            .FirstOrDefaultAsync(x => x.Id == request.Id, cancellationToken);
+            .FirstOrDefaultAsync(cancellationToken);
         if (category is null)
             throw new NotFoundException($"Category not found with ID: {request.Id}");
         return category;

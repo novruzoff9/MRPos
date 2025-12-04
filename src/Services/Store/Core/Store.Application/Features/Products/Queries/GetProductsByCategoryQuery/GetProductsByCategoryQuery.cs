@@ -16,7 +16,9 @@ public class GetProductsByCategoryQueryHandler(
         if (!categoryExists)
             throw new NotFoundException($"Company not found with ID: {request.CategoryId}");
 
-        var products = await dbContext.Products.Where(x=> x.CategoryId == request.CategoryId)
+        var products = await dbContext.Products
+            .Include(x => x.Category)
+            .Where(x=> x.CategoryId == request.CategoryId)
             .ProjectToType<ProductReturnDto>()
             .ToListAsync(cancellationToken);
         return products;

@@ -19,12 +19,11 @@ public static class ServiceRegistration
         });
 
         // Mapster config
-        var config = new TypeAdapterConfig();
-        config.Scan(Assembly.GetExecutingAssembly());
+        TypeAdapterConfig.GlobalSettings.Scan(Assembly.GetExecutingAssembly());
+        services.AddSingleton(TypeAdapterConfig.GlobalSettings);
+        services.AddScoped<IMapper, ServiceMapper>();
 
         // DI registrations
-        services.AddSingleton(config);
-        services.AddScoped<IMapper, ServiceMapper>();
         services.AddScoped<IMenuItemService, MenuItemService>();
     }
 }

@@ -13,9 +13,9 @@ public class GetTableQueryHandler(
     {
         string branchId = identityService.GetBranchId;
         var table = await dbContext.Tables
-            .AsNoTracking()
+            .Where(t => t.Id == request.Id)
             .ProjectToType<TableReturnDto>()
-            .FirstOrDefaultAsync(t => t.Id == request.Id, cancellationToken);
+            .FirstOrDefaultAsync(cancellationToken);
         if (table == null)
             throw new NotFoundException($"Table not found with ID: {request.Id}");
         if (table.BranchId != branchId)

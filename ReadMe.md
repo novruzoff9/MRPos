@@ -18,6 +18,14 @@ Digər Servislər isə ümumi bir databazada saxlanılır. Müxtəlif növlərd�
 - **Hesabatlar**: Satış məlumatlarına əsaslanan qrafik və cədvəl şəklində hesabatların yaradılması.
 - **Müştəriyönümlülük**: Hər bir restoran şəbəkəsinin öz məlumatlarına əsasən müştərilərin hər bir filial və qidalar barədə məlumat ala bilməsi üçün avtomatik hazırlanan reklam səhifələri
 
+## Kitabxanalar
+- **MediatR**: CQRS nümunəsini tətbiq etmək üçün istifadə olunur.
+- **Entity Framework Core**: Verilənlər bazası əməliyyatları üçün istifadə olunur
+- **Mapster**: Dto-lar və entitylər arasında maplama üçün istifadə olunur.
+- **FluentValidation**: Sorğuların və əmrlərin doğrulanması üçün istifadə olunur.
+- **SignalR**: Real-time məlumat ötürülməsi üçün istifadə olunur.
+
+
 ## Texnologiyalar
 
 - **Backend**: C# ASP.NET Core

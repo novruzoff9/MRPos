@@ -2,7 +2,7 @@
 
 namespace Store.Application.Common.Mappings;
 
-public class MenuItemMapper : IRegister
+internal class MenuItemMapper : IRegister
 {
     public void Register(TypeAdapterConfig config)
     {
