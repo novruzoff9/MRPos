@@ -1,5 +1,6 @@
 using Scalar.AspNetCore;
 using Shared.Extensions;
+using Shared.Middlewares;
 using Store.Application;
 using Store.Persistance;
 
@@ -22,6 +23,8 @@ if (app.Environment.IsDevelopment())
     app.MapOpenApi();
     app.MapScalarApiReference();
 }
+
+app.UseMiddleware<ExceptionHandlingMiddleware>();
 
 app.UseAuthorization();
 

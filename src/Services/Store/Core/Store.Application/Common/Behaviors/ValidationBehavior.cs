@@ -16,7 +16,13 @@ public class ValidationBehavior<TRequest, TResponse>(IEnumerable<IValidator<TReq
                 .ToList();
 
             if (failures.Count != 0)
-                throw new ValidationException(failures);
+            {
+                var errorMessages = failures
+                    .Select(f => f.ErrorMessage)
+                    .ToList();
+
+                throw new RequestValidationException(errorMessages, typeof(TRequest).Name);
+            }
         }
         return await next(cancellationToken);
     }

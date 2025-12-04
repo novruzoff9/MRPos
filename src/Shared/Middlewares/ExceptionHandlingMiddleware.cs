@@ -2,7 +2,6 @@
 using Microsoft.Extensions.Logging;
 using Shared.Exceptions.Common;
 using Shared.ResultTypes;
-using System.Net.Http;
 using System.Text.Json;
 
 namespace Shared.Middlewares;
@@ -17,6 +16,16 @@ public class ExceptionHandlingMiddleware(
         try
         {
             await next(context);
+        }
+        catch (AggregateExceptionBase ex)
+        {
+            if (context.Response.HasStarted)
+            {
+                logger.LogWarning("Response has already started, cannot write error response.");
+                return;
+            }
+            LogError(ex);
+            await HandleAggregateException(context, ex);
         }
         catch (BaseException ex)
         {
@@ -38,6 +47,18 @@ public class ExceptionHandlingMiddleware(
             LogError(ex);
             await HandleExceptionAsync(context, ex);
         }
+    }
+    private static Task HandleAggregateException(HttpContext context, AggregateExceptionBase ex)
+    {
+        if (context.Response.HasStarted)
+            return Task.CompletedTask;
+        var statusCode = (ex as BaseException)?.StatusCode ?? 500;
+        var response = Response<string>.Fail(ex.Errors, statusCode);
+
+        context.Response.ContentType = "application/json";
+        context.Response.StatusCode = statusCode;
+
+        return context.Response.WriteAsync(JsonSerializer.Serialize(response));
     }
 
     private static Task HandleExceptionAsync(HttpContext context, Exception ex)

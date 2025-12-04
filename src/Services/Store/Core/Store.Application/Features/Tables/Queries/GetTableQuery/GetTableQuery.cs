@@ -1,5 +1,4 @@
-﻿using Shared.Interfaces;
-using Store.Application.Common.Models.Table;
+﻿using Store.Application.Common.Models.Table;
 
 namespace Store.Application.Features.Tables;
 
