@@ -8,7 +8,8 @@ public class DeleteBranchCommandHandler(IApplicationDbContext dbContext) : IRequ
     {
         var branch =  await dbContext.Branches
             .FirstOrDefaultAsync(x=>x.Id == request.Id, cancellationToken);
-        //TODO: Exception
+        if(branch is null)
+            throw new NotFoundException($"Branch not found with ID: {request.Id}");
         dbContext.Branches.Remove(branch);
         return true;
     }

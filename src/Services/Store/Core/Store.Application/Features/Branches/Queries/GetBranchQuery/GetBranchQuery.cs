@@ -14,8 +14,8 @@ public class GetBranchQueryHandler(
         var branch = await dbContext.Branches
             .ProjectToType<BranchReturnDto>()
             .FirstOrDefaultAsync(x => x.Id == request.Id, cancellationToken);
-
-        //TODO: Exception
+        if(branch is null)
+            throw new NotFoundException($"Branch not found with ID: {request.Id}");
         return branch;
     }
 }

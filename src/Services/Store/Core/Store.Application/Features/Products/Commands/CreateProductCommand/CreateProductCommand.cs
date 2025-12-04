@@ -1,4 +1,3 @@
-using Shared.ResultTypes;
 using Store.Domain.Enums;
 
 namespace Store.Application.Features.Products;

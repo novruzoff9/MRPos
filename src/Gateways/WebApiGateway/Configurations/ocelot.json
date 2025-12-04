@@ -21,7 +21,7 @@
       ],
       "DownstreamScheme": "http",
       "DownstreamPathTemplate": "/api/{everything}",
-      "UpstreamPathTemplate": "/organization/{everything}",
+      "UpstreamPathTemplate": "/store/{everything}",
       "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ]
     },
     {

@@ -1,4 +1,5 @@
 ﻿using Store.Application.Common.Models.Company;
+using Store.Domain.Entities;
 
 namespace Store.Application.Features.Companies;
 
@@ -13,7 +14,8 @@ public class GetCompanyQueryHandler(
         var company = await dbContext.Companies
             .ProjectToType<CompanyReturnDto>()
             .FirstOrDefaultAsync(x => x.Id == request.Id, cancellationToken);
-        // TODO: Exception
+        if (company is null)
+            throw new NotFoundException($"Company not found with ID: {request.Id}");
         return company;
     }
 }

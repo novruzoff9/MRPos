@@ -9,6 +9,8 @@ public class DeleteCategoryCommandHandler(
     public async Task<bool> Handle(DeleteCategoryCommand request, CancellationToken cancellationToken)
     {
         var category = await dbContext.Categories.FirstOrDefaultAsync(x => x.Id == request.Id, cancellationToken);
+        if (category == null)
+            throw new NotFoundException($"Category not found with ID: {request.Id}");
         dbContext.Categories.Remove(category);
 
         return await dbContext.SaveChangesAsync(cancellationToken) > 0;

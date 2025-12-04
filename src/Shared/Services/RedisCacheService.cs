@@ -1,8 +1,8 @@
 ﻿using Shared.Extensions.Redis;
 using Shared.Interfaces;
 using Shared.ResultTypes;
-using System.Text.Json;
 using StackExchange.Redis;
+using System.Text.Json;
 
 namespace Shared.Services;
 
@@ -32,7 +32,8 @@ public class RedisCacheService : IRedisCacheService
         var jsonData = await _database.StringGetAsync(Id);
         if (jsonData.IsNullOrEmpty)
             return Response<T>.Fail("Cache not found", 404);
-        return Response<T>.Success(JsonSerializer.Deserialize<T>(jsonData), 200);
+        var jsonString = jsonData.ToString();
+        return Response<T>.Success(JsonSerializer.Deserialize<T>(jsonString), 200);
     }
 
     public async Task<Response<string>> SetAsync<T>(string key, T value, TimeSpan? expiry = null)

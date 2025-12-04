@@ -11,6 +11,8 @@ public class GetProductQueryHandler(IApplicationDbContext dbContext) : IRequestH
         var product = await dbContext.Products
             .ProjectToType<ProductReturnDto>()
             .FirstOrDefaultAsync(x => x.Id == request.Id, cancellationToken);
+        if (product is null)
+            throw new NotFoundException($"Product not found with ID: {request.Id}");
         return product;
     }
 }

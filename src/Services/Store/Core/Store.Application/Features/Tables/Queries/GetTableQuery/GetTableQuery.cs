@@ -17,7 +17,10 @@ public class GetTableQueryHandler(
             .AsNoTracking()
             .ProjectToType<TableReturnDto>()
             .FirstOrDefaultAsync(t => t.Id == request.Id, cancellationToken);
-        //TODO: Check branchId with table.BranchId and null
+        if (table == null)
+            throw new NotFoundException($"Table not found with ID: {request.Id}");
+        if (table.BranchId != branchId)
+            throw new ForbiddenAccessException($"You do not have access to this table.");
         return table;
     }
 }

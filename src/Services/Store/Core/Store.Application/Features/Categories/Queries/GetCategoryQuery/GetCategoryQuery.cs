@@ -11,6 +11,8 @@ public class GetCategoryQueryHandler(IApplicationDbContext context) : IRequestHa
         var category = await context.Categories
             .ProjectToType<CategoryReturnDto>()
             .FirstOrDefaultAsync(x => x.Id == request.Id, cancellationToken);
+        if (category is null)
+            throw new NotFoundException($"Category not found with ID: {request.Id}");
         return category;
     }
 }

@@ -2,8 +2,6 @@ using Menu.Data;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.EntityFrameworkCore;
 using Order.WebAPI.Hubs;
-using Shared.Extensions;
-using Shared.Middlewares;
 using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -29,7 +27,7 @@ builder.Services.AddHttpContextAccessor();
 
 //Authorization
 builder.Services.AddHttpContextAccessor();
-builder.Services.ConfigureAuth(builder.Configuration);
+//builder.Services.ConfigureAuth(builder.Configuration);
 
 
 builder.Services.AddAuthorizationBuilder()
@@ -51,7 +49,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseMiddleware<RestrictAccessMiddleware>();
+//app.UseMiddleware<RestrictAccessMiddleware>();
 
 app.UseHttpsRedirection();
 

@@ -10,7 +10,8 @@ public class EditCategoryCommandHandler(
     public async Task<bool> Handle(EditCategoryCommand request, CancellationToken cancellationToken)
     {
         var category = await dbContext.Categories.FirstOrDefaultAsync(x => x.Id == request.Id, cancellationToken);
-
+        if (category == null)
+            throw new NotFoundException($"Category not found with ID: {request.Id}");
         category.UpdateName(request.Name);
 
         return await dbContext.SaveChangesAsync(cancellationToken) > 0;
