@@ -7,7 +7,7 @@ public class UserDto
     public string LastName { get; set; }
     public string PhoneNumber { get; set; }
     public string CompanyId { get; set; }
-    public string BranchId { get; set; }
+    public string? BranchId { get; set; }
 }
 
 public class UserShowDto: UserDto

@@ -14,12 +14,14 @@ public class IdentityUser
     public string NormalizedEmail { get; set; }
     public string PhoneNumber { get; private set; }
     public string HashedPassword { get; private set; }
-    public string CompanyId { get; set; }
-    public string? BranchId { get; set; }
-    public IReadOnlyList<UserRole> Roles { get; set; } = [];
-    public IReadOnlyCollection<RefreshToken> RefreshTokens { get; set; } = [];
+    public string CompanyId { get; private set; }
+    public string BranchId { get; private set; }
+    public IReadOnlyList<UserRole> Roles { get; set; } = new List<UserRole>();
+    public IReadOnlyCollection<RefreshToken> RefreshTokens { get; set; } = new List<RefreshToken>();
 
-    public IdentityUser(string firstName, string lastName, string email, string phoneNumber, string password)
+    private IdentityUser() { }
+
+    public IdentityUser(string firstName, string lastName, string email, string phoneNumber, string password, string companyId, string? branchId = null)
     {
         if (!EmailRegex.IsMatch(email))
             throw new FormatException("Email format is invalid.");
@@ -34,6 +36,8 @@ public class IdentityUser
         NormalizedEmail = email.Trim().ToLower();
         PhoneNumber = phoneNumber;
         HashedPassword = BCrypt.Net.BCrypt.HashPassword(password);
+        CompanyId = companyId;
+        BranchId = branchId ?? "N/A";
     }
 
     public void Update(string firstName, string lastName, string email, string phoneNumber)

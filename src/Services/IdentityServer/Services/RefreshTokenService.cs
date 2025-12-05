@@ -1,7 +1,7 @@
 ﻿using IdentityServer.Context;
-using IdentityServer.Exceptions;
 using IdentityServer.Models;
 using Microsoft.EntityFrameworkCore;
+using Shared.Exceptions;
 using System.Security.Cryptography;
 
 namespace IdentityServer.Services;

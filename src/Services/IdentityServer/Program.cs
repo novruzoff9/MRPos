@@ -1,13 +1,12 @@
 using FluentValidation;
 using IdentityServer.Configurations;
 using IdentityServer.Context;
-using IdentityServer.DTOs;
+using IdentityServer.Context.Seed;
 using IdentityServer.Helpers;
-using IdentityServer.Middlewares;
 using IdentityServer.Services;
-using IdentityServer.Validations;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Scalar.AspNetCore;
+using Shared.Middlewares;
 using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -21,12 +20,9 @@ builder.Configuration
     .AddEnvironmentVariables();
 
 
-// Add services to the container.
 builder.Services.AddControllers();
 
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddOpenApi();
 
 builder.Services.AddDbContext<IdentityDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
@@ -48,9 +44,13 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
+    app.MapOpenApi();
+    app.MapScalarApiReference();
 }
+
+using var scope = app.Services.CreateScope();
+var context = scope.ServiceProvider.GetRequiredService<IdentityDbContext>();
+await IdentityDbSeeder.SeedAsync(context);
 
 app.UseMiddleware<ExceptionHandlingMiddleware>();
 app.UseAuthorization();

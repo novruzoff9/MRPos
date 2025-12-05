@@ -1,39 +1,46 @@
 ﻿using IdentityServer.DTOs;
+using IdentityServer.Models;
 using IdentityServer.Services;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Shared.ResultTypes;
 
 namespace IdentityServer.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
-public class RolesController : ControllerBase
+public class RolesController(IRoleService roleService) : ControllerBase
 {
-    private readonly IRoleService _roleService;
-
-    public RolesController(IRoleService roleService)
-    {
-        _roleService = roleService;
-    }
-
     [HttpPost]
     public async Task<IActionResult> CreateRole(CreateRoleDto role)
     {
-        var result = await _roleService.CreateRoleAsync(role);
+        var result = await roleService.CreateRoleAsync(role);
         if (result is not null)
         {
-            return Ok(result);
+            var response = Response<IdentityRole>.Success(result, 200);
+            return Ok(response);
         }
         else
-        {
             return BadRequest("Failed to create role.");
-        }
     }
 
     [HttpGet]
     public async Task<IActionResult> GetRoles()
     {
-        var roles = await _roleService.GetRolesAsync();
-        return Ok(roles);
+        var roles = await roleService.GetRolesAsync();
+        var response = Response<IEnumerable<IdentityRole>>.Success(roles, 200);
+        return Ok(response);
+    }
+
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> DeleteRole(string id)
+    {
+        var result = await roleService.DeleteRoleAsync(id);
+        if (result)
+        {
+            var response = Response<NoContent>.Success(204);
+            return Ok(response);
+        }
+        else
+            return NotFound("Role not found.");
     }
 }

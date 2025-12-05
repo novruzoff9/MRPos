@@ -13,18 +13,18 @@ public class JwtTokenGenerator(IOptions<JwtSettings> options)
 {
     private readonly JwtSettings _jwtSettings = options.Value;
 
-    public (string, int) GenerateToken(UserDetailedDto user, List<Claim>? extraClaims = null)
+    public TokenResponseDto GenerateToken(UserDetailedDto user, List<Claim>? extraClaims = null)
     {
         var claims = new List<Claim>
         {
-            new("sub", user.Id),
-            new("email", user.Email),
-            new("fullName", $"{user.FirstName} {user.LastName}"),
-            new("company", user.CompanyId),
-            new("branch", user.BranchId)
+            new Claim("sub", user.Id),
+            new Claim("email", user.Email),
+            new Claim("fullName", $"{user.FirstName} {user.LastName}")
         };
         if (extraClaims != null)
+        {
             claims.AddRange(extraClaims);
+        }
 
         foreach (var role in user.Roles)
         {
@@ -41,7 +41,14 @@ public class JwtTokenGenerator(IOptions<JwtSettings> options)
             signingCredentials: creds
         );
         var accessToken = new JwtSecurityTokenHandler().WriteToken(token);
-        
-        return (accessToken, _jwtSettings.ExpiryMinutes);
+        TokenResponseDto tokenResponse = new TokenResponseDto
+        {
+            access_token = accessToken,
+            expires_in = _jwtSettings.ExpiryMinutes * 60 * 60,
+            token_type = "Bearer",
+            refresh_token = string.Empty,
+            scope = string.Empty
+        };
+        return tokenResponse;
     }
 }

@@ -3,16 +3,13 @@ using Microsoft.EntityFrameworkCore;
 
 namespace IdentityServer.Context;
 
-public class IdentityDbContext : DbContext
+public class IdentityDbContext(DbContextOptions<IdentityDbContext> options) : DbContext(options)
 {
     public DbSet<IdentityUser> Users { get; set; }
     public DbSet<IdentityRole> Roles { get; set; }
     public DbSet<UserRole> UserRoles { get; set; }
     public DbSet<RefreshToken> RefreshTokens { get; set; }
 
-    public IdentityDbContext(DbContextOptions<IdentityDbContext> options) : base(options)
-    {
-    }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<IdentityUser>()
