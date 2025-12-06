@@ -17,7 +17,7 @@ public class CategoriesController(
     public async Task<IActionResult> GetCategories(CancellationToken cancellationToken)
     {
         var categories = await sender.Send(new GetCategoriesQuery());
-        var response = Response<List<CategoryReturnDto>>.Success(categories, 200);
+        var response = Response<ICollection<CategoryReturnDto>>.Success(categories, 200);
         return Ok(response);
     }
     [HttpGet("{id}")]
@@ -39,7 +39,7 @@ public class CategoriesController(
     public async Task<IActionResult> GetCategoriesByCompanyId(string id)
     {
         var result = await sender.Send(new GetCategoriesofCompany(id));
-        var response = Response<List<CategoryReturnDto>>.Success(result, 200);
+        var response = Response<ICollection<CategoryReturnDto>>.Success(result, 200);
         return Ok(response);
     }
     [HttpPut]

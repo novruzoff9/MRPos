@@ -23,7 +23,7 @@ public class CompaniesController(
     public async Task<IActionResult> GetCompanies()
     {
         var companies = await sender.Send(new GetCompaniesQuery());
-        var response = Response<List<CompanyReturnDto>>.Success(companies, 200);
+        var response = Response<ICollection<CompanyReturnDto>>.Success(companies, 200);
         return Ok(response);
     }
     [HttpGet("{id}")]

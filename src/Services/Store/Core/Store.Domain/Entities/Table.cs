@@ -6,8 +6,8 @@ public class Table(string name, int? capacity, string branchId, decimal? deposit
     public int? Capacity { get; private set; } = capacity;
     public decimal? Deposit { get; private set; } = deposit ?? 0;
 
-    public string BranchId { get; private set; } = branchId;
-    public Branch? Branch { get; }
+    public string BranchId { get; init; } = branchId;
+    public Branch? Branch { get; private set; }
 
     public void UpdateDeposit(decimal deposit)
     {

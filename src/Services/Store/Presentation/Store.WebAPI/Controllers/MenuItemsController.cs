@@ -14,7 +14,7 @@ public class MenuItemsController
     public async Task<IActionResult> GetAllItemsOfBranch(string branchId)
     {
         var menuItems = await menuItemService.GetAllItemsOfBranchAsync(branchId);
-        var response = Response<List<MenuItemReturnDto>>.Success(menuItems, 200);
+        var response = Response<ICollection<MenuItemReturnDto>>.Success(menuItems, 200);
         return Ok(response);
     }
 

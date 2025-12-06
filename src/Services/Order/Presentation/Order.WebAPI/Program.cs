@@ -2,6 +2,7 @@ using Order.Application;
 using Order.Persistence;
 using Scalar.AspNetCore;
 using Shared.Extensions;
+using Shared.Middlewares;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
@@ -22,6 +23,8 @@ if (app.Environment.IsDevelopment())
     app.MapOpenApi();
     app.MapScalarApiReference();
 }
+
+app.UseMiddleware<ExceptionHandlingMiddleware>();
 
 app.UseAuthorization();
 

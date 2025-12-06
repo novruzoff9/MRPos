@@ -20,9 +20,4 @@
     <ProjectReference Include="..\Order.Domain\Order.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Common\Mapping\" />
-    <Folder Include="Common\Models\" />
-  </ItemGroup>
-
 </Project>

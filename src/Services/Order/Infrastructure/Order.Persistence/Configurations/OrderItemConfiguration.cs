@@ -8,7 +8,7 @@ internal class OrderItemConfiguration : IEntityTypeConfiguration<OrderItem>
     {
         builder.Property(oi => oi.ProductId)
             .IsRequired()
-            .HasMaxLength(30);
+            .HasMaxLength(36);
         builder.Property(oi => oi.ProductName)
             .IsRequired()
             .HasMaxLength(100);

@@ -8,12 +8,12 @@ internal class OrderConfiguration : IEntityTypeConfiguration<TableOrder>
     {
         builder.Property(o => o.BranchId)
             .IsRequired()
-            .HasMaxLength(30);
+            .HasMaxLength(36);
         builder.Property(o => o.TableNumber)
             .IsRequired()
-            .HasMaxLength(50);
+            .HasMaxLength(36);
         builder.Property(o => o.WaiterId)
-            .HasMaxLength(30);
+            .HasMaxLength(36);
         builder.Property(o => o.ServicePercentage)
             .HasColumnType("decimal(18,2)");
         builder.Property(o => o.Deposit)

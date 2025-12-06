@@ -8,10 +8,10 @@ public class Product(string name, string? description, decimal price, ProductSta
     public string? Description { get; private set; } = description;
     public decimal Price { get; private set; } = price;
     public ProductStatus Status { get; private set; } = status;
-    public string CompanyId { get; private set; } = companyId;
+    public string CompanyId { get; init; } = companyId;
 
     public string CategoryId { get; private set; } = categoryId;
-    public Category? Category { get; }
+    public Category? Category { get; private set; }
     public void UpdateStatus(ProductStatus status)
     {
         Status = status;

@@ -23,7 +23,7 @@ public class TablesController(
     public async Task<IActionResult> GetAllTables()
     {
         var tables = await sender.Send(new GetTablesQuery());
-        var response = Response<List<TableReturnDto>>.Success(tables, 200);
+        var response = Response<ICollection<TableReturnDto>>.Success(tables, 200);
         return Ok(response);
     }
     [HttpPost]

@@ -3,9 +3,9 @@
 public class Category(string name, string companyId) : BaseEntity(), ICompanyOwned
 {
     public string Name { get; private set; } = name;
-    public string CompanyId { get; private set; } = companyId;
+    public string CompanyId { get; init; } = companyId;
 
-    public List<Product>? Products { get; }
+    public ICollection<Product>? Products { get; }
 
     public void UpdateName(string name)
     {

@@ -25,7 +25,7 @@ public class ProductsController(
     public async Task<IActionResult> Get()
     {
         var result = await sender.Send(new GetProductsQuery());
-        var response = Response<List<ProductReturnDto>>.Success(result, 200);
+        var response = Response<ICollection<ProductReturnDto>>.Success(result, 200);
         return Ok(response);
     }
 
@@ -42,7 +42,7 @@ public class ProductsController(
     public async Task<IActionResult> GetByCategory(string categoryId)
     {
         var result = await sender.Send(new GetProductsByCategoryQuery(categoryId));
-        var response = Response<List<ProductReturnDto>>.Success(result, 200);
+        var response = Response<ICollection<ProductReturnDto>>.Success(result, 200);
         return Ok(response);
     }
 

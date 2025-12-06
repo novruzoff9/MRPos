@@ -16,7 +16,7 @@ public class BranchesController(
     public async Task<IActionResult> GetBranches()
     {
         var branches = await sender.Send(new GetBranchesQuery());
-        var response = Response<List<BranchReturnDto>>.Success(branches, 200);
+        var response = Response<ICollection<BranchReturnDto>>.Success(branches, 200);
         return Ok(response);
     }
 

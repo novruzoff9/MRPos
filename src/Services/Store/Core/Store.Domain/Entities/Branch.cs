@@ -29,10 +29,10 @@ public class Branch : BaseEntity, ICompanyOwned
     public decimal ServiceFee { get; private set; }
     public Address Address { get; private set; }
 
-    public string CompanyId { get; private set; }
-    public Company? Company { get; }
+    public string CompanyId { get; init; }
+    public Company? Company { get; private set; }
 
-    public ICollection<Table> Tables { get; set; }
+    public ICollection<Table> Tables { get;  }
 
     public void UpdateOperatingHours(bool is24Hour, TimeOnly? opening, TimeOnly? closing)
     {
