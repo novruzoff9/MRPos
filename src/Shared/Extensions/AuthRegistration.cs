@@ -15,7 +15,10 @@ public static class AuthRegistration
 {
     public static IServiceCollection ConfigureAuth(this IServiceCollection services, IConfiguration configuration)
     {
-        var signingKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(configuration["AuthConfig:Secret"]));
+        string? secretKey = configuration["AuthConfig:Secret"];
+        if (secretKey is null || string.IsNullOrEmpty(secretKey))
+            throw new ArgumentNullException("AuthConfig:Secret", "Secret key for JWT authentication is not configured.");
+        var signingKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(secretKey));
         JsonWebTokenHandler.DefaultInboundClaimTypeMap.Remove("sub");
         JsonWebTokenHandler.DefaultInboundClaimTypeMap.Remove("roles");
         JsonWebTokenHandler.DefaultInboundClaimTypeMap.Remove("email");

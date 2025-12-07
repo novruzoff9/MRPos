@@ -16,10 +16,14 @@ public class IdentityUser
     public string HashedPassword { get; private set; }
     public string CompanyId { get; private set; }
     public string BranchId { get; private set; }
-    public IReadOnlyList<UserRole> Roles { get; set; } = new List<UserRole>();
-    public IReadOnlyCollection<RefreshToken> RefreshTokens { get; set; } = new List<RefreshToken>();
+    public ICollection<UserRole> Roles { get; protected set; } = new List<UserRole>();
+    public ICollection<RefreshToken> RefreshTokens { get; protected set; } = new List<RefreshToken>();
 
-    private IdentityUser() { }
+    private IdentityUser() 
+    {
+        Roles = new List<UserRole>();
+        RefreshTokens = new List<RefreshToken>();
+    }
 
     public IdentityUser(string firstName, string lastName, string email, string phoneNumber, string password, string companyId, string? branchId = null)
     {

@@ -17,19 +17,17 @@ public class JwtTokenGenerator(IOptions<JwtSettings> options)
     {
         var claims = new List<Claim>
         {
-            new Claim("sub", user.Id),
-            new Claim("email", user.Email),
-            new Claim("fullName", $"{user.FirstName} {user.LastName}")
+            new("sub", user.Id),
+            new("email", user.Email),
+            new("company", user.CompanyId),
+            new("branch", user.BranchId ?? "N/A"),
+            new("fullName", $"{user.FirstName} {user.LastName}")
         };
         if (extraClaims != null)
-        {
             claims.AddRange(extraClaims);
-        }
 
         foreach (var role in user.Roles)
-        {
             claims.Add(new Claim("role", role));
-        }
 
         var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwtSettings.Secret));
         var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);

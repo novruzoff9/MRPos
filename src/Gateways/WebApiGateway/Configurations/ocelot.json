@@ -33,7 +33,7 @@
       ],
       "DownstreamScheme": "http",
       "DownstreamPathTemplate": "/api/{everything}",
-      "UpstreamPathTemplate": "/catalog/{everything}",
+      "UpstreamPathTemplate": "/order/{everything}",
       "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ]
     }
   ],

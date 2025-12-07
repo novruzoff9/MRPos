@@ -9,7 +9,7 @@ public class CreateCompanyCommandValidator : AbstractValidator<CreateCompanyComm
             .MaximumLength(100).WithMessage("Company name must not exceed 100 characters.");
         RuleFor(c => c.PhoneNumber)
             .NotEmpty().WithMessage("Phone number is required.")
-            .Matches(@"^\+?[1-9]\d{1,14}$").WithMessage("Phone number is not valid.");
+            .Matches(@"^\+994\d{2}-\d{3}-\d{2}-\d{2}$").WithMessage("Telefon nömrəi +994xx-xxx-xx-xx formatında olmalıdır");
         RuleFor(c => c.Description)
             .MaximumLength(500).WithMessage("Description must not exceed 500 characters.");
         RuleFor(c => c.LogoUrl)

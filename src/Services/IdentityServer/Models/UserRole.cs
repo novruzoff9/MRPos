@@ -1,15 +1,24 @@
 ﻿namespace IdentityServer.Models;
 
-public class UserRole(string userId, string roleId)
+public class UserRole
 {
-    public string UserId { get; private set; } = userId;
-    public IdentityUser? User { get; set; }
+    public string UserId { get; private set; }
+    public IdentityUser? User { get; protected set; }
 
-    public string RoleId { get; private set; } = roleId;
-    public IdentityRole? Role { get; set; }
+    public string RoleId { get; private set; }
+    public IdentityRole? Role { get; protected set; }
 
-    public DateTime Assigned { get; private set; } = DateTime.UtcNow;
+    public DateTime Assigned { get; private set; }
     public DateTime? Revoked { get; private set; }
+
+    private UserRole() { }
+
+    public UserRole(string userId, string roleId)
+    {
+        UserId = userId;
+        RoleId = roleId;
+        Assigned = DateTime.UtcNow;
+    }
 
     public void Revoke()
     {

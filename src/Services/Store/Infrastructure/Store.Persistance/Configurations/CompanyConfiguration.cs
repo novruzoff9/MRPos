@@ -12,7 +12,7 @@ internal class CompanyConfiguration : IEntityTypeConfiguration<Company>
 
         builder.Property(c => c.PhoneNumber)
             .IsRequired()
-            .HasMaxLength(15);
+            .HasMaxLength(16);
 
         builder.Property(c => c.Description)
             .HasMaxLength(500);

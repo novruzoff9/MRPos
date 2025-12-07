@@ -9,8 +9,7 @@ public class IdentityService(IHttpContextAccessor httpContextAccessor) : IIdenti
     public ClaimsPrincipal GetUser => httpContextAccessor.HttpContext.User;
 
     public string GetUserId => GetClaimValue("sub");
-    //public string GetCompanyId => GetClaimValue("company");
-    public string GetCompanyId => "693100be-62f4-4d4c-9fb0-521300fa7396";
+    public string GetCompanyId => GetClaimValue("company");
     public string GetRole => GetClaimValue("roles");
     public string GetBranchId => GetClaimValue("branch");
 

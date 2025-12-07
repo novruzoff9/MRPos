@@ -63,6 +63,8 @@ public class UserService(
             Email = user.Email,
             PhoneNumber = user.PhoneNumber,
             HashedPassword = user.HashedPassword,
+            CompanyId = user.CompanyId,
+            BranchId = user.BranchId,
             Roles = user.Roles.Select(r => r.Role.RoleName).ToList()
         };
         return userDto;

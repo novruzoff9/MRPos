@@ -1,15 +1,9 @@
 ﻿namespace IdentityServer.Models;
 
-public class IdentityRole
+public class IdentityRole(string roleName)
 {
-    public string Id { get; private set; }
-    public string RoleName { get; private set; }
-    public string NormalizedName { get; private set; }
-    public IReadOnlyList<UserRole> Users { get; set; } = new List<UserRole>();
-    public IdentityRole(string roleName)
-    {
-        Id = Guid.NewGuid().ToString();
-        RoleName = roleName;
-        NormalizedName = roleName.Trim().ToLower();
-    }
+    public string Id { get; private set; } = Guid.NewGuid().ToString();
+    public string RoleName { get; private set; } = roleName;
+    public string NormalizedName { get; private set; } = roleName.Trim().ToLower();
+    public ICollection<UserRole> Users { get; protected set; } = new List<UserRole>();
 }
