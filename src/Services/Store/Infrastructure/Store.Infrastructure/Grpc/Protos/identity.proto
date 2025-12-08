@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+option csharp_namespace = "Identity.Grpc";
+
+service IdentityGrpc {
+  rpc GetEmployeeCountByBranch (EmployeeCountRequest) returns (EmployeeCountResponse);
+  rpc GetEmployeeCountForBranches (GetEmployeeCountBatchRequest) returns (GetEmployeeCountBatchResponse);
+}
+
+message EmployeeCountRequest {
+  string branchId = 1;
+}
+
+message EmployeeCountResponse {
+  int32 count = 1;
+}
+
+message GetEmployeeCountBatchRequest {
+    repeated string branchIds = 1;
+}
+
+message EmployeeCountItem {
+    string branchId = 1;
+    int32 count = 2;
+}
+
+message GetEmployeeCountBatchResponse {
+    repeated EmployeeCountItem items = 1;
+}

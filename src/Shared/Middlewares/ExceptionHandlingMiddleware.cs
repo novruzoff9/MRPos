@@ -10,6 +10,11 @@ public class ExceptionHandlingMiddleware(
     RequestDelegate next,
     ILogger<ExceptionHandlingMiddleware> logger)
 {
+    private static readonly JsonSerializerOptions _jsonOptions = new JsonSerializerOptions
+    {
+        PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+        DictionaryKeyPolicy = JsonNamingPolicy.CamelCase
+    };
     public async Task InvokeAsync(HttpContext context)
     {
         logger.LogDebug("ExceptionHandlingMiddleware invoked.");
@@ -58,7 +63,7 @@ public class ExceptionHandlingMiddleware(
         context.Response.ContentType = "application/json";
         context.Response.StatusCode = statusCode;
 
-        return context.Response.WriteAsync(JsonSerializer.Serialize(response));
+        return context.Response.WriteAsync(JsonSerializer.Serialize(response, _jsonOptions));
     }
 
     private static Task HandleExceptionAsync(HttpContext context, Exception ex)
@@ -72,7 +77,7 @@ public class ExceptionHandlingMiddleware(
         context.Response.ContentType = "application/json";
         context.Response.StatusCode = statusCode;
 
-        return context.Response.WriteAsync(JsonSerializer.Serialize(response));
+        return context.Response.WriteAsync(JsonSerializer.Serialize(response, _jsonOptions));
     }
 
     private void LogError(Exception ex)

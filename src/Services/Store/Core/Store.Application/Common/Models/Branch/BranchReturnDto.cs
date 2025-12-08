@@ -10,7 +10,8 @@ public record BranchReturnDto
     TimeOnly? Opening,
     TimeOnly? Closing,
     decimal ServiceFee,
-    string CompanyId,
+    int TableCount,
+    int EmployeeCount,
     AddressDto Address
 );
 

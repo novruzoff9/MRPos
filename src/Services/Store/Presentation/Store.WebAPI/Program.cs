@@ -2,6 +2,7 @@ using Scalar.AspNetCore;
 using Shared.Extensions;
 using Shared.Middlewares;
 using Store.Application;
+using Store.Infrastructure;
 using Store.Persistance;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,6 +14,7 @@ builder.Services.AddHttpContextAccessor();
 builder.Services.AddApplicationServices();
 
 builder.Services.AddPersistenceServices(builder.Configuration);
+builder.Services.AddInfrastructureServices(builder.Configuration);
 
 builder.Services.ConfigureAuth(builder.Configuration);
 

@@ -2,12 +2,15 @@ using FluentValidation;
 using IdentityServer.Configurations;
 using IdentityServer.Context;
 using IdentityServer.Context.Seed;
+using IdentityServer.Grpc.Services;
 using IdentityServer.Helpers;
 using IdentityServer.Services;
+using Microsoft.AspNetCore.Server.Kestrel.Core;
 using Microsoft.EntityFrameworkCore;
 using Scalar.AspNetCore;
 using Shared.Middlewares;
 using System.Reflection;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -23,6 +26,21 @@ builder.Configuration
 builder.Services.AddControllers();
 
 builder.Services.AddOpenApi();
+
+// Add gRPC services to the DI container
+builder.Services.AddGrpc();
+
+builder.WebHost.ConfigureKestrel(options =>
+{
+    options.ListenAnyIP(5001, listenOptions =>
+    {
+        listenOptions.Protocols = HttpProtocols.Http1;
+    });
+    options.ListenAnyIP(5005, listenOptions =>
+    {
+        listenOptions.Protocols = HttpProtocols.Http2;
+    });
+});
 
 builder.Services.AddDbContext<IdentityDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
@@ -53,7 +71,8 @@ var context = scope.ServiceProvider.GetRequiredService<IdentityDbContext>();
 await IdentityDbSeeder.SeedAsync(context);
 
 app.UseMiddleware<ExceptionHandlingMiddleware>();
-app.UseAuthorization();
+app.UseAuthorization(); 
+app.MapGrpcService<IdentityGrpcService>();
 
 app.MapControllers();
 

@@ -1,6 +1,6 @@
 ﻿namespace Store.Application.Features.Tables;
 
-public record CreateTableCommand(string Name, int Capacity, string BranchId, decimal? Deposit = null) : IRequest<bool>;
+public record CreateTableCommand(string Name, int? Capacity, string BranchId, decimal? Deposit = null) : IRequest<bool>;
 
 public class CreateTableCommandHandler(
     IMapper mapper,
