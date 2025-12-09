@@ -27,6 +27,7 @@
     <PackageReference Include="Scalar.AspNetCore" Version="2.11.1" />
 
 	  <Protobuf Include="Grpc\Protos\identity.proto" GrpcServices="Server" />
+	  <Protobuf Include="Grpc\Protos\branches.proto" GrpcServices="Client" />
   </ItemGroup>
 
   <ItemGroup>

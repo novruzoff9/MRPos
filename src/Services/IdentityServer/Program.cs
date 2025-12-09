@@ -2,6 +2,7 @@ using FluentValidation;
 using IdentityServer.Configurations;
 using IdentityServer.Context;
 using IdentityServer.Context.Seed;
+using IdentityServer.Grpc.Interfaces;
 using IdentityServer.Grpc.Services;
 using IdentityServer.Helpers;
 using IdentityServer.Services;
@@ -10,6 +11,8 @@ using Microsoft.EntityFrameworkCore;
 using Scalar.AspNetCore;
 using Shared.Middlewares;
 using System.Reflection;
+using Branches.Grpc;
+using Shared.Extensions;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -48,14 +51,26 @@ builder.Services.AddDbContext<IdentityDbContext>(options =>
 builder.Services.AddScoped<IRoleService, RoleService>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IUserRoleService, UserRoleService>();
+builder.Services.AddScoped<IEmployeeService, EmployeeService>();
 builder.Services.AddScoped<IRefreshTokenService, RefreshTokenService>();
 builder.Services.AddScoped<IAuthenticationService, AuthenticationService>();
 
 builder.Services.AddScoped<JwtTokenGenerator>();
 
+// Register gRPC client
+builder.Services.AddGrpcClient<BranchesGrpc.BranchesGrpcClient>(options =>
+{
+    var branchesServiceUrl = builder.Configuration["GrpcSettings:BranchesServiceUrl"];
+    options.Address = new Uri(branchesServiceUrl!);
+});
+builder.Services.AddScoped<IBranchesGrpc, BranchesGrpcImplementation>();
+
 builder.Services.Configure<JwtSettings>(builder.Configuration.GetSection("JwtSettings"));
 
 builder.Services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
+
+builder.Services.AddHttpContextAccessor();
+builder.Services.ConfigureAuth(builder.Configuration);
 
 var app = builder.Build();
 
