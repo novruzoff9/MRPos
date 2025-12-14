@@ -1,16 +1,20 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Shared.Models.General;
 using Shared.ResultTypes;
+using Store.Application.Common.Interfaces;
 using Store.Application.Common.Models.Category;
 using Store.Application.Features.Categories;
+using Store.Domain.Entities;
 
 namespace Store.WebAPI.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
 public class CategoriesController(
-    ISender sender
+    ISender sender,
+    ILookupService lookupService
     ) : ControllerBase
 {
     [HttpGet]
@@ -55,6 +59,14 @@ public class CategoriesController(
     {
         var result = await sender.Send(new DeleteCategoryCommand(id));
         var response = Response<bool>.Success(result, 200);
+        return Ok(response);
+    }
+
+    [HttpGet("lookup")]
+    public async Task<IActionResult> GetCategoriesLookup()
+    {
+        var lookup = await lookupService.GetLookupAsync<Category, string>();
+        var response = Response<List<LookupDto<string>>>.Success(lookup, 200);
         return Ok(response);
     }
 }

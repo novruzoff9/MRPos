@@ -49,5 +49,13 @@ public class Branch : BaseEntity, ICompanyOwned
         Opening = opening;
         Closing = closing;
     }
+
+    public void UpdateServiceFee(decimal serviceFee)
+    {
+        if (serviceFee < 0)
+            throw new ArgumentException("Service fee cannot be negative.", nameof(serviceFee));
+        
+        ServiceFee = serviceFee;
+    }
 }
 

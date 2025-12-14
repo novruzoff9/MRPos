@@ -2,6 +2,7 @@
 using IdentityServer.Models;
 using IdentityServer.Services;
 using Microsoft.AspNetCore.Mvc;
+using Shared.Models.General;
 using Shared.ResultTypes;
 
 namespace IdentityServer.Controllers;
@@ -28,6 +29,14 @@ public class RolesController(IRoleService roleService) : ControllerBase
     {
         var roles = await roleService.GetRolesAsync();
         var response = Response<IEnumerable<IdentityRole>>.Success(roles, 200);
+        return Ok(response);
+    }
+
+    [HttpGet("lookup")]
+    public async Task<IActionResult> GetRolesLookup()
+    {
+        var rolesLookup = await roleService.GetLookupAsync<IdentityRole, string>("RoleName");
+        var response = Response<List<LookupDto<string>>>.Success(rolesLookup, 200);
         return Ok(response);
     }
 

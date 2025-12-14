@@ -1,3 +1,4 @@
+using Branches.Grpc;
 using FluentValidation;
 using IdentityServer.Configurations;
 using IdentityServer.Context;
@@ -6,13 +7,14 @@ using IdentityServer.Grpc.Interfaces;
 using IdentityServer.Grpc.Services;
 using IdentityServer.Helpers;
 using IdentityServer.Services;
+using Mapster;
+using MapsterMapper;
 using Microsoft.AspNetCore.Server.Kestrel.Core;
 using Microsoft.EntityFrameworkCore;
 using Scalar.AspNetCore;
+using Shared.Extensions;
 using Shared.Middlewares;
 using System.Reflection;
-using Branches.Grpc;
-using Shared.Extensions;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -71,6 +73,11 @@ builder.Services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
 
 builder.Services.AddHttpContextAccessor();
 builder.Services.ConfigureAuth(builder.Configuration);
+
+// Mapster config
+TypeAdapterConfig.GlobalSettings.Scan(Assembly.GetExecutingAssembly());
+builder.Services.AddSingleton(TypeAdapterConfig.GlobalSettings);
+builder.Services.AddScoped<IMapper, ServiceMapper>();
 
 var app = builder.Build();
 

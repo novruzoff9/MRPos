@@ -24,3 +24,6 @@ public record AddressDto
     string Country,
     string GoogleMapsLocation
 );
+
+
+public record UpdateServiceFeeRequest(decimal ServiceFee);

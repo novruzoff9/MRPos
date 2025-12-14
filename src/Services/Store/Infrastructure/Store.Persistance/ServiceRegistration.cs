@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Store.Persistance.DbContexts;
+using Store.Persistance.Services;
 
 namespace Store.Persistance;
 
@@ -12,5 +13,6 @@ public static class ServiceRegistration
             options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
 
         services.AddScoped<IApplicationDbContext, ApplicationDbContext>();
+        services.AddScoped<ILookupService, LookupService>();
     }
 }

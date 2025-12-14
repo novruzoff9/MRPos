@@ -13,13 +13,11 @@ public class GetTableQueryHandler(
     {
         string branchId = identityService.GetBranchId;
         var table = await dbContext.Tables
-            .Where(t => t.Id == request.Id)
+            .Where(t => t.Id == request.Id && t.BranchId == branchId)
             .ProjectToType<TableReturnDto>()
             .FirstOrDefaultAsync(cancellationToken);
         if (table == null)
             throw new NotFoundException($"Table not found with ID: {request.Id}");
-        if (table.BranchId != branchId)
-            throw new ForbiddenAccessException($"You do not have access to this table.");
         return table;
     }
 }

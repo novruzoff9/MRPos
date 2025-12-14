@@ -10,9 +10,10 @@ namespace IdentityServer.Controllers;
 public class EmployeesController(IEmployeeService employeeService) : ControllerBase
 {
     [HttpGet]
-    public async Task<IActionResult> GetEmployees()
+    public async Task<IActionResult> GetEmployees([FromQuery] string? branchId = null, [FromQuery] string? roleId = null)
     {
-        var employees = await employeeService.GetEmployeesAsync();
+        var filter = new EmployeeFilterDto(branchId, roleId);
+        var employees = await employeeService.GetEmployeesAsync(filter);
         var response = Response<ICollection<EmployeeReturnDto>>.Success(employees, 200);
         return Ok(response);
     }
