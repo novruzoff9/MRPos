@@ -2,7 +2,6 @@ using Order.Application;
 using Order.Persistence;
 using Scalar.AspNetCore;
 using Shared.Extensions;
-using Shared.Middlewares;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();

@@ -13,6 +13,7 @@ internal class MenuItemMapper : IRegister
               .Map(dest => dest.Name, src => src.Product.Name)
               .Map(dest => dest.Price, src => src.Product.Price.ToString("F2"))
               .Map(dest => dest.Description, src => src.Product.Description)
+              .Map(dest => dest.ProductId, src => src.Product.Id)
               .MapToConstructor(true);
     }
 }

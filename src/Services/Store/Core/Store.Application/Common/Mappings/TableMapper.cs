@@ -9,7 +9,8 @@ internal class TableMapper : IRegister
     {
         config.NewConfig<Table, TableReturnDto>()
             .ConstructUsing(src => new TableReturnDto(
-                src.Id, src.Name, src.Capacity, src.TableStatus.ToString(), src.Deposit 
-            ));
+                src.Id, src.Name, src.Capacity, src.TableStatus.ToString(), src.Deposit
+            ))
+           .Map(dest => dest.ServiceFee, src => MapContext.Current.Parameters["ServiceFee"]);
     }
 }

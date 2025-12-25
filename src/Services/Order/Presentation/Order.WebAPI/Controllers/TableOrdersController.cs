@@ -8,7 +8,7 @@ namespace Order.WebAPI.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
-public class OrdersController(ISender sender) : ControllerBase
+public class TableOrdersController(ISender sender) : ControllerBase
 {
     [HttpGet]
     public async Task<IActionResult> GetOrders()
